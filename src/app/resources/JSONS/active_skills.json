@@ -1,0 +1,1851 @@
+
+[{"version":1, "objectName":"active_skills"},
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/mine_field.jpg",
+            "title": "Mine Field",
+            "description": "For the next 6 seconds, leave a trail of permanent land mines behind youn, each dealing 150 damage and applying Burn in a large area when triggered."
+        },
+        "statusEffect": ["Burn"],
+        "cooldown": 15.0,
+        "skillType": [
+            "Bomb",
+            "Lasting",
+            "Static",
+            "Physical"
+        ],"id": 1
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/tornado.jpg",
+            "title": "Tornado",
+            "description": "Summon a tornado at a random enemy's position that moves randomly, causing 80 damage and applying Dazed to enemies caught within every 0,5 seconds."
+           
+            
+        }, "id": 2,
+        "statusEffect": ["Dazed"],
+        "cooldown": 10.0,
+        "skillType": [
+            "Electric",
+            "Lasting",
+            "Area",
+            "Magical"
+        ]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/death_vortex.jpg",
+            "title": "Death Vortex",
+            "description": "Summon a dark vortex at a random enemy's position that moves randomly, applying Doom to enemies caught within."
+           
+        }, "id": 3,
+        "statusEffect": ["Doom"],
+        "cooldown": 12,
+        "skillType": ["Shadow", "Lasting", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_power.jpg",
+            "title": "Arance Power",
+            "description": "Empower you and all your nearby allies, increasing the multi cast modifier by 50% for 10.0 seconds."
+            
+        },"id": 4,
+        "cooldown": 30,
+        "skillType": ["Arcane", "Empowering", "Lasting", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/magic_missiles.jpg",
+            "title": "Magic Missiles",
+            "description": "Quickly fire 30 magic missiles in front of you, piercing enemies causing 30 damage and applying Brittle: +1% cooldowns and 3 damage per hit for 5 seconds with each hit."
+
+           
+        }, "id": 5,
+        "statusEffect": ["Brittle"],
+        "cooldown": 7,
+        "skillType": ["Arcane", "Missile", "Frontal", "Burst", "Magical"]
+    },
+
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_disc.jpg",
+            "title": "Arcane Disc",
+            "description": "Hurls an arcane disc that is bound to you in the target direction, causing 480 damage and applying 50% Exposed to targets hit. The disc returns to you at the end of its range, causing damage to enemies again on its way back."
+            
+        },"id": 6,
+        "statusEffect": ["Exposed"],
+        "cooldown": 5.2,
+        "skillType": ["Arcane", "Missile", "Frontal", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_sparks.jpg",
+            "title": "Arcane Sparks",
+            "description": "Fire a total of 8 projectiles that move randomly, dealing 160 damage and applying 40% Exposed to enemies caught in their path."
+            
+            
+        },"id": 7,
+        "statusEffect": ["Exposed"],
+        "cooldown": 5,
+        "skillType": ["Arcane", "Missile", "Burst", "Magical"]
+    },
+
+
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_beam.jpg",
+            "title": "Arcane Beam",
+            "description": "Fire a continuous beam in the direction you are aiming at, dealing up to 750 damage to enemies in the area."
+            
+        },"id": 8,
+        "cooldown": 8,
+        "skillType": ["Arcane", "Lasting", "Frontal", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_assault.jpg",
+            "title": "Arcane Assault",
+            "description": "Use arcane energy to hit enemies in front of you, causing 400 damage and applying 200% Vulnerable"
+            
+            
+        },"id": 9,
+        "statusEffect": ["Vulnerable"],
+        "cooldown": 6,
+        "skillType": ["Arcane", "Thrust", "Frontal", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_rift.jpg",
+            "title": "Arcane Rift",
+            "description": "For the next 6 seconds, leave a trail of arcane energy behind you, applying 10% Exposed every 1 second to enemies standing on your path."
+            
+            
+        },"id": 10,
+        "statusEffect": ["Exposed"],
+        "cooldown": 10,
+        "skillType": ["Arcane", "Lasting", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_blade.jpg",
+            "title": "Arcane Blade",
+            "description": "Strike enemies with a powerful arcane blade, causing 500 damage and an extra 50 damage per stack of Exposed or Vulnerable on the target."
+            
+           
+        },"id": 11,
+        "cooldown": 8.5,
+        "skillType": ["Arcane", "Swing", "Frontal", "Magical","Physical"]
+    },  {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_shield.jpg",
+            "title": "Arcane Shield",
+            "description": "Creates an arcane shield around you, absorbing up to 30 damage and lasting for 15 seconds. When the shield expires, it causes 30 times the damage absorbed as damage to enemies around you."
+            
+            
+        },"id": 12,
+        "cooldown": 30,
+        "skillType": ["Arcane", "Empowering", "Lasting", "Magical"]
+    }, {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_orb.jpg",
+            "title": "Arcane Orb",
+            "description": "Launch a large orb in the direction you are aiming at, which applies 80% Exposed to targets it passes through. Additionally, this orb quickly fires additional projectiles in all directions, each dealing 70 damage per hit."
+            
+           
+        },"id": 13,
+        "statusEffect": ["Exposed"],
+        "cooldown": 5,
+        "skillType": ["Arcane", "Missile", "Lasting", "Frontal", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_conjuration.jpg",
+            "title": "Arcane Conjuration",
+            "description": "Summon a total of 10 arcane pillars away from you, that quickly converge to your position, dealing 110 damage and applying 50% Exposed to enemies in their path."
+            
+            
+        },"id": 14,
+        "statusEffect": ["Exposed"],
+        "cooldown": 9,
+        "skillType": ["Arcane", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_overload.jpg",
+            "title": "Arcane Overload",
+            "description": "Spin your weapon around you, applying 80% Exposed to all nearby enemies, and firing 20 arcane missiles at random positions around you, dealing 250 damage per missile to enemies hit."
+            
+            
+        },"id": 15,
+        "statusEffect": ["Exposed"],
+        "cooldown": 8,
+        "skillType": ["Arcane", "Swing", "Area", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_explosion.jpg",
+            "title": "Arcane Explosion",
+            "description": "Summon a large arcane explosion at your position, dealing 350 damage and applying 60% Exposed."
+            
+            
+        },"id": 16,
+        "statusEffect": ["Exposed"],
+        "cooldown": 8,
+        "skillType": ["Arcane", "Area", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/slash.jpg",
+            "title": "Slash",
+            "description": "Slashes targets in the direction you are aiming at, causing 150 damage and applying 30% Vulnerable."
+            
+           
+        },"id": 17,
+        "statusEffect": ["Vulnerable"],
+        "cooldown": 1,
+        "skillType": ["Arcane", "Swing", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_slash.jpg",
+            "title": "Arcane Slash",
+            "description": "Fire an arcane slash forward, dealing 70 damage and applying 40% Exposed."
+            
+            
+        },"id": 18,
+        "statusEffect": ["Exposed"],
+        "cooldown": 1.4,
+        "skillType": ["Arcane", "Swing", "Frontal", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/arcane_missiles.jpg",
+            "title": "Arcane Missiles",
+            "description": "While the attack is channeled, you automatically fire 2 arcane missiles that seek a random nearby target, dealing 60 damage in a small area."
+           
+            
+        }, "id": 19,
+        "cooldown": 0.6,
+        "skillType": ["Arcane", "Missile", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/chromatic_bolt.jpg",
+            "title": "Chromatic Bolt",
+            "description": "Fires a ricocheting shot in the direction you are aiming at, that bounces around between targets until it has traveled a total of 60 meters, dealing 50 damage and applying a Random Damaging Negative Effect"
+            
+            
+        },"id": 20,
+        "statusEffect": ["Negative Effect"],
+        "cooldown": 6,
+        "skillType": ["Arcane", "Chaos", "Ice", "Nature", "Fire", "Electric", "Shadow", "Holy", "Projectile", "Missile", "Frontal", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/bloodlust.jpg",
+            "title": "Bloodlust",
+            "description": "Empower you and all your nearby allies, increasing the movement speed modifier by an additional 20% and cast frequency modifier by an additional 40% for 10 seconds."
+            
+            
+        },"id": 21,
+        "cooldown": 30,
+        "skillType": ["Chaos", "Empowering", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/chaos_bolt.jpg",
+            "title": "Chaos Bolt",
+            "description": "Fires a chaos bolt in the direction you are aiming at, piercing through enemies in a line, causing a random amount of damage between 1 and 240. Two secondary bolts are released on impact, each applying a Random Powerful Negative Effect."
+            
+           
+        },"id": 22,
+        "statusEffect": ["Negative Effect"],
+        "cooldown": 4.5,
+        "skillType": ["Chaos", "Missile", "Frontal", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/chaos_bomb.jpg",
+            "title": "Chaos Bomb",
+            "description": "Throws a chaos bomb in an area in front of you, causing a random amount of damage between 1 and 1000 and applying a Random Powerful Negative Effect."
+            
+            
+        },"id": 23,
+        "statusEffect": ["Negative Effect"],
+        "cooldown": 6.5,
+        "skillType": ["Chaos", "Bomb", "Frontal", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/chaos_golem.jpg",
+            "title": "Chaos Golem",
+            "description": "Summon 1 chaos golem to fight for you. A maximum of 3 units can be active at any time. Chaos Golems deal a random amount of damage between 1 and 2000 and inflict Stun and a Random Powerful Negative Effect in a large area."
+            
+            
+        },"id": 24,
+        "statusEffect": ["Negative Effect"],
+        "cooldown": 60,
+        "skillType": ["Chaos", "Summon", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/death_claw.jpg",
+            "title": "Death Claw",
+            "description": "Conjures a chaotic death claw at the feet of a random enemy, causing a random amount of damage between 1 and 1000 and applying a Random Powerful Negative Effect."
+            
+            
+        },"id": 25,
+        "statusEffect": ["Negative Effect"],
+        "cooldown": 5.5,
+        "skillType": ["Chaos", "Area", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/chaos_wave.jpg",
+            "title": "Chaos Wave",
+            "description": "Releases a wave of chaos around you, dealing random damage between 1 and 400 and applying a Random Powerful Negative Effect."
+           
+            
+        }, "id": 26,
+        "statusEffect": ["Negative Effect"],
+        "cooldown": 7,
+        "skillType": ["Chaos", "Area", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/chaos_totem.jpg",
+            "title": "Chaos Totem",
+            "description": "Summon a chaos totem at your position for 15.0 seconds, which continuously fires chaos bolts at the nearest enemy, dealing a random amount of damage between 1 and 300 and applying a Random Powerful Negative Effect. A maximum of 3 totems may be active at any one time."
+            
+            
+        },"id": 27,
+        "statusEffect": ["Negative Effect"],
+        "cooldown": 15,
+        "skillType": ["Chaos", "Static", "Summon", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/manifestation_of_chaos.jpg",
+            "title": "Manifestation of Chaos",
+            "description": "Release a total of 4 projectiles that move randomly, dealing a random amount of damage between 1 and 300 and applying a Random Powerful Negative Effect to enemies caught in their path."
+            
+           
+        },"id": 28,
+        "statusEffect": ["Negative Effect"],
+        "cooldown": 7,
+        "skillType": ["Chaos", "Missile", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/unchained_chaos.jpg",
+            "title": "Unchained Chaos",
+            "description": "Release a chain of chaos at a random enemy, causing a random amount of damage between 1 and 290, applying a Random Powerful Negative Effect, and then jumping anywhere from 0 to 10 additional times to nearby targets if possible."
+            
+            
+        },"id": 29,
+        "statusEffect": ["Negative Effect"],
+        "cooldown": 6.5,
+        "skillType": ["Chaos", "Missile", "Chain", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/chaotic_missile.jpg",
+            "title": "Chaotic Missile",
+            "description": "Throws a chaotic missile forward hitting enemies in a line, causing a random amount of damage between 1 and 80 and applying a Random Powerful Negative Effect every time it goes through enemies. There is a 50% chance that the missile will come back to you."
+           
+            
+        }, "id": 30,
+        "statusEffect": ["Negative Effect"],
+        "cooldown": 1.3,
+        "skillType": ["Chaos", "Missile", "Frontal", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/frost_bolt.jpg",
+            "title": "Frost Bolt",
+            "description": "Fires an icy projectile in the direction you are aiming at, piercing through enemies in a line, causing 300 damage and inflicting 20% Slow."
+            
+            
+        },"id": 31,
+        "statusEffect": ["Slow"],
+        "cooldown": 1.0,
+        "skillType": ["Ice", "Missile", "Frontal", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/glacier.jpg",
+            "title": "Glacier",
+            "description": "Summons a large glacier over a random enemy, dealing 900 damage and pushing enemies back, inflicting 2 seconds Stun and 60% Slow."
+           
+            
+        }, "id": 32,
+        "statusEffect": ["Slow","Stun"],
+        "cooldown": 6,
+        "skillType": ["Ice", "Area","Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/ice_vortex.jpg",
+            "title": "Ice Vortex",
+            "description": "Summon an icy vortex at a random enemy's position that for 3 seconds quickly applies 5% Slow and then explodes, dealing 25 damage per stack of Slow or Paralysis on the target"
+            
+            
+        },"id": 33,
+        "statusEffect": ["Slow"],
+        "cooldown": 8,
+        "skillType": ["Ice", "Lasting", "Area","Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/blizzard.jpg",
+            "title": "Blizzard",
+            "description": "Conjures a blizzard over a random enemy, hitting enemies 25 times, causing a total of 875 damage and applying 5% Slow with every hit."
+            
+            
+        },"id": 34,
+        "statusEffect": ["Slow"],
+        "cooldown": 7,
+        "skillType": ["Ice", "Lasting", "Area","Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/frozen_warhammer.jpg",
+            "title": "Frozen Warhammer",
+            "description": "Conjures a frozen warhammer to slam targets in front of you, dealing 300 damage and an extra 15 damage per stack of Slow or Paralysis on the target. Applies 10% Slow."
+
+            
+           
+        },"id": 35,
+        "statusEffect": ["Slow"],
+        "cooldown": 6,
+        "skillType": ["Ice", "Slam", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/poison_bolt.jpg",
+            "title": "Poison Bolt",
+            "description": "Fires 5 poisonous projectiles in the direction you are aiming at, inflicting Poison: 130 damage over 15 seconds to enemies in a large area."
+
+            
+            
+        },"id": 36,
+        "statusEffect": ["Poison"],
+        "cooldown": 3.5,
+        "skillType": ["Nature", "Missile", "Frontal", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/posion_bomb.jpg",
+            "title": "Poison Bomb",
+            "description": "Throws a poison bomb at a random enemy, dealing 100 damage and applying Poison instantly to targets hit, leaving a poison puddle in the ground, inflicting Poison: 450 damage over 15 seconds to enemies in a large area."
+
+            
+            
+        },"id": 37,
+        "statusEffect": ["Poison"],
+        "cooldown": 4,
+        "skillType": ["Nature", "Missile", "Frontal", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/poison_cloud.jpg",
+            "title": "Poison Cloud",
+            "description": "Summons a moving poison cloud that applies 1 stacks of Poison: 400 damage over 15 seconds every 0.5 seconds to enemies caught within."
+           
+            
+        }, "id": 38,
+        "statusEffect": ["Poison"],
+        "cooldown": 12,
+        "skillType": ["Nature", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/acid_rain.jpg",
+            "title": "Acid Rain",
+            "description": "Throw a projectile in an arc in the direction you are aiming at, raining acid on enemies in its trajectory, applying Rot: 100 damage over 15 seconds, spread on death with each rain drop."
+            
+            
+        },"id": 39,
+        "statusEffect": ["Rot"],
+        "cooldown": 6,
+        "skillType": ["Nature", "Bomb", "Area", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/war_tiger.jpg",
+            "title": "War Tiger",
+            "description": "Summon 2 War Tigers to fight for you. A maximum of 6 units can be active at any time."
+            
+            
+        },"id": 40,
+        "cooldown": 20,
+        "skillType": ["Nature", "Summon", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/battle_moose.jpg",
+            "title": "Battle Moose",
+            "description": "Summon 1 battle moose to fight for you. A maximum of 8 units can be active at any time."
+           
+            
+        }, "id": 41,
+        "cooldown": 40,
+        "skillType": ["Nature", "Summon", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/bestial_wrath.jpg",
+            "title": "Bestial Wrath",
+            "description": "Empower your nearby allies only, increasing movement speed modifier by 40% and multi cast modifier by 70% for 10.0 seconds."
+           
+            
+        }, "id": 42,
+        "cooldown": 20,
+        "skillType": ["Nature", "Empowering", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/putrid_hounds.jpg",
+            "title": "Putrid Hounds",
+            "description": "Summon 2 putrid hounds to fight for you, applying 3% Weakness when they attack. A maximum of 7 units can be active at any time."
+            
+            
+        },"id": 43,
+        "statusEffect": ["Weakness"],
+        "cooldown": 30,
+        "skillType": ["Nature", "Summon", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/festering_strike.jpg",
+            "title": "Festering Strike",
+            "description": "Causes 30 damage and applies Poison: 90 damage over 15 seconds to all enemies around you."
+            
+            
+        },"id": 44,
+        "statusEffect": ["Poison"],
+        "cooldown": 1.6,
+        "skillType": ["Nature", "Swing", "Area", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/contagion.jpg",
+            "title": "Contagion",
+            "description": "Causes a large explosion at your position, applying Rot: 1200 damage over 15 seconds, spread on death to nearby enemies."
+            
+            
+        },"id": 45,
+        "statusEffect": ["Rot"],
+        "cooldown": 7,
+        "skillType": ["Nature", "Area", "Burst", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/path_of_decay.jpg",
+            "title": "Path of Decay",
+            "description": "For the next 6 seconds, leave a trail of decay behind you, applying Poison: 120 damage over 15 seconds every 1 seconds to enemies standing in your path."
+            
+            
+        },"id": 46,
+        "statusEffect": ["Poison"],
+        "cooldown": 12,
+        "skillType": ["Nature", "Lasting", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/cobra_totem.jpg",
+            "title": "Cobra Totem",
+            "description": "Summon a cobra totem at your position for 10 seconds, which continuously fires poison bombs at the nearest enemy, dealing 150 initial damage and applying 1 stacks of Poison: 500 damage over 15 secondsto enemies in an area. A maximum of 4 totems may be active at any one time."
+            
+            
+        },"id": 47,
+        "statusEffect": ["Poison"],
+        "cooldown": 7,
+        "skillType": ["Nature", "Static", "Summon", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/venomous_strike.jpg",
+            "title": "Venomous Strike",
+            "description": "Slashes targets in front of you causing 120 damage and applying 2 stacks of Poison: 220 damage over 15 seconds."
+            
+            
+        },"id": 48,
+        "statusEffect": ["Poison"],
+        "cooldown": 1.8,
+        "skillType": ["Nature", "Swing", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/fire_bolt.jpg",
+            "title": "Fire Bolt",
+            "description": "Shoots a fiery projectile in the direction you are aiming at, causing 200 damage and applying 6 stacks of Burn: 300 damage over 8 seconds."
+            
+            
+        },"id": 49,
+        "statusEffect": ["Burn"],
+        "cooldown": 4,
+        "skillType": ["Fire", "Missile", "Frontal", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/meteor.jpg",
+            "title": "Meteor",
+            "description": "Hurls a large meteor at a random enemy, dealing 400 damage and strong pushback, inflicting 6 seconds Stun and Burn: 200 damage over 8 seconds."
+            
+            
+        },"id": 50,
+        "statusEffect": ["Burn","Stun"],
+        "cooldown": 7,
+        "skillType": ["Fire", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/flame_wave.jpg",
+            "title": "Flame Wave",
+            "description": "Causes a large explosion at your position, dealing 150 damage to nearby enemies, applying 1 stacks of Burn: 400 damage over 8 seconds, 2 seconds Stun and pushing them back."
+           
+            
+        }, "id": 51,
+        "statusEffect": ["Burn","Stun"],
+        "cooldown": 8,
+        "skillType": ["Fire", "Area", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/fire_wall.jpg",
+            "title": "Fire Wall",
+            "description": "Creates a wall of fire at the feet of a random enemy, applying Burn: 480 damage over 8 seconds to any enemy that crosses it."
+            
+            
+        },"id": 52,
+        "statusEffect": ["Burn"],
+        "cooldown": 11,
+        "skillType": ["Fire", "Lasting", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/meteor_shower.jpg",
+            "title": "Meteor Shower",
+            "description": "15 small meteorites hit the ground around a random enemy, dealing 100 damage per meteorite and inflicting 5 seconds Stun and Burn: 200 damage over 8 seconds."
+            
+            
+        },"id": 53,
+        "statusEffect": ["Burn","Stun"],
+        "cooldown": 10,
+        "skillType": ["Fire", "Area", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/conflagrate.jpg",
+            "title": "Conflagrate",
+            "description": "Causes all enemies in a large area around you that are currently afflicted with Burn or Melting to explode, dealing 180 damage to nearby enemies."
+            
+            
+        },"id": 54,
+        "cooldown": 9,
+        "skillType": ["Fire", "Area", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/lava_shield.jpg",
+            "title": "Lava Shield",
+            "description": "Creates 3 orbs that rotate around you for 6 seconds, exploding on contact with enemies, causing 200 damage and applying Melting in a large area."
+            
+        },"id": 55,
+        "statusEffect":["Melting"],
+        "cooldown": 8,
+        "skillType": ["Fire", "Lasting", "Aura", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/fire_walk.jpg",
+            "title": "Fire Walk",
+            "description": "For the next 6 seconds, leave a trail of fire behind you, applying 1 stacks of Burn: 60 damage over 8 seconds every 1 seconds to enemies standing in the fire."
+            
+            
+        },"id": 56,
+        "statusEffect":["Burn"],
+        "cooldown": 12,
+        "skillType": ["Fire", "Lasting", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/flamethrower.jpg",
+            "title": "Flamethrower",
+            "description": "You launch a continuous pillar of flames forward hitting enemies for 6 seconds, applying Melting: -2.0 armor and 75 damage over 8 seconds every 0.25 seconds to enemies that are caught in its path."
+            
+            
+        },"id": 57,
+        "statusEffect":["Melting"],
+        "cooldown": 11,
+        "skillType": ["Fire", "Lasting", "Frontal", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/fire_pillar.jpg",
+            "title": "Fire Pillar",
+            "description": "Summons a fire pillar at a random enemy position, dealing 10 damage and applying Melting: -15.0 armor and 500 damage over 8 seconds."
+            
+            
+        },"id": 58,
+        "statusEffect":["Melting"],
+        "cooldown": 7,
+        "skillType": ["Fire", "Area", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/fire_slash.jpg",
+            "title": "Fire Slash",
+            "description": "Sends a fiery slash forward, causing 50 damage and applying 1 stacks of Burn: 170 damage over 8 seconds."
+            
+            
+        },"id": 59,
+        "statusEffect":["Burn"],
+        "cooldown": 1.6,
+        "skillType": ["Fire", "Missile", "Frontal", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/combustion.jpg",
+            "title": "Combustion",
+            "description": "You emit an aura of fire for 6 seconds, applying 1 stacks of Burn: 70 damage over 8 seconds to enemies that stay near you every 0.5 seconds"
+            
+            
+        },"id": 60,
+        "statusEffect":["Burn"],
+        "cooldown": 8,
+        "skillType": ["Fire", "Lasting", "Aura", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/fiery_missiles.jpg",
+            "title": "Fiery Missiles",
+            "description": "While attack is channeled, you automatically launch fiery missiles that seek 3 random targets, dealing 5 damage and applying 1 stacks of Burn: 40 damage over 8 seconds in a tiny area."
+            
+            
+        },"id": 61,
+        "statusEffect":["Burn"],
+        "cooldown": 0.7,
+        "skillType": ["Fire", "Missile", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/lightning_bolt.jpg",
+            "title": "Lightning Bolt",
+            "description": "Fires 3 lightning projectiles towards a random enemy, piercing through enemies in a line, each causing 700 damage and inflicting 10% Dazed."
+            
+            
+        },"id": 62,
+        "statusEffect":["Dazed"],
+        "cooldown": 5,
+        "skillType": ["Electric", "Missile", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/thunder_clap.jpg",
+            "title": "Thunder Clap",
+            "description": "Hit the ground in front of you calling a thunder strike, dealing 1100 damage and applying 2 seconds Stun and 15% Disoriented."
+            
+            
+        },"id": 63,
+        "statusEffect":["Stun","Disoriented"],
+        "cooldown": 5,
+        "skillType": ["Electric", "Slam", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/thunder_strike.jpg",
+            "title": "Thunder Strike",
+            "description": "Calls down thunder to strike a random enemy, dealing 1300 damage and pushing enemies back, inflicting 20% Dazed and 4 seconds Stun."
+            
+            
+        },"id": 64,
+        "statusEffect":["Stun","Dazed"],
+        "cooldown": 6,
+        "skillType": ["Electric", "Area", "Magical"]
+    },{
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/chain_lightning.jpg",
+            "title": "Chain Lightning",
+            "description": "Hurls a lightning bolt at a random enemy, causing 400 damage, applying 10% Dazed and then jumping to 7 additional nearby targets if possible."
+            
+            
+        },"id": 65,
+        "statusEffect":["Dazed"],
+        "cooldown": 6,
+        "skillType": ["Electric", "Chain", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/call_lightning.jpg",
+            "title": "Call Lightning",
+            "description": "Summon a total of 7 lightning strikes away from you, that quickly converge to your position, dealing 80 damage and applying 15% Dazed to enemies in their path."
+            
+            
+        },"id": 66,
+        "statusEffect":["Dazed"],
+        "cooldown": 7,
+        "skillType": ["Electric", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/lightning_beam.jpg",
+            "title": "Lightning Beam",
+            "description": "Fire a continuous beam in the direction you are aiming at, dealing up to 300 damage to enemies in the area and quickly applying 1% Dazed."
+            
+            
+        },"id": 67,
+        "statusEffect":["Dazed"],
+        "cooldown": 6,
+        "skillType": ["Electric", "Lasting", "Frontal", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shadow_bolt.jpg",
+            "title": "Shadow Bolt",
+            "description": "Fires 7 shadowy projectiles towards a random enemy, piercing through enemies in a line, inflicting 1 stacks of Doom: 160 delayed damage each."
+            
+            
+        },"id": 68,
+        "statusEffect":["Doom"],
+        "cooldown": 8,
+        "skillType": ["Shadow", "Missile", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shadow_spike.jpg",
+            "title": "Shadow Spike",
+            "description": "Shadow spikes are summoned from the ground in a straight line towards a random enemy, causing 230 damage and applying Doom: 350 delayed damage."
+            
+            
+        },"id": 69,
+        "statusEffect":["Doom"],
+        "cooldown": 6,
+        "skillType": ["Shadow", "Missile", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/void.jpg",
+            "title": "Void",
+            "description": "Creates a void at a random position that pulls enemies in a large area towards it position for 6 seconds, applying 1 stacks of Doom: 240 delayed damage. The pull is not effective against very heavy enemies."
+            
+            
+        },"id": 70,
+        "statusEffect":["Doom"],
+        "cooldown": 14,
+        "skillType": ["Shadow", "Lasting", "Area", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shadow_orb.jpg",
+            "title": "Shadow Orb",
+            "description": "Launch a large orb in the direction you are aiming at, which applies 1 stacks of Cursed: 200 delayed area damage to targets it passes through. Additionally, this orb quickly fires additional projectiles in all directions, each dealing 50 damage per hit."
+            
+            
+        },"id": 71,
+        "statusEffect":["Cursed"],
+        "cooldown": 8,
+        "skillType": ["Shadow", "Missile", "Lasting", "Frontal", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shadow_step.jpg",
+            "title": "Shadow Step",
+            "description": "Create a dark portal in front of you and another a few meters away from you, allowing you to teleport from one portal to the other at any time, dealing 300 damage and applying Hemorrhage: 750 damage over 10 seconds, and extra damage from movement to enemies near the portal you come out of. Both portals are consumed in the process."
+            
+            
+        },"id": 72,
+        "statusEffect":["Hemorrhage"],
+        "cooldown": 8,
+        "skillType": ["Shadow", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/skeletal_mage.jpg",
+            "title": "Skeletal Mage",
+            "description": "Summon 1 skeletal mage to fight for you. A maximum of 4 Skeletal Mages can be active at any time."
+            
+            
+        },"id": 73,
+        "cooldown": 20,
+        "skillType": ["Shadow", "Summon", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/skeletal_archers.jpg",
+            "title": "Skeletal Archers",
+            "description": "Summon 2 skeletal archers to fight for you. A maximum of 4 Skeletal Archers can be active at any time."
+            
+            
+        },"id": 74,
+        "cooldown": 30,
+        "skillType": ["Shadow", "Summon", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shadow_grasp.jpg",
+            "title": "Shadow Grasp",
+            "description": "Pulls enemies in a large area towards you, applying Cursed: 150 delayed area damage."
+            
+            
+        },"id": 75,
+        "statusEffect":["Cursed"],
+        "cooldown": 4,
+        "skillType": ["Shadow", "Swing", "Area", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shadow_nova.jpg",
+            "title": "Shadow Nova",
+            "description": "Creates a shadow nova around you, which heals allies for 25 health and applies Doom: 400 delayed damage on enemies in a large area."
+            
+            
+        },"id": 76,
+        "statusEffect":["Doom"],
+        "cooldown": 8,
+        "skillType": ["Shadow", "Area", "Burst", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/ray_of_doom.jpg",
+            "title": "Ray of Doom",
+            "description": "Summon 2 shadow rays that rotate around you for 6 seconds, applying 1 stacks of Doom: 150 delayed damage to enemies hit."
+           
+            
+        }, "id": 77,
+        "statusEffect":["Doom"],
+        "cooldown": 10,
+        "skillType": ["Shadow", "Lasting", "Aura", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/skeletal_warriors.jpg",
+            "title": "Skeletal Warriors",
+            "description": "Summon 3 skeletal warriors to fight for you. A maximum of 12 Skeletal Warriors can be active at any time."
+            
+            
+        },"id": 78,
+        "cooldown": 20,
+        "skillType": ["Shadow", "Summon", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/obliterate.jpg",
+            "title": "Obliterate",
+            "description": "Obliterate targets in the direction you are aiming at, causing 150 damage and applying 9% Weakness."
+            
+            
+        },"id": 79,
+        "statusEffect":["Weakness"],
+        "cooldown": 1.5,
+        "skillType": ["Shadow", "Swing", "Frontal", "Magical", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/heroic_strike.jpg",
+            "title": "Heroic Strike",
+            "description": "Slow attack that strikes targets in a large area in the direction you are aiming at, causing 650 damage and applying Confused: -5% chance to hit and 50% chance to take 500 damage when attacking, for 5 seconds on enemies hit. x3 critical damage."
+            
+            
+        },"id": 80,
+        "statusEffect":["Confused"],
+        "cooldown": 6.5,
+        "skillType": ["Holy", "Swing", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/light_beam.jpg",
+            "title": "Light Beam",
+            "description": "Fire a continuous beam in the direction you are aiming at, dealing up to 280 damage to enemies in the area and quickly applying Brittle: +1% cooldowns and 1 damage per hit for 5 seconds."
+            
+            
+        },"id": 81,
+        "statusEffect":["Brittle"],
+        "cooldown": 10,
+        "skillType": ["Holy", "Lasting", "Frontal", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/might.jpg",
+            "title": "Might",
+            "description": "Empower you and all your nearby allies, increasing the damage modifier by an additional 50% for 10.0 seconds."
+            
+            
+        },"id": 82,
+        "cooldown": 25,
+        "skillType": ["Holy", "Empowering", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/smite.jpg",
+            "title": "Smite",
+            "description": "Smite enemies at a random location after 3 seconds with holy light, dealing 450 damage to enemies and healing 5 health to allies."
+            
+            
+        },"id": 83,
+        "cooldown": 6,
+        "skillType": ["Holy", "Empowering", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/beacon_of_light.jpg",
+            "title": "Beacon of Light",
+            "description": "You emit a blessed aura for 6 seconds, causing 80 damage and applying Confused: -1.0% chance to hit and 50% chance to take 20 damage when attacking, for 5 seconds to enemies that stay near you every 0.5 seconds."
+            
+            
+        },"id": 84,
+        "statusEffect":["Confused"],
+        "cooldown": 8,
+        "skillType": ["Holy", "Lasting", "Aura", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/exorcism.jpg",
+            "title": "Exorcism",
+            "description": "Expel a wave of light around you, dealing 300 damage and healing yourself for 0.5 for each enemy hit."
+            
+            
+        },"id": 85,
+        "cooldown": 8,
+        "skillType": ["Holy", "Area", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/templars_verdict.jpg",
+            "title": "Templar's Verdict",
+            "description": "Inflict your judgement at a random enemy's position, causing 480 damage to enemies in the area. Damage is multiplied by 3 on critical strikes."
+            
+            
+        },"id": 86,
+        "cooldown": 5,
+        "skillType": ["Holy", "Swing", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/blades_of_light.jpg",
+            "title": "Blades of Light",
+            "description": "You slash forward two times, causing a total of 180 damage and applying 4% Dazed for each hit."
+            
+            
+        },"id": 87,
+        "statusEffect":["Dazed"],
+        "cooldown": 1.3,
+        "skillType": ["Holy", "Swing", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/holy_fire.jpg",
+            "title": "Holy Fire",
+            "description": "You launch 3 waves of holy fire in the direction you are aiming at, each causing 500 damage to enemies in a straight line, transforming all stacks of Dazed into Disoriented. Damage is multiplied by 3 on critical strikes."
+            
+            
+        },"id": 88,
+        "cooldown": 5,
+        "skillType": ["Holy", "Missile", "Frontal", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/bladestorm.jpg",
+            "title": "Bladestorm",
+            "description": "Spin your weapon around you for a few seconds, hitting enemies all around you a total of 20 times, dealing 60 damage per hit."
+            
+            
+        },"id": 89,
+        "cooldown": 10,
+        "skillType": ["Swing", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/subdue.jpg",
+            "title": "Subdue",
+            "description": "A powerful strike in the direction you are aiming at, dealing 50 damage and an extra 10 damage per stack of Bleed or Hemorrhage in the affected targets, applying 12% Fragility."
+            
+            
+        },"id": 90,
+        "statusEffect": ["Fragility"],
+        "cooldown": 3,
+        "skillType": ["Swing", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/titans_cleaver.jpg",
+            "title": "Titan's Cleaver",
+            "description": "Slash enemies in front of you dealing 350 damage. Damage is multiplied by (1 + 2 x Armor Power bonus)."
+            
+            
+        },"id": 91,
+        "cooldown": 4,
+        "skillType": ["Swing", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/scent_of_blood.jpg",
+            "title": "Scent of Blood",
+            "description": "Increases your cast frequency modifier by an additional 10%, and an extra 1% for each stack of Bleed or Hemorrhage on nearby enemies for 10 seconds. The extra cast frequency modifier cannot exceed 200%."
+            
+            
+        },"id": 92,
+        "cooldown": 34,
+        "skillType": ["Swing", "Empowering", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/savege_strike.jpg",
+            "title": "Savage Strike",
+            "description": "Perform a massive strike in front of you dealing 4000 damage divided equally among all enemies hit."
+            
+            
+        },"id": 93,
+        "cooldown": 6,
+        "skillType": ["Swing", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/whirlwind.jpg",
+            "title": "Whirlwind",
+            "description": "You spin with your weapons, causing 140 damage to all enemies around you."
+            
+            
+        },"id": 94,
+        "cooldown": 1.4,
+        "skillType": ["Swing", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/double_slash.jpg",
+            "title": "Double Slash",
+            "description": "You slash forward two times, causing a total of 80 damage and applying 2 stacks of Bleed: 100 damage over 10 seconds."
+            
+            
+        },"id": 95,
+        "statusEffect":["Bleed"],
+        "cooldown": 1.4,
+        "skillType": ["Swing", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/throw_axe.jpg",
+            "title": "Throw Axe",
+            "description": "Throws an axe forward hitting enemies in a line, and then coming back to your current position, causing 100 damage and applying 2 stacks of Hemorrhage: 300 damage over 10 seconds, and extra damage from movement every time it goes through enemies."
+            
+            
+        },"id": 96,
+        "statusEffect":["Hemorrhage"],
+        "cooldown": 5,
+        "skillType": ["Swing", "Missile", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/uppercut.jpg",
+            "title": "Uppercut",
+            "description": "Throw enemies in the direction you are aiming at in the air, causing 400 damage and inflicting 5 seconds Stun and Wound."
+            
+            
+        },"id": 97,
+        "statusEffect":["Stun","Wound"],
+        "cooldown": 4,
+        "skillType": ["Swing", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/flurry.jpg",
+            "title": "Flurry",
+            "description": "Quickly throw daggers in the direction you are aiming at, hitting enemies total of 20 times, dealing 40 damage and applying 2 stacks of Bleed: 60 damage over 10 seconds with every hit."
+            
+            
+        },"id": 98,
+        "statusEffect":["Bleed"],
+        "cooldown": 8,
+        "skillType": ["Thrust", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/quick_strike.jpg",
+            "title": "Quick Strike",
+            "description": "Perform a quick strike in front of you dealing 90 damage. Damage is multiplied by (1 + 2 x Movement Speed bonus)"
+           
+            
+        }, "id": 99,
+        "cooldown": 2,
+        "skillType": ["Thrust", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/piercing_shout.jpg",
+            "title": "Piercing Shout",
+            "description": "Weakens all nearby enemies, reducing their armor power by 50 for 5.0 seconds."
+            
+            
+        },"id": 100,
+        "cooldown": 15,
+        "skillType": ["Thrust", "Empowering", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/backstab.jpg",
+            "title": "Backstab",
+            "description": "Stab enemies in front of you, causing 300 damage. Damage is multiplied by 5 and you also apply Hemorrhage: 800 damage over 10 seconds, and extra damage from movement if you are behind the target."
+            
+            
+        },"id": 101,
+        "statusEffect":["Hemorrhage"],
+        "cooldown": 3,
+        "skillType": ["Thrust", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/rupture.jpg",
+            "title": "Rupture",
+            "description": "Hit enemies in a long line in front of you, dealing 500 damage and applying 15% Disoriented and 4 seconds Stun. Can stun most elite enemies."
+           
+            
+        }, "id": 102,
+        "statusEffect":["Disoriented","Stun"],
+        "cooldown": 8,
+        "skillType": ["Thrust", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/sinister_strike",
+            "title": "Sinister Strike",
+            "description": "Stab enemies in front of you, causing 70 damage if the target is facing you, or applying 10 stacks of Hemorrhage: 300 damage over 10 seconds, and extra damage from movement if you are behind the target."
+            
+            
+        },"id": 103,
+        "statusEffect":["Hemorrhage"],
+        "cooldown": 1,
+        "skillType": ["Thrust", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/eviscerate.jpg",
+            "title": "Eviscerate",
+            "description": "You strike enemies in front of you, dealing 80 damage and applying 5 stacks of Bleed: 100 damage over 10 seconds if they are facing you, or dealing 250 damage and an extra 50 damage per stack of Bleed or Hemorrhage in the target and removing those effects in the process if you are behind their backs."
+            
+            
+        },"id": 104,
+        "statusEffect":["Bleed"],
+        "cooldown": 3,
+        "skillType": ["Thrust", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/intimidating_shout.jpg",
+            "title": "Intimidating Shout",
+            "description": "Weakens all nearby enemies, subtracting 60% from their damage modifier for 8 seconds."
+            
+            
+        },"id": 105,
+        "cooldown": 18,
+        "skillType": ["Thrust", "Empowering", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shield_wall.jpg",
+            "title": "Shield Wall",
+            "description": "Empower you and all your nearby allies, increasing your armor power by 200 for 4.0 seconds"
+            
+            
+        },"id": 106,
+        "cooldown": 30,
+        "skillType": ["Thrust", "Empowering", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/storm_of_spears.jpg",
+            "title": "Storm of Spears",
+            "description": "Quickly spin around for a few seconds firing a total of 100 spears in all directions, each piercing enemies and dealing 50 damage and applying Hemorrhage: 300 damage over 10 seconds, and extra damage from movement."
+            
+            
+        },"id": 107,
+        "statusEffect":["Hemorrhage"],
+        "cooldown": 10,
+        "skillType": ["Thrust", "Missile", "Lasting", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/thrust.jpg",
+            "title": "Thrust",
+            "description": "Hit enemies in a long line in front of you dealing 90 damage and applying 4 stacks of Bleed: 120 damage over 10 seconds."
+            
+            
+        },"id": 108,
+        "statusEffect":["Bleed"],
+        "cooldown": 1.5,
+        "skillType": ["Thrust", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shield_bash.jpg",
+            "title": "Shield Bash",
+            "description": "Thrust your shield forward, dealing 500 damage. Damage is multiplied by (1 + 2 x Armor Power bonus)."
+            
+            
+        },"id": 109,
+        "cooldown": 5,
+        "skillType": ["Thrust", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/body_slam.jpg",
+            "title": "Body Slam",
+            "description": "Slam your body into the enemies in front of you dealing 500 damage. Damage is multiplied by (1 + 2 x Max HP bonus)"
+           
+            
+        }, "id": 110,
+        "cooldown": 5,
+        "skillType": ["Slam", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/demolish.jpg",
+            "title": "Demolish",
+            "description": "Hit the ground in front of you, dealing 300 damage and sending 10 shockwaves in random directions, each dealing 100 damage and applying Hemorrhage: 150 damage over 10 seconds, and extra damage from movement"
+            
+            
+        },"id": 111,
+        "statusEffect":["Hemorrhage"],
+        "cooldown": 7,
+        "skillType": ["Slam", "Missile", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shockwave.jpg",
+            "title": "Shockwave",
+            "description": "Hit the ground causing a shockwave in a line in front of you, causing 250 damage and applying Hemorrhage: 300 damage over 10 seconds, and extra damage from movement."
+            
+            
+        },"id": 112,
+        "statusEffect":["Hemorrhage"],
+        "cooldown": 6,
+        "skillType": ["Slam", "Area", "Frontal", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shockwave_totem.jpg",
+            "title": "Shockwave Totem",
+            "description": "Summon a ground shaking totem at your position for 20 seconds, which continuously fires shockwaves at the nearest enemy, dealing 100 damage and applying Hemorrhage: 200 damage over 10 seconds, and extra damage from movement in a large area. A maximum of 4 totems may be active at any one time."
+            
+            
+        },"id": 113,
+        "statusEffect":["Hemorrhage"],
+        "cooldown": 10,
+        "skillType": ["Slam", "Static", "Summon", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/stomp.jpg",
+            "title": "Stomp",
+            "description": "You stomp the ground, causing 400 damage and applying +9% Fragility and 4 seconds Stun to all enemies around you."
+            
+            
+        },"id": 114,
+        "statusEffect":["Fragility","Stun"],
+        "cooldown": 7,
+        "skillType": ["Slam", "Area", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/ground_slam.jpg",
+            "title": "Ground Slam",
+            "description": "Hit the ground with a powerful strike in the direction you are aiming at, causing 300 damage, applying Bleed: 500 damage over 10 seconds."
+            
+            
+        },"id": 115,
+        "statusEffect":["Bleed"],
+        "cooldown": 6,
+        "skillType": ["Slam", "Area", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/bladed_chakram.jpg",
+            "title": "Bladed Chakram",
+            "description": "Throw a chakram in the target direction, causing 120 damage and applying Rot: 450 damage over 15 seconds, spread on death to targets hit. The chakram returns to you at the end of its range, causing damage to enemies again on its way back."
+            
+            
+        },"id": 116,
+        "statusEffect":["Rot"],
+        "cooldown": 6,
+        "skillType": ["Projectile", "Missile", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/build_ballista.jpg",
+            "title": "Build Ballista",
+            "description": "Build a ballista at your position for 25 seconds, which quickly fires bolts at the nearest enemy, dealing 120 damage. A maximum of 4 ballistas can be active at any given time."
+            
+            
+        },"id": 117,
+        "cooldown": 15,
+        "skillType": ["Projectile", "Static", "Summon", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/frag_shot.jpg",
+            "title": "Frag Shot",
+            "description": "Fires a shot in the direction you are aiming at, piercing through enemies in a line, dealing 250 damage. Two secondary bolts are released on impact, each dealing another 150 damage and applying 3% Fragility."
+            
+            
+        },"id": 118,
+        "statusEffect":["Fragility"],
+        "cooldown": 6,
+        "skillType": ["Projectile", "Missile", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/storm_of_arrows.jpg",
+            "title": "Storm of Arrows",
+            "description": "Quickly spin around for a few seconds firing a total of 100 arrows in all directions, each piercing enemies and dealing 200 damage."
+            
+            
+        },"id": 119,
+        "cooldown": 7,
+        "skillType": ["Projectile", "Missile", "Lasting", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/split_shot.jpg",
+            "title": "Split Shot",
+            "description": "Fires a projectile in the direction you are aiming at, that explodes on impact releasing 10 projectiles, each dealing 70 damage and applying Bleed: 250 damage over 10 seconds."
+            
+            
+        },"id": 120,
+        "statusEffect":["Bleed"],
+        "cooldown": 6,
+        "skillType": ["Projectile", "Missile", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/sniper_shot.jpg",
+            "title": "Sniper Shot",
+            "description": "Fires a shot in the direction you are aiming at, causing 380 damage. Damage is multiplied by 5 on critical strikes."
+            
+            
+        },"id": 121,
+        "cooldown": 7,
+        "skillType": ["Projectile", "Missile", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/ricochet.shot.jpg",
+            "title": "Ricochet Shot",
+            "description": "Fires a ricocheting shot in the direction you are aiming at, that bounces around between targets until it has traveled a total of 60 meters, dealing 100 damage every time it hits an enemy."
+            
+            
+        },"id": 122,
+        "cooldown": 5,
+        "skillType": ["Projectile", "Missile", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shoot.jpg",
+            "title": "Shoot",
+            "description": "Fires 3 arrows in the direction you are aiming at, dealing 50 damage to all enemies hit and applying 3% Fragility for each arrow."
+            
+            
+        },"id": 123,
+        "statusEffect":["Fragility"],
+        "cooldown": 1,
+        "skillType": ["Projectile", "Missile", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/rain_of_arrows.jpg",
+            "title": "Rain of Arrows",
+            "description": "Shoots multiple arrows at a random enemy's location, hitting enemies multiple times, causing a total of 560 damage and applying 3 seconds Stun with every hit."
+            
+            
+        },"id": 124,
+        "statusEffect":["Stun"],
+        "cooldown": 8,
+        "skillType": ["Projectile", "Lasting", "Area", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/spread_shot.jpg",
+            "title": "Spread Shot",
+            "description": "Fires 10 arrows in a short range with a large spread in the direction you are aiming at, dealing 40 damage per arrow."
+            
+            
+        },"id": 125,
+        "cooldown": 1.2,
+        "skillType": ["Projectile", "Missile", "Frontal", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/bomb_barrage.jpg",
+            "title": "Bomb Barrage",
+            "description": "Fires 10 bombs in an area in front of you, each causing 85 damage and applying 3% Weakness."
+            
+            
+        },"id": 126,
+        "statusEffect":["Weakness"],
+        "cooldown": 5,
+        "skillType": ["Bomb", "Missile", "Frontal", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/cluster_bomb.jpg",
+            "title": "Cluster Bomb",
+            "description": "Throw a bomb in front of you, dealing 300 damage in an area and exploding into 20 smaller bombs, each dealing 150 damage."
+            
+            
+        },"id": 127,
+        "cooldown": 8,
+        "skillType": ["Bomb", "Area", "Frontal", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shrapnel_bomb.jpg",
+            "title": "Shrapnel Bomb",
+            "description": "Throw a bomb in front of you, dealing 270 damage in an area and exploding into 15 projectiles that fly in all directions, each dealing 45 damage and applying Bleed: 80 damage over 10 seconds."
+            
+            
+        },"id": 128,
+        "statusEffect":["Bleed"],
+        "cooldown": 6,
+        "skillType": ["Bomb", "Area", "Frontal", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/suction_bomb.jpg",
+            "title": "Suction Bomb",
+            "description": "Throw a bomb in front of you pulling enemies in a large area towards its position, causing 220 damage."
+            
+            
+        },"id": 129,
+        "cooldown": 4,
+        "skillType": ["Bomb", "Area", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/weakening_granade.jpg",
+            "title": "Weakening Grenade",
+            "description": "Throws a grenade in an area in front of you, causing 350 damage and applying 24% Weakness."
+            
+            
+        },"id": 130,
+        "statusEffect":["Weakness"],
+        "cooldown": 6,
+        "skillType": ["Bomb", "Area", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/bear_trap.jpg",
+            "title": "Bear Trap",
+            "description": "Leave a permanent trap in the ground that explodes when an enemy steps on it, causing 500 damage and applying 60% Slow and Wound to enemies in a large area."
+            
+            
+        },"id": 131,
+        "statusEffect":["Slow","Wound"],
+        "cooldown": 8,
+        "skillType": ["Bomb", "Lasting", "Static", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shrapnel_mine.jpg",
+            "title": "Shrapnel Mine",
+            "description": "Leave a permanent mine in the ground that explodes when an enemy steps on it, exploding into 20 fragments that fly in all direction, each applying 5 stacks of Hemorrhage: 130 damage over 10 seconds, and extra damage from movement."
+            
+            
+        },"id": 132,
+        "statusEffect":["Hemorrhage"],
+        "cooldown": 5,
+        "skillType": ["Bomb", "Lasting", "Static", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/mortar_shot.jpg",
+            "title": "Mortar Shot",
+            "description": "Fires 5 mortar shots in an area in front of you, each causing 30 damage and applying 1 stacks of Bleed: 60 damage over 10 seconds."
+            
+            
+        },"id": 133,
+        "statusEffect":["Bleed"],
+        "cooldown": 1.5,
+        "skillType": ["Bomb", "Area", "Frontal", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/disengage.jpg",
+            "title": "Disengage",
+            "description": "Throw an icy bomb right in front of you, dealing 450 damage and applying 20 stacks of Paralysis: -100% movement speed, +20% direct damage taken to enemies, pushing them away."
+            
+            
+        },"id": 134,
+        "statusEffect":["Paralysis"],
+        "cooldown": 6,
+        "skillType": ["Bomb", "Area", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/explosive_shot.jpg",
+            "title": "Explosive Shot",
+            "description": "Fires an explosive shot in the direction you are aiming at, dealing 250 damage and applying 12% Weakness to enemies in large area."
+            
+            
+        },"id": 135,
+        "statusEffect":["Weakness"],
+        "cooldown": 5,
+        "skillType": ["Blast", "Missile", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/shrapnel_shot.jpg",
+            "title": "Shrapnel Shot",
+            "description": "Fires 8 projectiles in the direction you are aiming at, each exploding on contact into 5 smaller projectiles that deal 80 damage each."
+            
+            
+        },"id": 136,
+        "cooldown": 8,
+        "skillType": ["Blast", "Missile", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/napalm_blast.jpg",
+            "title": "Napalm Blast",
+            "description": "Fires a blast of fire in a cone in front of you, causing 40 damage, applying Melting: -12.0 armor and 400 damage over 8 seconds and leaving a burning area in the ground that continuously applies Melting: -1.0 armor to enemies."
+            
+            
+        },"id": 137,
+        "statusEffect":["Melting"],
+        "cooldown": 8,
+        "skillType": ["Blast", "Area", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/power_blast.jpg",
+            "title": "Power Blast",
+            "description": "Fires a powerful blast in a line in front of you, causing 150 damage and applying 10% Disoriented."
+            
+            
+        },"id": 138,
+        "statusEffect":["Disoriented"],
+        "cooldown": 6,
+        "skillType": ["Blast", "Frontal", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/freezing_blow.jpg",
+            "title": "Freezing Blow",
+            "description": "Fires a freezing blow in a cone in front of you, causing 500 damage and transforming all stacks of Slow into Paralysis."
+            
+            
+        },"id": 139,
+        "cooldown": 4,
+        "skillType": ["Ice", "Blast", "Area", "Frontal", "Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/ancient_curse.jpg",
+            "title": "Ancient Curse",
+            "description": "Fires a shadowy blast in a cone in front of you, causing 200 damage and applying Doom: 300 delayed damage to enemies, and increasing the cast frequency of allies by an additional 50% for 12.0 seconds."
+            
+            
+        },"id": 140,
+        "statusEffect":["Doom"],
+        "cooldown": 8,
+        "skillType": ["Shadow", "Blast", "Area", "Frontal", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/buckshot.jpg",
+            "title": "Buckshot",
+            "description": "Fires a blast of pellets in a cone in front of you, causing 100 damage and applying 3% Fragility."
+            
+            
+        },"id": 141,
+        "statusEffect":["Fragility"],
+        "cooldown": 2,
+        "skillType": ["Blast", "Frontal", "Burst", "Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/summon_helper_elves.jpg",
+            "title": "Summon Helper Elves",
+            "description": "Summon 3 helper elves to fight for you. A maximum of 6 units can be active at any time"
+            
+            
+        },"id": 142,
+        "cooldown": 30,
+        "skillType": ["Ice","Summon","Magical","Physical","Seasonal"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/surprise_gift.jpg",
+            "title": "Surprise Gift",
+            "description": "Leave a permanent gift on the ground that opens when an enemy steps on it, cause 600 damage to nearby enemies and firing 6 bombs that splut on impact, each causing 400 damage and applying Paralysis."
+            
+            
+        },"id": 143,
+        "statusEffect":["Paralysis"],
+        "cooldown": 7.5,
+        "skillType": ["Ice","Bomb","Lasting","Physical","Seasonal","Static"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/avalanche.jpg",
+            "title": "Avalanche",
+            "description": "Fires 25 snowballs in an area in front of you over 3 seconds, each causing 90 damage and applying Slow."
+            
+            
+        },"id": 144,
+        "statusEffect":["Slow"],
+        "cooldown": 5,
+        "skillType": ["Ice","Bomb","Area","Frontal","Physical","Seasonal"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/smoke.bomb.jpg",
+            "title": "Smoke Bomb",
+            "description": "Throws a bomb at a random enemy, applying Distracted, Slow and enveloping the area in smoke for 6 seconds, causing all your attacks on enemies inside the area to be considered as attacks from behind."
+            
+            
+        },"id": 145,
+        "statusEffect":["Distracted", "Slow"],
+        "cooldown": 10,
+        "skillType": ["Shadow","Bomb","Lasting","Frontal","Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/aura_of_chaos.jpg",
+            "title": "Aura of Chaos",
+            "description": "You emit an aura of chaos for 6 seconds, causing random damage between 1 and 80 and applying a random powerful Negative effect to enemies that stay near you every 0.5 seconds."
+            
+            
+        },"id": 146,
+        "statusEffect":["Negative Effect"],
+        "cooldown": 12,
+        "skillType": ["Chaos","Lasting","Aura","Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/reap.jpg",
+            "title": "Reap",
+            "description": "Slashes target in the direction you are aiming at, causing all Doom and Cursed stacks in the area to deal 200% of their damage instantly, removing the effects in the process."
+            
+            
+        },"id": 147,
+        "cooldown": 6,
+        "skillType": ["Shadow","Swing","Frontal","Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/summon_infantry.jpg",
+            "title": "Summon Infantry",
+            "description": "Summon 6 powerful legionnaires to fight for you for 20,0 seconds, which applying Dazed when they attack. A maximum of 6 units can be active at any time."
+            
+            
+        },"id": 148,
+        "statusEffect":["Dazed"],
+        "cooldown": 45,
+        "skillType": ["Electric","Summon","Magical","Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/penance.jpg",
+            "title": "Penance",
+            "description": "Hurls a holy bolt at a random enemy, causing 200 damage, applying Disoriented and then jumping to 8 additional nearby targets if possible."
+            
+            
+        },"id": 149,
+        "statusEffect":["Disoriented"],
+        "cooldown": 7,
+        "skillType": ["Holy","Missile","Chain","Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/hammer_of_justice.jpg",
+            "title": "Hammer of Justice",
+            "description": "Throws a fast hammer forward hitting enemies in a line, and then coming back to your current position, causing 140 damage every time it goes through enemies. Damage is multiplies by 3 on critical strikes."
+            
+            
+        },"id": 150,
+        "cooldown": 1.8,
+        "skillType": ["Holy","Swing","Missile","Frontal","Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/seeking_chaos.jpg",
+            "title": "Seeking Chaos",
+            "description": "While the attack is channeled, you automatically launch 2 chaotic missiles that seek random targets, dealing random damage between 1 and 140 and applying random powerful Negative effect."
+           
+            
+        }, "id": 151,
+        "statusEffect":["Negative Effect"],
+        "cooldown": 0.6,
+        "skillType": ["Chaos","Missile","Burst","Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/wild_strike.jpg",
+            "title": "Wild Strike",
+            "description": "Strike enemies in front of you, dealing 300 damage and an extra 20% damage per summoned unit you control."
+            
+            
+        },"id": 152,
+        "cooldown": 3,
+        "skillType": ["Nature","Slam","Frontal","Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/twin_daggers.jpg",
+            "title": "Twin Daggers",
+            "description": "You slash forward two times, causing a total of 100 damage and applying Weakness. Damage is multiplied by 5 if you are behind your target."
+            
+            
+        },"id": 153,
+        "statusEffect":["Disoriented"],
+        "cooldown": 1.2,
+        "skillType": ["Thrust","Frontal","Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/severe_cold.jpg",
+            "title": "Severe Cold",
+            "description": "Fires a ricocheting shot in the direction you are aiming at, that bounces around between targets until it has traveled a total of 60 meters, dealing 60 damage and applying Slow every time it hits an enemy."
+           
+            
+        }, "id": 154,
+        "statusEffect":["Slow"],
+        "cooldown": 2.5,
+        "skillType": ["Ice","Missile","Frontal","Magical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/jupiters_spear.jpg",
+            "title": "Jupiter's Spear",
+            "description": "You strike enemies in fron of you, dealing 50 damage and creating a maximum of 4 lightning bolts that jump to 3 additional nearby targets causing 130 damage and applying Dazed if possible."
+            
+            
+        },"id": 155,
+        "statusEffect":["Dazed"],
+        "cooldown": 3,
+        "skillType": ["Electric","Thrust","Frontal","Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/unholy_bolt.jpg",
+            "title": "Unholy Bolt",
+            "description": "Fires a shadowy projectile in the direction you are aiming at, piercing through enemies in a line, causing 200 damage and inflicting Doom on enemies and healing 10 health on allies."
+            
+            
+        },"id": 156,
+        "statusEffect":["Doom"],
+        "cooldown": 2,
+        "skillType": ["Shadow","Missile","Frontal","Magical","Physical"]
+    },
+    {
+        "activeSkill": {
+            "icon": "@app/src/app/resources/skill_icons/unholy_aura.jpg",
+            "title": "Unholy Aura",
+            "description": "You emit a shadowy aura for 6 seconds, applying Doom to enemies that stay near you every 0,5 seconds."
+            
+            
+        },"id": 157,
+        "statusEffect":["Doom"],
+        "cooldown": 8,
+        "skillType": ["Shadow","Lasting","Aura","Magical"]
+    }
+]

@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    /* Container colors*/
+    --background: #000000;
+    --container-bg-dark: #212121;
+    --container-bg-bright: #262626;
+    --border-color: #423e38;
+    --border-outer-color: #23201e;
+    --text-title-color:#e39a2f;
+    --title-color:#f8b76f;
+    --cooldown-color:#f7d060;
+    --type-color:#86dcf6;
+    /* --------------------------- */
+
+    /* Status effects*/
+    --burn-color:#eb8219;
+    --doom-color:#9256f6;
+    --bleed-color:#e93b27;
+    --poison-color:#47c56a;
+    /* --------------------------- */
+    
+    /* Powerful status effects*/
+    --weakness-color:#867d3d;
+    --slow-color:#72f5f5;
+    --hemorrhage-color:#ba1223;
+    --cursed-color:#846ad8;
+    --fragility-color:#aaa174;
+    --rot-color:#1ca22e;
+    --melting-color:#d2491c;
+    --paralysis-color:#3397ac;
+    --brittle-color:#ab4008;
+    --stun-color:#ef82dd;
+    --dazed-color:#faed37;
+    --disoriented-color:#b0a308;
+    --exposed-color:#dd4561;
+    --vulnerable-color:#ab1e3a;
+    --distracted-color:#8ebc41;
+    --confused-color:#62930f;
+    --wound-color:#a36f70;
+    --negative-effect-color:#f85a5a;
+    /* --------------------------- */
+    
+    --positive-color:#80ed1e;
+    --negative-color:#ff0035;
+    
+
+}

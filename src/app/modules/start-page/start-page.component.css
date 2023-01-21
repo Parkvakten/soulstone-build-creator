@@ -1,0 +1,25 @@
+.grid{
+    display: grid;
+    gap: 1.5em;
+    grid-template-rows: repeat(3,1fr);
+
+}
+
+.share-grid{
+    justify-self: flex-end;
+}
+
+.text{
+    margin: .5em;
+    border: 2px solid;
+    
+    border-color: var(--border-outer-color);
+    border-top-color: white;
+    outline: 2px solid var(--border-color);
+    outline-offset: -3px;
+    padding: .5em;
+}
+
+.text > h1{
+    color: var(--text-title-color);
+}

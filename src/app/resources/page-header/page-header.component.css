@@ -1,0 +1,30 @@
+.header-container{
+    width: 100%;
+    /* position: fixed; */
+}
+
+.button-container{
+    display: -webkit-flex;
+  display: flex;
+  background-color: var(--container-bg-dark);
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  justify-content: center;
+  position: relative;
+}
+.image{
+    align-content: space-around;
+       margin-right: 15px; 
+       margin-left: 15px;
+}
+
+.home{
+  color: var(--text-title-color);
+    cursor: pointer;
+    order: -1;
+  font-size: 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
