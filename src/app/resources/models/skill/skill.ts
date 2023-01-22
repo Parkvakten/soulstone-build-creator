@@ -28,7 +28,7 @@ export interface IStatusEffect {
    id: number
 }
 
-type StatusEffectTitle = "Doom" | "Fragility" | "Slow" | "Burn" | "Poison" | "Cursed" | "Melting" | "Bleed" | "Hemorrhage" | "Rot" | "Weakness" | "Brittle" | "Paralysis" | "Stun" | "Dazed" | "Disoriented" | "Exposed" | "Vulnerable" | "Distracted" | "Confused" | "Wound" | "Negative Effect"
+export type StatusEffectTitle = "Doom" | "Fragility" | "Slow" | "Burn" | "Poison" | "Cursed" | "Melting" | "Bleed" | "Hemorrhage" | "Rot" | "Weakness" | "Brittle" | "Paralysis" | "Stun" | "Dazed" | "Disoriented" | "Exposed" | "Vulnerable" | "Distracted" | "Confused" | "Wound" | "Negative Effect"
 
 type SkillType = 
    'Arcane' | 'Fire' | 'Chaos' | 'Physical' | 'Ice' | 'Electric' | 'Nature' | 'Shadow' | 'Holy' | 

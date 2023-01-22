@@ -19,7 +19,7 @@ export class AppDB extends Dexie {
         characters: '++id',
         weapons: '++id',
         active_skills: '++id',
-        status_effects: '++id',
+        status_effects: '++id,effectTitle',
         runes: '++id'
     });
     //this.on('populate', () => this.populate());

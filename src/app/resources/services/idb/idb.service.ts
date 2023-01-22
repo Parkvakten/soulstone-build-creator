@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Table } from 'dexie';
-import { defer, from, Observable } from 'rxjs';
+import { defer, from, Observable, of } from 'rxjs';
 import { IdbDatabase } from 'src/app/idbconfig';
 import { ICharacter } from '../../models/character/character';
 import { IRune } from '../../models/rune/rune';
@@ -78,6 +78,11 @@ export class IdbService {
     const obs$ = from(table.toArray());
     //const obs$ = defer(() => from(table.toArray()))
     return obs$ as Observable<T[]>
+  }
+
+  getItemByIndex$<T>(table:Table,key:string, indexObj?: string, indexArr?: string[]):Observable<T[]>{
+    const obs$ = from(table.where(key).anyOf(indexObj? indexObj : indexArr? indexArr : '').toArray())
+    return obs$
   }
 
 

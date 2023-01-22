@@ -7,6 +7,7 @@ import { PageHeaderComponent } from './resources/page-header/page-header.compone
 import { StartPageComponent } from './modules/start-page/start-page.component';
 import { CreateBuildComponent } from './modules/create-build/create-build.component';
 import { ViewSkillsComponent } from './modules/view-skills/view-skills.component';
+import { SkillContainerComponent } from './modules/shared/skill-container/skill-container/skill-container.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ViewSkillsComponent } from './modules/view-skills/view-skills.component
     PageHeaderComponent,
     StartPageComponent,
     CreateBuildComponent,
-    ViewSkillsComponent
+    ViewSkillsComponent,
+    SkillContainerComponent
   ],
   imports: [
     BrowserModule,
