@@ -3,4 +3,6 @@
     margin-left: 25%;
     margin-right: 25%;
     background-color: var(--container-bg-dark);
+    color: white;
+    font-size: 18px;    
 }
