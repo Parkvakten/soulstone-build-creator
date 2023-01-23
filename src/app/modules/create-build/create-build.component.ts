@@ -20,39 +20,23 @@ $getCharacters: Observable<ICharacter[]> = this.idbService.getAllItems$<ICharact
 }))
 
 $getWeapons: Observable<IWeapon[]> = this.idbService.getAllItems$<IWeapon>(this.idbService.db.weapons).pipe(map((res)=>{
-  
-  console.log('res for get weapons',res);
+  console.log('res for get weapons',res)
   return res;
 }))
 
 
 $getStatusEffects: Observable<IStatusEffect[]> = this.idbService.getAllItems$<IStatusEffect>(this.idbService.db.status_effects).pipe(map((res)=>{
-  console.log('res for get statusEffects',res);
+  console.log('res for get status effects',res)
   return res;
 }))
   
 
-$getSkills: Observable<IActiveSkill> = this.idbService.getAllItems$<IActiveSkill>(this.idbService.db.active_skills).pipe(switchMap((res)=>{
+$getSkills: Observable<IActiveSkill[]> = this.idbService.getAllItems$<IActiveSkill>(this.idbService.db.active_skills).pipe(map((res)=>{
   console.log('res for get skills',res);
-  res.forEach((skill)=>{
-    
-    if(skill.statusEffect !== undefined){
-      console.log('skill',skill)
-      return this.idbService.getItemByIndex$<IStatusEffect>(this.idbService.db.status_effects,'effectTitle',undefined,skill.statusEffect).pipe(mergeMap((statusEffect: IStatusEffect[])=>{
-        console.log('got status effect',statusEffect)
-        skill.statusEffectObj = statusEffect;
-        console.log(skill.statusEffectObj)
-        return statusEffect
-      }))
-    }else {
-      return res
-    }
-  })
   return res;
 }))
 
 $getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbService.db.runes).pipe(map((res)=>{
-  
   console.log('res for get runes',res);
   return res;
 }))

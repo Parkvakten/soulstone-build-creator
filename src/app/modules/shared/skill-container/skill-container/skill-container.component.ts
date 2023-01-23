@@ -22,10 +22,4 @@ export class SkillContainerComponent {
     
   }
 
-   getStatusEffect$(statusEffect: StatusEffectTitle[] | undefined):Observable<IStatusEffect[]>{
-    //return of([]);
-     return this.idbService.getItemByIndex$<IStatusEffect>(this.idbService.db.status_effects,'effectTitle',undefined, statusEffect)
-
-   }
-
 }

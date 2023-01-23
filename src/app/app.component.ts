@@ -18,8 +18,29 @@ export class AppComponent implements OnInit{
   status_effects: IStatusEffect[] = require('../app/resources/JSONS/status_effects.json');
   weapons: IWeapon[]  = require('../app/resources/JSONS/weapons.json');
   //versions: Versions[] = this.getVersionsFromLocalStorage();
+
+  formatSkills(){
+    this.active_skills.slice(1,this.active_skills.length).forEach((skill,skillIndex)=>{
+      if(skill.statusEffect !== undefined){
+
+        skill.statusEffectObj = this.status_effects.filter((item)=>{
+          if(skill.statusEffect?.includes(item.effectTitle)){
+            return item
+          }else{
+            return
+          }
+        })
+      }
+    })
+  }
+
+  
   
   constructor(private idbService: IdbService, private versionService: VersionService) {
+    if(this.versionService.checkVersion(this.versionService.getVersionNumber('active_skills'),JSON.parse(JSON.stringify(this.active_skills[0])) as Versions)){
+      this.formatSkills();
+    }
+
   }
 
  /*
@@ -110,75 +131,6 @@ export class AppComponent implements OnInit{
    
   }
 
-  // addVersion(version: Versions){
-  //   let versionsObj: Versions[] = [];
-  //   let storageVersions: string | null = localStorage.getItem('versions');
-  //   if(storageVersions !== null){
-  //     versionsObj = JSON.parse(storageVersions);
-  //     versionsObj = versionsObj.filter((versionObj)=> {
-  //       return versionObj.objectName !==version.objectName
-  //     })
-  //     versionsObj.push(version);
-  //     localStorage.setItem('versions',JSON.stringify(versionsObj))
-  //   }else{
-  //     versionsObj.push(version)
-  //     localStorage.setItem('versions',JSON.stringify(versionsObj))
-  //   }
-  // }
-
-  // addVersions(){
-  //   let versions: string[] = [JSON.stringify(this.active_skills[0]),
-  //   JSON.stringify(this.runes[0]),
-  //   JSON.stringify(this.status_effects[0]),
-  //   JSON.stringify(this.weapons[0])]
-    
-  //   localStorage.setItem('versions',JSON.stringify(versions)) 
-  // }
-
-  // getVersionsFromLocalStorage(): Versions[]{
-  //   let storageVersions: string | null = localStorage.getItem('versions');
-  //   let versions: Versions[] = [];
-  //   if(storageVersions !== null){
-      
-  //     versions = JSON.parse(storageVersions)
-  //     versions.forEach((version,index)=> {
-  //       versions[index] = JSON.parse(JSON.stringify(version)) as Versions;
-  //     })
-  //     return versions;
-  //   }else{
-  //     return [];
-  //   }
-    
-  // }
-
-  // getVersionNumber(objectName:string):number | undefined{
-  //   if(this.versions.length > 0){
-  //     let index = this.versions.findIndex((item)=> {
-  //       return item.objectName === objectName;
-  //     })
-  //     return index !== -1 ? this.versions[index].version : undefined;
-  //   }else{
-  //     return undefined
-  //   }
-  // }
-
-
-  // checkVersion(localStorageVersionNumber: number | undefined, newVersionNumber: Versions): Observable<boolean>{
-    
-  //   //Om versionen i json filen är undefined behöver vi lägga till den då den inte finns.
-  //   //Vi laddar även om data
-  //   if(localStorageVersionNumber){
-  //     if(newVersionNumber.version > localStorageVersionNumber){
-  //       return of(true)
-  //     }else{
-  //       return of(false);
-  //     }
-  //   }else{
-  //     return of(true)
-  //   }
-    
-    
-  // }
 
  
 

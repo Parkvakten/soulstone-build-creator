@@ -1,10 +1,12 @@
 <div>
-    <!-- <img [src]="this.skill.activeSkill.icon"> -->
+    <img [alt]="this.skill.activeSkill.title" [src]="this.skill.activeSkill.icon">
     <h1> {{this.skill.activeSkill.title}} </h1>
 
     <p> {{this.skill.activeSkill.description}} </p>
-    <!-- <div *ngIf="this.skill.statusEffect !== undefined">
-        <div *ngFor="let statusEffect of this.getStatusEffect$(this.skill.statusEffect) | async" >
-            {{statusEffect}} </div>
-    </div> -->
+    <div *ngIf="this.skill.statusEffect !== undefined">
+        <p *ngFor="let object of this.skill.statusEffectObj">
+            {{object.effectDetail}}
+        </p>
+    </div>
+
 </div>
