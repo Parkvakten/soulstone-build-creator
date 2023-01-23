@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Table } from 'dexie';
-import { defer, from, Observable, of } from 'rxjs';
+import { defer, from, map, mergeMap, Observable, of } from 'rxjs';
 import { IdbDatabase } from 'src/app/idbconfig';
 import { ICharacter } from '../../models/character/character';
 import { IRune } from '../../models/rune/rune';
@@ -81,7 +81,10 @@ export class IdbService {
   }
 
   getItemByIndex$<T>(table:Table,key:string, indexObj?: string, indexArr?: string[]):Observable<T[]>{
-    const obs$ = from(table.where(key).anyOf(indexObj? indexObj : indexArr? indexArr : '').toArray())
+    const obs$ = from(table.where(key).anyOf(indexObj? indexObj : indexArr? indexArr : '').toArray()).pipe(mergeMap((res)=>{
+      console.log('res',res)
+      return res;
+    }))
     return obs$
   }
 

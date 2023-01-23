@@ -3,8 +3,8 @@
     <h1> {{this.skill.activeSkill.title}} </h1>
 
     <p> {{this.skill.activeSkill.description}} </p>
-    <div *ngIf="this.skill.statusEffect !== undefined">
+    <!-- <div *ngIf="this.skill.statusEffect !== undefined">
         <div *ngFor="let statusEffect of this.getStatusEffect$(this.skill.statusEffect) | async" >
             {{statusEffect}} </div>
-    </div>
+    </div> -->
 </div>

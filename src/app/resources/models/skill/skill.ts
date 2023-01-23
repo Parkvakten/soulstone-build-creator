@@ -4,6 +4,7 @@ export interface IActiveSkill {
    cooldown:number
    skillType: SkillType[],
    id: number,
+   statusEffectObj?:IStatusEffect[]
 }
 
 export interface IPassiveSkill {

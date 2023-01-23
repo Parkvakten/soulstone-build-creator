@@ -11,8 +11,8 @@
         </div>
     </div>
     
-    <div *ngFor="let skill of $getSkills | async" >
-        <app-skill-container [skill]="skill"></app-skill-container>
+    <div *ngFor="let skill in $getSkills | async" >
+        <app-skill-container></app-skill-container>
     </div>
     
     <div *ngFor="let rune of $getRunes | async" >
