@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { map, mergeMap, Observable, of, switchMap } from 'rxjs';
+import { generateBuild, IBuild } from 'src/app/resources/models/build/build';
 import { ICharacter } from 'src/app/resources/models/character/character';
 import { IRune } from 'src/app/resources/models/rune/rune';
 import { IActiveSkill, IStatusEffect } from 'src/app/resources/models/skill/skill';
 import { IWeapon } from 'src/app/resources/models/weapon/weapon';
+import { BuildService } from 'src/app/resources/services/build/build.service';
 import { IdbService } from 'src/app/resources/services/idb/idb.service';
 
 @Component({
@@ -11,8 +13,12 @@ import { IdbService } from 'src/app/resources/services/idb/idb.service';
   templateUrl: './create-build.component.html',
   styleUrls: ['./create-build.component.css']
 })
-export class CreateBuildComponent implements OnInit {
   
+
+export class CreateBuildComponent implements OnInit {
+  selectedIndex: number = -1;
+  
+
 $getCharacters: Observable<ICharacter[]> = this.idbService.getAllItems$<ICharacter>(this.idbService.db.characters).pipe(map((res)=>{
   console.log('res for get characters',res);
   return res;
@@ -41,10 +47,43 @@ $getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbSer
   return res;
 }))
 
-  constructor(private idbService: IdbService) { }
+$getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idbService.db.builds)
+.pipe(
+  map((res)=>{
+    console.log('res for get builds',res);
+    return res
+  })
+)
 
+  currentBuild: IBuild | null = null
+
+  constructor(private idbService: IdbService, private buildService: BuildService) {
+    this.buildService.currentBuild$.subscribe((res)=>{      
+      this.currentBuild = res;
+    })}
+  
+
+   addBuild(){
+    let build: IBuild = generateBuild();
+    
+    this.idbService.getTableLength(this.idbService.db.builds).then((res)=>{
+      build.id = res+1;
+      this.buildService._setNewCurrentBuild(build);
+      return this.idbService.addItem$(this.idbService.db.builds,build)
+    })
+    
+   }
+
+   navigateToBuild(build:IBuild){
+    this.buildService._setNewCurrentBuild(build)
+   }
+   
+   setSelected(index: number){
+    this.selectedIndex = index
+   }
   ngOnInit(): void {
   }
 
+  
 
 }

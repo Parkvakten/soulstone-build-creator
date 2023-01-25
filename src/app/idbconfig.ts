@@ -1,5 +1,6 @@
 // db.ts
 import Dexie, { Table } from 'dexie';
+import { IBuild } from './resources/models/build/build';
 import { ICharacter } from './resources/models/character/character';
 import { IRune } from './resources/models/rune/rune';
 import { IActiveSkill, IStatusEffect } from './resources/models/skill/skill';
@@ -12,6 +13,7 @@ export class AppDB extends Dexie {
     active_skills!: Table<IActiveSkill>;
     status_effects!: Table<IStatusEffect>;
     runes!: Table<IRune>;
+    builds!: Table<IBuild>
 
   constructor() {
     super('SoulstoneBuildCreator');
@@ -20,7 +22,8 @@ export class AppDB extends Dexie {
         weapons: '++id',
         active_skills: '++id',
         status_effects: '++id,effectTitle',
-        runes: '++id'
+        runes: '++id',
+        builds: '++id'
     });
     //this.on('populate', () => this.populate());
   }

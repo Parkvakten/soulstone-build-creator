@@ -1,0 +1,22 @@
+.first-step-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.div-right{
+    width: 60%;
+}
+.button{
+    color: var();
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.grid-item{
+    cursor: pointer;
+}
+
+.title{
+    color: var(--text-title-color);
+}

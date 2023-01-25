@@ -6,6 +6,7 @@ import { IdbService } from './resources/services/idb/idb.service';
 import { forkJoin, map, Observable, of, switchMap } from 'rxjs';
 import { Version } from '@angular/compiler';
 import { Versions, VersionService } from './resources/services/version/version.service';
+import { ICharacter } from './resources/models/character/character';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit{
   runes: IRune[] = require('../app/resources/JSONS/runes.json');
   status_effects: IStatusEffect[] = require('../app/resources/JSONS/status_effects.json');
   weapons: IWeapon[]  = require('../app/resources/JSONS/weapons.json');
+  characters: ICharacter[] = require('../app/resources/JSONS/characters.json')
   //versions: Versions[] = this.getVersionsFromLocalStorage();
 
   formatSkills(){
@@ -34,11 +36,26 @@ export class AppComponent implements OnInit{
     })
   }
 
+  formatCharacter(){
+    this.characters.slice(1,this.characters.length).forEach((character)=>{
+      character.weapons = this.weapons.filter((weapon)=>{
+        if(character.characterType === weapon.class){
+          return weapon
+        }else{
+          return
+        }
+      })
+    })
+  }
+
   
   
   constructor(private idbService: IdbService, private versionService: VersionService) {
     if(this.versionService.checkVersion(this.versionService.getVersionNumber('active_skills'),JSON.parse(JSON.stringify(this.active_skills[0])) as Versions)){
       this.formatSkills();
+    }
+    if(this.versionService.checkVersion(this.versionService.getVersionNumber('characters'),JSON.parse(JSON.stringify(this.characters[0])) as Versions)){
+      this.formatCharacter();
     }
 
   }
@@ -46,7 +63,7 @@ export class AppComponent implements OnInit{
  /*
  Att göra:
   Fixa bilder för
-    -Tom actionbar slots
+    -Tom actionbar slots 
     -Runor
  */
 
@@ -63,14 +80,14 @@ export class AppComponent implements OnInit{
     */
     //console.log('this.versions',this.versions[0].version)
     
-   this.populateIdbWithJSON(this.active_skills,this.runes,this.status_effects,this.weapons).subscribe((res)=> {
+   this.populateIdbWithJSON(this.active_skills,this.runes,this.status_effects,this.characters,this.weapons).subscribe((res)=> {
     console.log('res',res);
    })
    
    //Hämta data för runor, vapen och skills.
    
   }
-  populateIdbWithJSON(active_skills: IActiveSkill[], runes: IRune[], status_effects: IStatusEffect[], weapons: IWeapon[]):Observable<boolean[]> {
+  populateIdbWithJSON(active_skills: IActiveSkill[], runes: IRune[], status_effects: IStatusEffect[],characters: ICharacter[], weapons: IWeapon[]):Observable<boolean[]> {
   let boolArr: boolean[] = [];
    const active_skills$ =  
   this.versionService.checkVersion(this.versionService.getVersionNumber('active_skills'),JSON.parse(JSON.stringify(active_skills[0])) as Versions).pipe(
@@ -109,6 +126,18 @@ export class AppComponent implements OnInit{
       }
     }))
 
+    const characters$ = this.versionService.checkVersion(this.versionService.getVersionNumber('characters'),JSON.parse(JSON.stringify(characters[0])) as Versions).pipe(
+      switchMap((res)=>{
+        if(res){
+          this.versionService.addVersion(JSON.parse(JSON.stringify(this.characters[0])) as Versions)
+          this.characters.shift();
+          return this.idbService.populateCharacters$(characters)
+        }else{
+          return of(false);
+        }
+      })
+    )
+
    const weapons$ = this.versionService.checkVersion(this.versionService.getVersionNumber('weapons'),JSON.parse(JSON.stringify(weapons[0])) as Versions).pipe(
     switchMap((res)=> {
       if(res){
@@ -122,7 +151,7 @@ export class AppComponent implements OnInit{
     }))
 
 
-  return forkJoin([active_skills$,runes$,status_effects$,weapons$]).pipe(map((addRes: any[])=> {
+  return forkJoin([active_skills$,runes$,status_effects$,characters$, weapons$]).pipe(map((addRes: any[])=> {
     addRes.forEach((res)=> {
      boolArr.push(res);
     })

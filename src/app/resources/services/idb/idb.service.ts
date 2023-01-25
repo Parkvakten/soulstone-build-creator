@@ -15,6 +15,16 @@ export class IdbService {
   constructor() { }
   public db = IdbDatabase;
 
+  addItem$(table: Table, object: any):Observable<boolean>{
+    const obs$ = from(table.add(object).then((res)=>{
+      console.log('res from add',res)
+      return true;
+    }).catch(()=>{
+      return false;
+    }))
+    return obs$;
+  }
+
   populateSkills$(skills: IActiveSkill[]):Observable<boolean>{
     
     const obs$ = defer(()=> from(IdbDatabase.active_skills.bulkAdd(skills).then((res)=>{
@@ -69,10 +79,10 @@ export class IdbService {
     return obs$
   }
 
-  getTableLength(table: Table): Observable<number>{
-     const obs$ = defer(()=> from(table.count()))
-    return obs$
+  getTableLength(table:Table){
+    return table.count()
   }
+
 
   getAllItems$<T>(table:Table): Observable<T[]>{
     const obs$ = from(table.toArray());
@@ -80,12 +90,29 @@ export class IdbService {
     return obs$ as Observable<T[]>
   }
 
-  getItemByIndex$<T>(table:Table,key:string, indexObj?: string, indexArr?: string[]):Observable<T[]>{
-    const obs$ = from(table.where(key).anyOf(indexObj? indexObj : indexArr? indexArr : '').toArray()).pipe(mergeMap((res)=>{
+  getItemByIndex$<T>(table:Table,key:string, index: any):Observable<T>{
+    const obs$ = from(table.where(key).equals(index).toArray()).pipe(mergeMap((res)=>{
       console.log('res',res)
       return res;
     }))
     return obs$
+  }
+
+  getItemsByIndex$<T>(table: Table, key:string,indexArr: string[]):Observable<T[]>{
+    const obs$ = from(table.where(key).anyOf(indexArr).toArray());
+    return obs$
+  }
+
+  deleteItem$(id:number,table:Table):Observable<any>{
+    const obs$ = from(table.delete(id));
+    return obs$;
+  }
+
+  updateItem$<T>(table:Table,id:number,changes:object):Observable<T>{
+const obs$ = from(table.update(id,changes).then(()=>{
+  return changes as any
+}))
+return obs$
   }
 
 

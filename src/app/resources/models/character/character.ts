@@ -4,12 +4,13 @@ import { IStat } from "../stat/stat";
 import { IWeapon } from "../weapon/weapon";
 
 export interface ICharacter {
-    weapon: IWeapon,
-    runes: IRune[],
-    runicPower: number,
-    stats: IStat[]
-    actionBar: IActionBar,
     characterType: CharacterType
+    weapons: IWeapon[],
+    stats: IStat[]
+    //runicPower: number,
+    
+   //actionBar: IActionBar,
+    
 
 }
 
