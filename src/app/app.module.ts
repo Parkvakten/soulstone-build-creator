@@ -10,6 +10,7 @@ import { ViewSkillsComponent } from './modules/view-skills/view-skills.component
 import { SkillContainerComponent } from './modules/shared/skill-container/skill-container/skill-container.component';
 import { CharacterContainerComponent } from './modules/shared/character-container/character-container/character-container.component';
 import { SelectorBaseComponent } from './modules/shared/selector-base/selector-base/selector-base.component';
+import { BuilContainerComponent } from './modules/shared/build-container/build-container/build-container.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SelectorBaseComponent } from './modules/shared/selector-base/selector-b
     ViewSkillsComponent,
     SkillContainerComponent,
     CharacterContainerComponent,
-    SelectorBaseComponent
+    SelectorBaseComponent,
+    BuilContainerComponent
   ],
   imports: [
     BrowserModule,

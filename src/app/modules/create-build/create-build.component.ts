@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { map, mergeMap, Observable, of, switchMap } from 'rxjs';
+import { Component, Input, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { map, mergeMap, Observable, of, switchMap, take } from 'rxjs';
 import { generateBuild, IBuild } from 'src/app/resources/models/build/build';
 import { ICharacter } from 'src/app/resources/models/character/character';
 import { IRune } from 'src/app/resources/models/rune/rune';
@@ -7,6 +8,8 @@ import { IActiveSkill, IStatusEffect } from 'src/app/resources/models/skill/skil
 import { IWeapon } from 'src/app/resources/models/weapon/weapon';
 import { BuildService } from 'src/app/resources/services/build/build.service';
 import { IdbService } from 'src/app/resources/services/idb/idb.service';
+
+
 
 @Component({
   selector: 'app-create-build',
@@ -17,8 +20,8 @@ import { IdbService } from 'src/app/resources/services/idb/idb.service';
 
 export class CreateBuildComponent implements OnInit {
   selectedIndex: number = -1;
+  selectedSkillIndex: number = -1;
   
-
 $getCharacters: Observable<ICharacter[]> = this.idbService.getAllItems$<ICharacter>(this.idbService.db.characters).pipe(map((res)=>{
   console.log('res for get characters',res);
   return res;
@@ -56,12 +59,18 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
 )
 
   currentBuild: IBuild | null = null
+  
 
-  constructor(private idbService: IdbService, private buildService: BuildService) {
+  constructor(private idbService: IdbService, private buildService: BuildService,private router: Router,private route:ActivatedRoute) {
     this.buildService.currentBuild$.subscribe((res)=>{      
       this.currentBuild = res;
     })}
   
+    goBack(){
+      this.router.navigate([
+        '/create'
+      ],{relativeTo:this.route})
+    }
 
    addBuild(){
     let build: IBuild = generateBuild();
@@ -74,10 +83,54 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
     
    }
 
-   navigateToBuild(build:IBuild){
-    this.buildService._setNewCurrentBuild(build)
+   checkNextButton():boolean{
+    /*
+      sista steget är runes, så som det finns ett värde i runes så ska den alltid returnera true
+    */
+
+    let returnBool: boolean = false;
+    if(this.currentBuild){
+      if(this.currentBuild.stepNumber === 0 && this.currentBuild.selectedWeapon !== undefined){
+        returnBool = true
+      }else if(this.currentBuild.stepNumber === 1 && this.currentBuild.selectedWeapon !== undefined){
+        returnBool = true
+      }else if(this.currentBuild.selectedRunes !== undefined){
+        returnBool = true
+      }
+     
+          
+      }
+    
+    return returnBool;
    }
+
+   filterSkills(eventString: Event){
+      const value = (eventString.target as HTMLInputElement).value;
+      this.$getSkills.pipe(map((res)=>{
+        res.filter((r)=>{
+          console.log('value',value)
+          return r.activeSkill.title === value
+        })
+      })).subscribe()
+   }
+
+   previousStep(){
+    if(this.currentBuild){
+    this.buildService.previousStep(this.currentBuild)
+  }
+   }
+
+   nextStep(){
+    if(this.currentBuild){
+      this.buildService.nextStep(this.currentBuild)
+    }
+    
+   }
+
    
+   setSelectedSkillIndex(index:number){
+    this.selectedSkillIndex = index;
+   }
    setSelected(index: number){
     this.selectedIndex = index
    }
@@ -86,4 +139,20 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
 
   
 
+}
+
+@Pipe({
+  name: 'filterSkills'
+})
+export class SkillsFilterPipe implements PipeTransform{
+  transform(skills:IActiveSkill[],filterTerm?: any): IActiveSkill[] {
+    if(filterTerm === undefined){
+      return skills
+    }else{
+      return skills.filter((skill)=>{
+        return skill.activeSkill.title.toLowerCase() === filterTerm.toLowerCase()
+      })
+    }
+  }
+  
 }

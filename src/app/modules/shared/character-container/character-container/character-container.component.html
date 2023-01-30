@@ -1,12 +1,19 @@
 <div class="character-container">
 <div *ngIf="this.stepNumber === 0" >
     {{character.characterType}}
-    <app-selector-base [selected]="this.selected" [selectItem]="{objectKey:'selectedCharacter',item:character}" [currentBuild]="this.currentBuild"></app-selector-base>
+    <app-selector-base 
+    [selected]="this.selected" 
+    [selectItem]="{objectKey:'selectedCharacter',item:character}" 
+    [currentBuild]="this.currentBuild"></app-selector-base>
 </div>
 <div *ngIf="this.stepNumber === 1" >
     <div *ngFor="let weapon of character.weapons; let i = index" (click)="setSelectedIndex(i)" >
         {{weapon.name}}
-        <app-selector-base [selected]="this.selected && this.selectedIndex === i" [selectItem]="{objectKey:'selectedWeapon',item:weapon}" ></app-selector-base>
+        <app-selector-base 
+        [selected]="this.selected && this.selectedIndex === i"
+        [selectItem]="{objectKey:'selectedWeapon',item:weapon}"
+        [currentBuild]="this.currentBuild"
+        ></app-selector-base>
     </div>
     
 </div>

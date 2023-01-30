@@ -277,7 +277,7 @@
     },
     {
         "activeSkill": {
-            "icon": "assets/skill_icons/ChaosGolem.png",
+            "icon": "assets/skill_icons/SummonChaosGolem.png",
             "title": "Chaos Golem",
             "description": "Summon 1 chaos golem to fight for you. A maximum of 3 units can be active at any time. Chaos Golems deal a random amount of damage between 1 and 2000 and inflict Stun and a Random Powerful Negative Effect in a large area."
             
@@ -325,8 +325,8 @@
     },
     {
         "activeSkill": {
-            "icon": "assets/skill_icons/ManifestationOfChaos.png",
-            "title": "Manifestation of Chaos",
+            "icon": "assets/skill_icons/ManifestationsOfChaos.png",
+            "title": "Manifestations of Chaos",
             "description": "Release a total of 4 projectiles that move randomly, dealing a random amount of damage between 1 and 300 and applying a Random Powerful Negative Effect to enemies caught in their path."
             
            
@@ -579,7 +579,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FireBolt.png",
             "title": "Fire Bolt",
-            "description": "Shoots a fiery projectile in the direction you are aiming at, causing 200 damage and applying 6 stacks of Burn: 300 damage over 8 seconds."
+            "description": "Shoots a fiery projectile in the direction you are aiming at, causing 200 damage and applying 6 stacks of Burn 300 damage over 8 seconds."
             
             
         },"id": 49,
@@ -591,7 +591,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Meteor.png",
             "title": "Meteor",
-            "description": "Hurls a large meteor at a random enemy, dealing 400 damage and strong pushback, inflicting 6 seconds Stun and Burn: 200 damage over 8 seconds."
+            "description": "Hurls a large meteor at a random enemy, dealing 400 damage and strong pushback, inflicting 6 seconds Stun and Burn 200 damage over 8 seconds."
             
             
         },"id": 50,
@@ -603,7 +603,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FlameWave.png",
             "title": "Flame Wave",
-            "description": "Causes a large explosion at your position, dealing 150 damage to nearby enemies, applying 1 stacks of Burn: 400 damage over 8 seconds, 2 seconds Stun and pushing them back."
+            "description": "Causes a large explosion at your position, dealing 150 damage to nearby enemies, applying 1 stacks of Burn 400 damage over 8 seconds, 2 seconds Stun and pushing them back."
            
             
         }, "id": 51,
@@ -615,7 +615,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FireWall.png",
             "title": "Fire Wall",
-            "description": "Creates a wall of fire at the feet of a random enemy, applying Burn: 480 damage over 8 seconds to any enemy that crosses it."
+            "description": "Creates a wall of fire at the feet of a random enemy, applying Burn 480 damage over 8 seconds to any enemy that crosses it."
             
             
         },"id": 52,
@@ -627,7 +627,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/MeteorShower.png",
             "title": "Meteor Shower",
-            "description": "15 small meteorites hit the ground around a random enemy, dealing 100 damage per meteorite and inflicting 5 seconds Stun and Burn: 200 damage over 8 seconds."
+            "description": "15 small meteorites hit the ground around a random enemy, dealing 100 damage per meteorite and inflicting 5 seconds Stun and Burn 200 damage over 8 seconds."
             
             
         },"id": 53,
@@ -661,7 +661,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FireWalk.png",
             "title": "Fire Walk",
-            "description": "For the next 6 seconds, leave a trail of fire behind you, applying 1 stacks of Burn: 60 damage over 8 seconds every 1 seconds to enemies standing in the fire."
+            "description": "For the next 6 seconds, leave a trail of fire behind you, applying 1 stacks of Burn 60 damage over 8 seconds every 1 seconds to enemies standing in the fire."
             
             
         },"id": 56,
@@ -697,7 +697,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FireSlash.png",
             "title": "Fire Slash",
-            "description": "Sends a fiery slash forward, causing 50 damage and applying 1 stacks of Burn: 170 damage over 8 seconds."
+            "description": "Sends a fiery slash forward, causing 50 damage and applying 1 stacks of Burn 170 damage over 8 seconds."
             
             
         },"id": 59,
@@ -709,7 +709,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Combustion.png",
             "title": "Combustion",
-            "description": "You emit an aura of fire for 6 seconds, applying 1 stacks of Burn: 70 damage over 8 seconds to enemies that stay near you every 0.5 seconds"
+            "description": "You emit an aura of fire for 6 seconds, applying 1 stacks of Burn 70 damage over 8 seconds to enemies that stay near you every 0.5 seconds"
             
             
         },"id": 60,
@@ -721,7 +721,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FieryMissiles.png",
             "title": "Fiery Missiles",
-            "description": "While attack is channeled, you automatically launch fiery missiles that seek 3 random targets, dealing 5 damage and applying 1 stacks of Burn: 40 damage over 8 seconds in a tiny area."
+            "description": "While attack is channeled, you automatically launch fiery missiles that seek 3 random targets, dealing 5 damage and applying 1 stacks of Burn 40 damage over 8 seconds in a tiny area."
             
             
         },"id": 61,
@@ -814,7 +814,7 @@
     },
     {
         "activeSkill": {
-            "icon": "assets/skill_icons/ShadowStrike.png",
+            "icon": "assets/skill_icons/ShadowSpikes.png",
             "title": "Shadow Spike",
             "description": "Shadow spikes are summoned from the ground in a straight line towards a random enemy, causing 230 damage and applying Doom: 350 delayed damage."
             
@@ -862,7 +862,7 @@
     },
     {
         "activeSkill": {
-            "icon": "assets/skill_icons/SummonSkeletalMage.png",
+            "icon": "assets/skill_icons/SummonSkeletonsMage.png",
             "title": "Skeletal Mage",
             "description": "Summon 1 skeletal mage to fight for you. A maximum of 4 Skeletal Mages can be active at any time."
             
@@ -873,7 +873,7 @@
     },
     {
         "activeSkill": {
-            "icon": "assets/skill_icons/SummonSkeletalArchers.png",
+            "icon": "assets/skill_icons/SummonSkeletonsArcher.png",
             "title": "Skeletal Archers",
             "description": "Summon 2 skeletal archers to fight for you. A maximum of 4 Skeletal Archers can be active at any time."
             
@@ -920,7 +920,7 @@
     },
     {
         "activeSkill": {
-            "icon": "assets/skill_icons/SummonSkeletalWarriors.png",
+            "icon": "assets/skill_icons/SummonSkeletonsWarrior.png",
             "title": "Skeletal Warriors",
             "description": "Summon 3 skeletal warriors to fight for you. A maximum of 12 Skeletal Warriors can be active at any time."
             
@@ -1046,7 +1046,7 @@
     },
     {
         "activeSkill": {
-            "icon": "assets/skill_icons/BladeStorm.png",
+            "icon": "assets/skill_icons/Bladestorm.png",
             "title": "Bladestorm",
             "description": "Spin your weapon around you for a few seconds, hitting enemies all around you a total of 20 times, dealing 60 damage per hit."
             

@@ -46,18 +46,21 @@ export class BuildService {
     if(this.buildIdFromParams !== undefined){
       this.getBuild$(Number(this.buildIdFromParams)).pipe(take(1)).subscribe((res)=>{
         if(res !== undefined){
+          console.log('build from params',res)
           this._setNewCurrentBuild(res)
         }
       })
       
+    }else{
+      this._setNewCurrentBuild(null)
     }
     
   }
-  _setNewCurrentBuild(build: IBuild){
+  _setNewCurrentBuild(build: IBuild|null){
     this.shouldUpdateBuild = false;
     this.router.navigate([],{
       relativeTo: this.route,
-      queryParams: {'buildId':build.id},
+      queryParams: build !== null ? {'buildId':build.id} : null,
       queryParamsHandling: 'merge',
       replaceUrl:true
     })

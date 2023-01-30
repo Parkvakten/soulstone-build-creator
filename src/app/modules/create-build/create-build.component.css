@@ -9,14 +9,13 @@
 .button{
     color: var();
 }
-.grid-container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
-.grid-item{
-    cursor: pointer;
-}
+
 
 .title{
     color: var(--text-title-color);
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }

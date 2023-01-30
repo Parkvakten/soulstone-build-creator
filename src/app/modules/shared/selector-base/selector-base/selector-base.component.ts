@@ -23,13 +23,24 @@ export class SelectorBaseComponent {
   }
 
   saveItem(selectItem: ISelectItem){
-    debugger;
-      (this.currentBuild as any)[selectItem.objectKey] = selectItem.item;
+    switch (selectItem.objectKey) {
+      case 'selectedSkills':
+        this.currentBuild.selectedSkills === undefined ?
+         this.currentBuild.selectedSkills = [selectItem.item] :
+         this.currentBuild.selectedSkills.push(selectItem.item);
+        this.buildService._updateBuild(this.currentBuild);
+        if(this.currentBuild.selectedSkills !== undefined && this.currentBuild.selectedSkills.length === 6) {
+          this.buildService.nextStep(this.currentBuild)
+        }
+        break;
+    
+      default:
+        (this.currentBuild as any)[selectItem.objectKey] = selectItem.item;
       console.log(selectItem);
       this.buildService._updateBuild(this.currentBuild);
-      this.buildService.nextStep(this.currentBuild)
-      
-
+        this.buildService.nextStep(this.currentBuild)
+        break;
+    }
   }
 
   nextStep(){

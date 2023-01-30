@@ -1,0 +1,5 @@
+<div class="grid-container" >
+    <span (click)="navigateToBuild(build)" class="grid-item" *ngFor="let build of this.builds" >
+     <img *ngIf="build.icon" [src]="build.icon" >
+     {{build.buildName}}</span>
+ </div>
