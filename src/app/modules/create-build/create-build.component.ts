@@ -21,6 +21,7 @@ import { IdbService } from 'src/app/resources/services/idb/idb.service';
 export class CreateBuildComponent implements OnInit {
   selectedIndex: number = -1;
   selectedSkillIndex: number = -1;
+  selectedRuneIndex: number = -1;
   filterString:string = '';
   
 $getCharacters: Observable<ICharacter[]> = this.idbService.getAllItems$<ICharacter>(this.idbService.db.characters).pipe(map((res)=>{
@@ -46,7 +47,9 @@ $getSkills: Observable<IActiveSkill[]> = this.idbService.getAllItems$<IActiveSki
   return res;
 }))
 
-$getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbService.db.runes).pipe(map((res)=>{
+$getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbService.db.runes)
+.pipe(
+  map((res)=>{
   console.log('res for get runes',res);
   return res;
 }))
@@ -60,6 +63,7 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
 )
 
   currentBuild: IBuild | null = null
+  
   
 
   constructor(private idbService: IdbService, private buildService: BuildService,private router: Router,private route:ActivatedRoute) {
@@ -79,9 +83,13 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
     this.idbService.getTableLength(this.idbService.db.builds).then((res)=>{
       build.id = res+1;
       this.buildService._setNewCurrentBuild(build);
-      return this.idbService.addItem$(this.idbService.db.builds,build)
+      //return this.idbService.addItem$(this.idbService.db.builds,build)
     })
     
+   }
+
+   saveBuild(){
+    return this.idbService.addItem$(this.idbService.db.builds,this.currentBuild)
    }
 
    checkNextButton():boolean{
@@ -112,7 +120,9 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
     
    }
 
-   
+   setSelectedRuneIndex(index:number){
+    this.selectedRuneIndex = index;
+   }
    setSelectedSkillIndex(index:number){
     this.selectedSkillIndex = index;
    }

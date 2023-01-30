@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { debug } from 'console';
 import { IBuild } from 'src/app/resources/models/build/build';
 import { BuildService } from 'src/app/resources/services/build/build.service';
 
@@ -18,9 +19,12 @@ export class SelectorBaseComponent {
   @Input() buttonText: string = '';
   @Input() selected: boolean = false;
   @Input() selectedIndex: number = -1;
+  @Input() multiple: boolean = true;
   constructor(private buildService:BuildService) {
 
   }
+
+
 
   saveItem(selectItem: ISelectItem){
     switch (selectItem.objectKey) {
@@ -33,7 +37,17 @@ export class SelectorBaseComponent {
           this.buildService.nextStep(this.currentBuild)
         }
         break;
-    
+        case 'selectedRunes':
+          console.log(this.currentBuild.selectedRunes)
+          this.currentBuild.selectedRunes === undefined ?
+          this.currentBuild.selectedRunes = [selectItem.item] :
+          this.currentBuild.selectedRunes.push(selectItem.item);
+          this.buildService._updateBuild(this.currentBuild)
+          console.log(this.currentBuild.selectedRunes.length)
+          if(this.currentBuild.selectedRunes !== undefined && this.currentBuild.selectedRunes.length === 6){
+              this.buildService.nextStep(this.currentBuild)
+          }  
+        break;
       default:
         (this.currentBuild as any)[selectItem.objectKey] = selectItem.item;
       console.log(selectItem);

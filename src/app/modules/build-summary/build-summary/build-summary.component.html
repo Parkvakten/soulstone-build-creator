@@ -1,0 +1,10 @@
+<div class="build-summary-container" >
+    <div class="build-summary-character" > {{this.build.selectedCharacter}} </div>
+    <div class="build-summary-weapon" > {{this.build.selectedWeapon}} </div>
+    <div class="build-summary-skills" *ngFor="let skill of this.build.selectedSkills" >
+        <app-skill-container [skill]="skill"></app-skill-container>
+      </div>
+      <div class="build-summary-runes" *ngFor="let rune of this.build.selectedRunes" >
+        <app-rune-container [rune]="rune" ></app-rune-container>
+      </div>
+</div>

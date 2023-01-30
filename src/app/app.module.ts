@@ -12,7 +12,9 @@ import { CharacterContainerComponent } from './modules/shared/character-containe
 import { SelectorBaseComponent } from './modules/shared/selector-base/selector-base/selector-base.component';
 import { BuilContainerComponent } from './modules/shared/build-container/build-container/build-container.component';
 import { FormsModule } from '@angular/forms';
-import { FilterskillsPipe } from './resources/pipes/filterskills.pipe';
+import { RuneContainerComponent } from './modules/shared/rune_container/rune-container/rune-container.component';
+import { Filter } from './resources/pipes/filter.pipe';
+import { BuildSummaryComponent } from './modules/build-summary/build-summary/build-summary.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FilterskillsPipe } from './resources/pipes/filterskills.pipe';
     CharacterContainerComponent,
     SelectorBaseComponent,
     BuilContainerComponent,
-    FilterskillsPipe
+    RuneContainerComponent,
+    Filter,
+    BuildSummaryComponent
   ],
   imports: [
     BrowserModule,

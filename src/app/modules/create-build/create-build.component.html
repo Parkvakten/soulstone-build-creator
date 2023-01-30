@@ -1,6 +1,6 @@
-<button class="btn btn-outline-light" *ngIf="this.currentBuild" (click)="goBack()" >Create / Select Build</button>
-<button class="btn btn-outline-light" (click)="previousStep()" *ngIf="this.currentBuild && this.currentBuild.stepNumber > 0">Previous step</button>
-<button class="btn btn-outline-light" (click)="nextStep()" *ngIf="checkNextButton()" >Next step</button>
+<button class="btn btn-outline-light button" *ngIf="this.currentBuild" (click)="goBack()" >Create / Select Build</button>
+<button class="btn btn-outline-light button" (click)="previousStep()" *ngIf="this.currentBuild && this.currentBuild.stepNumber > 0">Previous step</button>
+<button class="btn btn-outline-light button" (click)="nextStep()" *ngIf="checkNextButton()" >Next step</button>
 <div class="first-step-container" *ngIf="!this.currentBuild" >
     <div class="div-left">
         <h3 class="title">Create build</h3>
@@ -25,16 +25,21 @@
     </div>
 </div>
 
-<div *ngIf="this.currentBuild.stepNumber === 2" class="skills-container" >
-    <input type="text" name="search" placeholder="Search skill name" [(ngModel)]="this.filterString">
-    <div *ngFor="let skill of $getSkills | async | filterskills:filterString; let i = index" >
+<input class="filter-field" *ngIf="this.currentBuild.stepNumber === 2 || this.currentBuild.stepNumber === 3"  type="text" name="search" [placeholder]="this.currentBuild.stepNumber === 2 ? '...Search skill name' : '...Search rune name'" [(ngModel)]="this.filterString">
+<div *ngIf="this.currentBuild.stepNumber === 2" class="grid-container" >
+    
+    <div *ngFor="let skill of $getSkills | async  | filter:filterString:'activeSkill':'title'; let i = index" >
         <app-skill-container (click)="setSelectedSkillIndex(i)" [skill]="skill" [currentBuild]="this.currentBuild" [selected]="this.selectedSkillIndex === i" ></app-skill-container>
     </div>
 </div>
 
-<div *ngIf="this.currentBuild.stepNumber === 3" >
-    <div *ngFor="let rune of $getRunes | async" >
-
+<div *ngIf="this.currentBuild.stepNumber === 3" class="grid-container" >
+    <div *ngFor="let rune of $getRunes | async | filter:filterString:'title'; let i = index" >
+        <app-rune-container (click)="setSelectedRuneIndex(i)" [rune]="rune" [currentBuild]="this.currentBuild" [selected]="this.selectedRuneIndex === i" ></app-rune-container>
     </div>
+</div>
+<div *ngIf="this.currentBuild.stepNumber === 4 " >
+    <button (click)="saveBuild()" >Save build</button>
+    <app-build-summary [build]="this.currentBuild" ></app-build-summary>
 </div>
 </div>

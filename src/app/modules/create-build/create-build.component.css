@@ -15,7 +15,14 @@
     color: var(--text-title-color);
 }
 
-.skills-container{
+.grid-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+}
+
+.filter-field{
+    margin: .5em;   
+}
+.button{
+    margin: .5em
 }

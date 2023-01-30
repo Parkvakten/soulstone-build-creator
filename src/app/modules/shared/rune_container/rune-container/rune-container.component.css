@@ -1,4 +1,4 @@
-.skill-container{
+.rune-container{
     border: 2px solid;
     border-color: var(--border-outer-color);
     border-top-color: white;
@@ -10,15 +10,19 @@
     justify-items: center;
     text-align: center;
     background-image: linear-gradient(var(--background),var(--container-bg-dark));
-    min-height: 670px;
+    min-height: 460px
 }
 
-.skill-icon{
+.rune-icon{
     width: 10em;
     height: 10em;
     
 }
 
-.skill-title{
+.rune-title{
     color: var(--title-color);
+}
+
+.selector-container{
+    width: 100%;
 }

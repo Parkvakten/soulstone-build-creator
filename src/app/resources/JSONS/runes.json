@@ -3,348 +3,406 @@
     "title": "Skill Affinity: Fire",
     "description": "You are guaranteed to be offered only skills that contain the type Fire the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":1
+    "id":1,
+    "icon":"assets/rune_icons/FireAffinity.png"
   },
   {
     "title": "Skill Mastery: Fire",
     "description": "Adds upp to 6 random Active Skills of type Fire that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":2
+    "id":2,
+    "icon":"assets/rune_icons/FireMastery.png"
   },
   {
     "title": "Skill Inclination: Fire",
     "description": "Increases the chance that active skills of type Fire will be offered to you when you level up",
     "runeCost": 3,
-    "id":3
+    "id":3,
+    "icon":"assets/rune_icons/FireInclination.png"
   },
   {
     "title": "Skill Affinity: Blast",
     "description": "You are guaranteed to be offered only skills that contain the type Blast the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":4
+    "id":4,
+    "icon":"assets/rune_icons/BlastAffinity.png"
   },
   {
     "title": "Skill Mastery: Blast",
     "description": "Adds upp to 6 random Active Skills of type Blast that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":5
+    "id":5,
+    "icon":"assets/rune_icons/BlastMastery.png"
   },
   {
     "title": "Skill Inclination: Blast",
     "description": "Increases the chance that active skills of type Blast will be offered to you when you level up",
     "runeCost": 3,
-    "id":6
+    "id":6,
+    "icon":"assets/rune_icons/BlastInclination.png"
   },
   {
     "title": "Skill Affinity: Bomb",
     "description": "You are guaranteed to be offered only skills that contain the type Bomb the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":7
+    "id":7,
+    "icon":"assets/rune_icons/BombAffinity.png"
   },
   {
     "title": "Skill Mastery: Bomb",
     "description": "Adds upp to 6 random Active Skills of type Bomb that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":8
+    "id":8,
+    "icon":"assets/rune_icons/BombMastery.png"
   },
   {
     "title": "Skill Inclination: Bomb",
     "description": "Increases the chance that active skills of type Bomb will be offered to you when you level up",
     "runeCost": 3,
-    "id":9
+    "id":9,
+    "icon":"assets/rune_icons/BombInclination.png"
   },
   {
     "title": "Skill Affinity: Electric",
     "description": "You are guaranteed to be offered only skills that contain the type Electric the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":10
+    "id":10,
+    "icon":"assets/rune_icons/ElectricAffinity.png"
   },
   {
     "title": "Skill Mastery: Electric",
     "description": "Adds upp to 6 random Active Skills of type Electric that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":11
+    "id":11,
+    "icon":"assets/rune_icons/ElectricMastery.png"
   },
   {
     "title": "Skill Inclination: Electric",
     "description": "Increases the chance that active skills of type Electric will be offered to you when you level up",
     "runeCost": 3,
-    "id":12
+    "id":12,
+    "icon":"assets/rune_icons/ElectricInclination.png"
   },
   {
     "title": "Skill Affinity: Chaos",
     "description": "You are guaranteed to be offered only skills that contain the type Chaos the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":13
+    "id":13,
+    "icon":"assets/rune_icons/ChaosAffinity.png"
   },
   {
     "title": "Skill Mastery: Chaos",
     "description": "Adds upp to 6 random Active Skills of type Chaos that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":14
+    "id":14,
+    "icon":"assets/rune_icons/ChaosMastery.png"
   },
   {
     "title": "Skill Inclination: Chaos",
     "description": "Increases the chance that active skills of type Chaos will be offered to you when you level up",
     "runeCost": 3,
-    "id":15
+    "id":15,
+    "icon":"assets/rune_icons/ChaosInclination.png"
   },
   {
     "title": "Skill Affinity: Shadow",
     "description": "You are guaranteed to be offered only skills that contain the type Shadow the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":16
+    "id":16,
+    "icon":"assets/rune_icons/ShadowAffinity.png"
   },
   {
     "title": "Skill Mastery: Shadow",
     "description": "Adds upp to 6 random Active Skills of type Shadow that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":17
+    "id":17,
+    "icon":"assets/rune_icons/ShadowMastery.png"
   },
   {
     "title": "Skill Inclination: Shadow",
     "description": "Increases the chance that active skills of type Shadow will be offered to you when you level up",
     "runeCost": 3,
-    "id":18
+    "id":18,
+    "icon":"assets/rune_icons/ShadowInclination.png"
   },
   {
     "title": "Skill Affinity: Thrust",
     "description": "You are guaranteed to be offered only skills that contain the type Thrust the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":19
+    "id":19,
+    "icon":"assets/rune_icons/ThrustAffinity.png"
   },
   {
     "title": "Skill Mastery: Thrust",
     "description": "Adds upp to 6 random Active Skills of type Thrust that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":20
+    "id":20,
+    "icon":"assets/rune_icons/ThrustMastery.png"
   },
   {
     "title": "Skill Inclination: Thrust",
     "description": "Increases the chance that active skills of type Thrust will be offered to you when you level up",
     "runeCost": 3,
-    "id":21
+    "id":21,
+    "icon":"assets/rune_icons/ThrustInclination.png"
   },
   {
     "title": "Skill Affinity: Swing",
     "description": "You are guaranteed to be offered only skills that contain the type Swing the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":22
+    "id":22,
+    "icon":"assets/rune_icons/SwingAffinity.png"
   },
   {
     "title": "Skill Mastery: Swing",
     "description": "Adds upp to 6 random Active Skills of type Swing that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":23
+    "id":23,
+    "icon":"assets/rune_icons/SwingMastery.png"
   },
   {
     "title": "Skill Inclination: Swing",
     "description": "Increases the chance that active skills of type Swing will be offered to you when you level up",
     "runeCost": 3,
-    "id":24
+    "id":24,
+    "icon":"assets/rune_icons/SwingInclination.png"
   },
   {
     "title": "Skill Affinity: Ice",
     "description": "You are guaranteed to be offered only skills that contain the type Ice the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":25
+    "id":25,
+    "icon":"assets/rune_icons/IceAffinity.png"
   },
   {
     "title": "Skill Mastery: Ice",
     "description": "Adds upp to 6 random Active Skills of type Ice that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":26
+    "id":26,
+    "icon":"assets/rune_icons/IceMastery.png"
   },
   {
     "title": "Skill Inclination: Ice",
     "description": "Increases the chance that active skills of type Ice will be offered to you when you level up",
     "runeCost": 3,
-    "id":27
+    "id":27,
+    "icon":"assets/rune_icons/IceInclination.png"
   },
   {
     "title": "Skill Affinity: Slam",
     "description": "You are guaranteed to be offered only skills that contain the type Slam the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":28
+    "id":28,
+    "icon":"assets/rune_icons/SlamAffinity.png"
   },
   {
     "title": "Skill Mastery: Slam",
     "description": "Adds upp to 6 random Active Skills of type Slam that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":29
+    "id":29,
+    "icon":"assets/rune_icons/SlamMastery.png"
   },
   {
     "title": "Skill Inclination: Slam",
     "description": "Increases the chance that active skills of type Slam will be offered to you when you level up",
     "runeCost": 3,
-    "id":30
+    "id":30,
+    "icon":"assets/rune_icons/SlamInclination.png"
   },
   {
     "title": "Skill Affinity: Projectile",
     "description": "You are guaranteed to be offered only skills that contain the type Projectile the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":31
+    "id":31,
+    "icon":"assets/rune_icons/ProjectileAffinity.png"
   },
   {
     "title": "Skill Mastery: Projectile",
     "description": "Adds upp to 6 random Active Skills of type Projectile that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":32
+    "id":32,
+    "icon":"assets/rune_icons/ProjectileMastery.png"
   },
   {
     "title": "Skill Inclination: Projectile",
     "description": "Increases the chance that active skills of type Projectile will be offered to you when you level up",
     "runeCost": 3,
-    "id":33
+    "id":33,
+    "icon":"assets/rune_icons/ProjectileInclination.png"
   },
   {
     "title": "Skill Affinity: Nature",
     "description": "You are guaranteed to be offered only skills that contain the type Nature the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":34
+    "id":34,
+    "icon":"assets/rune_icons/NatureAffinity.png"
   },
   {
     "title": "Skill Mastery: Nature",
     "description": "Adds upp to 6 random Active Skills of type Nature that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":35
+    "id":35,
+    "icon":"assets/rune_icons/NatureMastery.png"
   },
   {
     "title": "Skill Inclination: Nature",
     "description": "Increases the chance that active skills of type Nature will be offered to you when you level up",
     "runeCost": 3,
-    "id":36
+    "id":36,
+    "icon":"assets/rune_icons/NatureInclination.png"
   },
   {
     "title": "Skill Affinity: Holy",
     "description": "You are guaranteed to be offered only skills that contain the type Holy the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":37
+    "id":37,
+    "icon":"assets/rune_icons/HolyAffinity.png"
   },
   {
     "title": "Skill Mastery: Holy",
     "description": "Adds upp to 6 random Active Skills of type Holy that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":38
+    "id":38,
+    "icon":"assets/rune_icons/HolyMastery.png"
   },
   {
     "title": "Skill Inclination: Holy",
     "description": "Increases the chance that active skills of type Holy will be offered to you when you level up",
     "runeCost": 3,
-    "id":39
+    "id":39,
+    "icon":"assets/rune_icons/HolyInclination.png"
   },
   {
     "title": "Skill Affinity: Arcane",
     "description": "You are guaranteed to be offered only skills that contain the type Arcane the first time you are offered active skills, if possible. If you have multiple affinities, the will happen on at a time",
     "runeCost": 1,
-    "id":40
+    "id":40,
+    "icon":"assets/rune_icons/ArcaneAffinity.png"
   },
   {
     "title": "Skill Mastery: Arcane",
     "description": "Adds upp to 6 random Active Skills of type Arcane that your character would not have access to otherwise to the skill pool, if possible",
     "runeCost": 2,
-    "id":41
+    "id":41,
+    "icon":"assets/rune_icons/ArcaneMastery.png"
   },
   {
     "title": "Skill Inclination: Arcane",
     "description": "Increases the chance that active skills of type Arcane will be offered to you when you level up",
     "runeCost": 3,
-    "id":42
+    "id":42,
+    "icon":"assets/rune_icons/ArcaneInclination.png"
   },
   {
     "title": "Recklessness",
     "description": "Increases all damage you cause by 0,5% per missing health point",
     "runeCost": 3,
-    "id":43
+    "id":43,
+    "icon":"assets/rune_icons/Recklessness.png"
   },
   {
     "title": "Executioner",
     "description": "You cause 5,0% extra damage per different type of negative effect on enemies you hit",
     "runeCost": 2,
-    "id":44
+    "id":44,
+    "icon":"assets/rune_icons/Executioner.png"
   },
   {
     "title": "Commanding Presence",
     "description": "Reduces all damage you deal by 40,0%, but increases the damage modifier of all units summoned by you by 40,0%",
     "runeCost": 3,
-    "id":45
+    "id":45,
+    "icon":"assets/rune_icons/CommandingPresence.png"
   },
   {
     "title": "Multi Cast Mastery",
     "description": "Increases the chance for long chains of multi-casting to happen",
     "runeCost": 2,
-    "id":46
+    "id":46,
+    "icon":"assets/rune_icons/MulticastMadness.png"
   },
   {
     "title": "Center of Attention",
     "description": "All of your own random targeted area effects are now targeted at your position instead",
     "runeCost": 1,
-    "id":47
+    "id":47,
+    "icon":"assets/rune_icons/CenterofAttention.png"
   },
   {
     "title": "Synergetic",
     "description": "Increases the chance of being offered synergy power-ups where applying one ngeative effect can chain and apply another, and increase the chances of those synergies happening by 20,0%",
     "runeCost": 4,
-    "id":48
+    "id":48,
+    "icon":"assets/rune_icons/Synergetic.png"
   },
   {
     "title": "Dash Mastery",
     "description": "Increases your dash speed by 50,0% , resulting ina longer distance traveled",
     "runeCost": 1,
-    "id":49
+    "id":49,
+    "icon":"assets/rune_icons/DashMastery.png"
   },
   {
     "title": "Reroll Mastery",
     "description": "You gain one extra reroll every 5 levels",
     "runeCost": 3,
-    "id":50
+    "id":50,
+    "icon":"assets/rune_icons/RerollMastery.png"
   },
   {
     "title": "Singlar Focus",
     "description": "Skills can now be picked multiple times. Power-ups that enchance a specific skill, will be applied to a random instance of the skill.",
     "runeCost": 5,
-    "id":51
+    "id":51,
+    "icon":"assets/rune_icons/SingularFocus.png"
   },
   {
     "title": "Surefooted",
     "description": "You take 15,0% less damage from all sources and you are also much more resistant to pushback",
     "runeCost": 2,
-    "id":52
+    "id":52,
+    "icon":"assets/rune_icons/Surefooted.png"
   },
   {
     "title": "Weapon Expert",
     "description": "You start the game with the special weapon skill for your currently selected weapon",
     "runeCost": 1,
-    "id":53
+    "id":53,
+    "icon":"assets/rune_icons/WeaponExpert.png"
   },
   {
     "title": "Critical Mastery",
     "description": "100,0% of your critical chance is added to your critical damage multiplier when calculating critical damage",
     "runeCost": 2,
-    "id":54
+    "id":54,
+    "icon":"assets/rune_icons/CriticalMastery.png"
   },
   {
     "title": "Controlled Chaos",
     "description": "For all your abilities that deal a random amount of damage, damage will be rolled twice and the highest roll will be chosen",
     "runeCost": 2,
-    "id":55
+    "id":55,
+    "icon":"assets/rune_icons/ControlledChaos.png"
   },
   {
     "title": "Generalist",
     "description": "you cause 5,0% extra damage for each different type your currently active skills have.",
     "runeCost": 2,
-    "id":56
+    "id":56,
+    "icon":"assets/rune_icons/Generalist.png"
   },
   {
     "title": "Purity",
     "description": "Increases all damage cause by 50,0%. This bonus is reduced by 5,0% for each different type of negative effect on the target.",
     "runeCost": 2,
-    "id":57
+    "id":57,
+    "icon":"assets/rune_icons/Purity.png"
   },
   {
     "title": "Focus Fire",
     "description": "Increases all damage you deal by 40,0% but decreases the area of all your skills by 20,0%",
     "runeCost": 2,
-    "id":58
+    "id":58,
+    "icon":"assets/rune_icons/FocusFire.png"
   }
 ]
