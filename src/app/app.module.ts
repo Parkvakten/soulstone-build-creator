@@ -11,6 +11,8 @@ import { SkillContainerComponent } from './modules/shared/skill-container/skill-
 import { CharacterContainerComponent } from './modules/shared/character-container/character-container/character-container.component';
 import { SelectorBaseComponent } from './modules/shared/selector-base/selector-base/selector-base.component';
 import { BuilContainerComponent } from './modules/shared/build-container/build-container/build-container.component';
+import { FormsModule } from '@angular/forms';
+import { FilterskillsPipe } from './resources/pipes/filterskills.pipe';
 
 @NgModule({
   declarations: [
@@ -22,12 +24,14 @@ import { BuilContainerComponent } from './modules/shared/build-container/build-c
     SkillContainerComponent,
     CharacterContainerComponent,
     SelectorBaseComponent,
-    BuilContainerComponent
+    BuilContainerComponent,
+    FilterskillsPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

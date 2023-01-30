@@ -1,6 +1,6 @@
-import { Component, Input, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map, mergeMap, Observable, of, switchMap, take } from 'rxjs';
+import { map, Observable} from 'rxjs';
 import { generateBuild, IBuild } from 'src/app/resources/models/build/build';
 import { ICharacter } from 'src/app/resources/models/character/character';
 import { IRune } from 'src/app/resources/models/rune/rune';
@@ -21,6 +21,7 @@ import { IdbService } from 'src/app/resources/services/idb/idb.service';
 export class CreateBuildComponent implements OnInit {
   selectedIndex: number = -1;
   selectedSkillIndex: number = -1;
+  filterString:string = '';
   
 $getCharacters: Observable<ICharacter[]> = this.idbService.getAllItems$<ICharacter>(this.idbService.db.characters).pipe(map((res)=>{
   console.log('res for get characters',res);
@@ -90,28 +91,12 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
 
     let returnBool: boolean = false;
     if(this.currentBuild){
-      if(this.currentBuild.stepNumber === 0 && this.currentBuild.selectedWeapon !== undefined){
+      if(this.currentBuild.stepNumber === 0 || this.currentBuild.stepNumber === 1 && this.currentBuild.selectedWeapon !== undefined || this.currentBuild.selectedRunes !== undefined){
         returnBool = true
-      }else if(this.currentBuild.stepNumber === 1 && this.currentBuild.selectedWeapon !== undefined){
-        returnBool = true
-      }else if(this.currentBuild.selectedRunes !== undefined){
-        returnBool = true
-      }
-     
-          
+      }   
       }
     
     return returnBool;
-   }
-
-   filterSkills(eventString: Event){
-      const value = (eventString.target as HTMLInputElement).value;
-      this.$getSkills.pipe(map((res)=>{
-        res.filter((r)=>{
-          console.log('value',value)
-          return r.activeSkill.title === value
-        })
-      })).subscribe()
    }
 
    previousStep(){
@@ -141,18 +126,3 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
 
 }
 
-@Pipe({
-  name: 'filterSkills'
-})
-export class SkillsFilterPipe implements PipeTransform{
-  transform(skills:IActiveSkill[],filterTerm?: any): IActiveSkill[] {
-    if(filterTerm === undefined){
-      return skills
-    }else{
-      return skills.filter((skill)=>{
-        return skill.activeSkill.title.toLowerCase() === filterTerm.toLowerCase()
-      })
-    }
-  }
-  
-}

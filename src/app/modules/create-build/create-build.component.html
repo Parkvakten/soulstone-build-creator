@@ -26,8 +26,8 @@
 </div>
 
 <div *ngIf="this.currentBuild.stepNumber === 2" class="skills-container" >
-    <input type="text" >
-    <div *ngFor="let skill of $getSkills | async | filterSkills; let i = index" >
+    <input type="text" name="search" placeholder="Search skill name" [(ngModel)]="this.filterString">
+    <div *ngFor="let skill of $getSkills | async | filterskills:filterString; let i = index" >
         <app-skill-container (click)="setSelectedSkillIndex(i)" [skill]="skill" [currentBuild]="this.currentBuild" [selected]="this.selectedSkillIndex === i" ></app-skill-container>
     </div>
 </div>
