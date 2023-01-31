@@ -1,6 +1,10 @@
 <div class="character-container">
 <div *ngIf="this.stepNumber === 0" >
-    {{character.characterType}}
+    <div class="character-name" > {{character.characterType}} </div>
+    <img class="character-icon" [src]="character.icon" [alt]="character.characterType" >
+    <div *ngFor="let stat of character.stats;let i = index">
+        <p  [id]="getId(character.characterType,i)">{{stat}}{{formatStatText(character.characterType,i)}}</p>
+    </div>
     <app-selector-base 
     [selected]="this.selected" 
     [selectItem]="{objectKey:'selectedCharacter',item:character}" 

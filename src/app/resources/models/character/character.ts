@@ -1,17 +1,11 @@
-import { IActionBar } from "../action-bar/action-bar";
-import { IRune } from "../rune/rune";
 import { IStat } from "../stat/stat";
 import { IWeapon } from "../weapon/weapon";
 
 export interface ICharacter {
     characterType: CharacterType
     weapons: IWeapon[],
-    stats: IStat[]
-    //runicPower: number,
-    
-   //actionBar: IActionBar,
-    
-
+    stats: IStat[],
+    icon:string
 }
 
 export type CharacterType = [

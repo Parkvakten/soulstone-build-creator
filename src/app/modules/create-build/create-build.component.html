@@ -17,11 +17,12 @@
 </div>
 <div *ngIf="this.currentBuild">
     
-    <div *ngIf="this.currentBuild.stepNumber === 0 || this.currentBuild.stepNumber ===  1">
+    <div *ngIf="this.currentBuild.stepNumber === 0 || this.currentBuild.stepNumber ===  1" >
         <h3 class="title">{{this.currentBuild.stepNumber === 0 ? 'Select character' : 'Select weapon'}}</h3>
+        <div class="grid-container">
     <div *ngFor="let character of $getCharacters | async; let i = index" >
         <app-character-container (click)="setSelected(i)" [selected]="this.selectedIndex === i" [currentBuild]="this.currentBuild" [character]="character" [stepNumber]="this.currentBuild.stepNumber"></app-character-container>
-        
+    </div>
     </div>
 </div>
 
