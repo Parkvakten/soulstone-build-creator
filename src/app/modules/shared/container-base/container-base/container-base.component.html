@@ -1,0 +1,16 @@
+<div class="base-container" >
+    <div class="base-title" > {{title}} </div>
+    <img class="base-icon" *ngIf="icon" [src]="icon" [alt]="title" >
+    <div *ngIf="stats !== undefined && stats.length > 0" >
+    <div *ngFor="let stat of stats;let i = index">
+        <p  [id]="getId(title,i)">{{stat}}{{formatStatText(title,i)}}
+    </div>
+    </div>
+    <div *ngIf="description" >
+        <p>{{description}}</p>
+    </div>
+    <app-selector-base class="selector-container"
+    [selected]="this.selected" 
+    [selectItem]="{objectKey:selectBaseKey,item:selectBaseObject}" 
+    [currentBuild]="this.currentBuild"></app-selector-base>
+</div>

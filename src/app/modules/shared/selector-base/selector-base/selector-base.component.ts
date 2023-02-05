@@ -43,6 +43,7 @@ export class SelectorBaseComponent {
           this.currentBuild.selectedRunes = [selectItem.item] :
           this.currentBuild.selectedRunes.push(selectItem.item);
           this.buildService._updateBuild(this.currentBuild)
+
           console.log(this.currentBuild.selectedRunes.length)
           if(this.currentBuild.selectedRunes !== undefined && this.currentBuild.selectedRunes.length === 6){
               this.buildService.nextStep(this.currentBuild)
@@ -52,6 +53,7 @@ export class SelectorBaseComponent {
         (this.currentBuild as any)[selectItem.objectKey] = selectItem.item;
       console.log(selectItem);
       this.buildService._updateBuild(this.currentBuild);
+
         this.buildService.nextStep(this.currentBuild)
         break;
     }

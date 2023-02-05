@@ -5,6 +5,9 @@
     <div class="div-left">
         <h3 class="title">Create build</h3>
     <button (click)="addBuild()" class="btn btn-outline-light button">Create new build</button>
+
+    <h3 class="title">Unsaved build</h3>
+    <app-buil-container [build]="localStorageBuild"></app-buil-container>
 </div>
 
     <div class="div-right">
@@ -17,29 +20,61 @@
 </div>
 <div *ngIf="this.currentBuild">
     
-    <div *ngIf="this.currentBuild.stepNumber === 0 || this.currentBuild.stepNumber ===  1" >
+    <div *ngIf="this.currentBuild.stepNumber === 0" >
         <h3 class="title">{{this.currentBuild.stepNumber === 0 ? 'Select character' : 'Select weapon'}}</h3>
-        <div class="grid-container">
+        <div class="grid-container" style="grid-template-columns: repeat(3,1fr);">
     <div *ngFor="let character of $getCharacters | async; let i = index" >
-        <app-character-container (click)="setSelected(i)" [selected]="this.selectedIndex === i" [currentBuild]="this.currentBuild" [character]="character" [stepNumber]="this.currentBuild.stepNumber"></app-character-container>
+        <app-container-base
+[title]="this.character.characterType"
+[currentBuild]="this.currentBuild"
+(click)="setSelected(i)" 
+[selected]="this.selectedIndex === i" 
+[selectBaseKey]="'selectedCharacter'"
+[selectBaseObject]="this.character"
+[icon]="character.icon"
+[stats]="character.stats"
+></app-container-base>
+        
+        </div>
+</div>
+</div>
+<div *ngIf=" this.currentBuild.stepNumber ===  1">
+    <div class="grid-container" style="grid-template-columns: repeat(3,1fr);" *ngIf="this.currentBuild.selectedCharacter" >
+        <div *ngFor="let weapon of this.currentBuild.selectedCharacter.weapons;let i = index" >
+            <app-container-base
+            [title]="weapon.name"
+            [currentBuild]="this.currentBuild"
+            [selected]="this.selectedIndex === i"
+            [selectBaseKey]="'selectedWeapon'"
+            [selectBaseObject]="weapon"
+            [icon]="weapon.icon"
+            [stats]="weapon.stats"
+            (click)="setSelected(i)"
+            ></app-container-base>
     </div>
     </div>
 </div>
 
 <input class="filter-field" *ngIf="this.currentBuild.stepNumber === 2 || this.currentBuild.stepNumber === 3"  type="text" name="search" [placeholder]="this.currentBuild.stepNumber === 2 ? '...Search skill name' : '...Search rune name'" [(ngModel)]="this.filterString">
-<div *ngIf="this.currentBuild.stepNumber === 2" class="grid-container" >
+<div *ngIf="this.currentBuild.stepNumber === 2" class="grid-container" style="grid-template-columns: repeat(3,1fr);" >
     
     <div *ngFor="let skill of $getSkills | async  | filter:filterString:'activeSkill':'title'; let i = index" >
-        <app-skill-container (click)="setSelectedSkillIndex(i)" [skill]="skill" [currentBuild]="this.currentBuild" [selected]="this.selectedSkillIndex === i" ></app-skill-container>
+        <app-skill-container
+         (click)="setSelectedSkillIndex(i)"
+          [skill]="skill"
+           [currentBuild]="this.currentBuild"
+            [selected]="this.selectedSkillIndex === i"
+             ></app-skill-container>
     </div>
 </div>
 
-<div *ngIf="this.currentBuild.stepNumber === 3" class="grid-container" >
+<div *ngIf="this.currentBuild.stepNumber === 3" class="grid-container" style="grid-template-columns: repeat(3,1fr);">
     <div *ngFor="let rune of $getRunes | async | filter:filterString:'title'; let i = index" >
         <app-rune-container (click)="setSelectedRuneIndex(i)" [rune]="rune" [currentBuild]="this.currentBuild" [selected]="this.selectedRuneIndex === i" ></app-rune-container>
     </div>
 </div>
 <div *ngIf="this.currentBuild.stepNumber === 4 " >
+    <input type="text" placeholder="Enter build name">
     <button (click)="saveBuild()" >Save build</button>
     <app-build-summary [build]="this.currentBuild" ></app-build-summary>
 </div>

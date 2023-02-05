@@ -1,31 +1,31 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { first } from 'rxjs';
+import { Component, Input } from '@angular/core';
 import { IBuild } from 'src/app/resources/models/build/build';
-import { ICharacter } from 'src/app/resources/models/character/character';
+import { IStat } from 'src/app/resources/models/stat/stat';
 
 @Component({
-  selector: 'app-character-container',
-  templateUrl: './character-container.component.html',
-  styleUrls: ['./character-container.component.css']
+  selector: 'app-container-base',
+  templateUrl: './container-base.component.html',
+  styleUrls: ['./container-base.component.css']
 })
+export class ContainerBaseComponent {
 
-export class CharacterContainerComponent implements OnInit{
-  ngOnInit(): void {
-    
-  }
-
-
-  setSelectedIndex(index: number){
-    this.selectedIndex = index
-  }
   @Input() currentBuild!: IBuild;
-  @Input() character!: ICharacter;
-  @Input() stepNumber!: number;
-  @Input() selected: boolean = false
-  selectedIndex: number = -1
-
-
+  @Input() title:any = '';
+  @Input() selected: boolean = false;
+  @Input() selectBaseKey: string = '';
+  @Input() selectBaseObject: any;
+  @Input() icon?: string = '';
+  @Input() stats?: IStat[] = [];
+  @Input() description?: string;
   
+
+
+
+  getId(type: any, index: number):string{
+    let id: string = '';
+    id = type + index;
+    return id;
+  }
 
   formatStatText(type:any,index:number){
     let element = document.getElementById(this.getId(type,index));
@@ -48,9 +48,4 @@ export class CharacterContainerComponent implements OnInit{
     
   }
 
-  getId(type: any, index: number):string{
-    let id: string = '';
-    id = type + index;
-    return id;
-  }
 }

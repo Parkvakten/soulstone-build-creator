@@ -9,14 +9,17 @@ import { BuildService } from 'src/app/resources/services/build/build.service';
 })
 export class BuilContainerComponent implements OnInit {
 
-  
+  @Input() builds:IBuild[]| null = []
+  @Input() build:IBuild | null = null;
+  localStorageBuild: IBuild | null = null;
   constructor(private buildService:BuildService) {
     
     
   }
   ngOnInit(): void {
-console.log('buulds',this.builds)  }
-  @Input() builds:IBuild[]| null = []
+    
+    }
+  
 
   
 

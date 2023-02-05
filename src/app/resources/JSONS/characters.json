@@ -17,7 +17,7 @@
 "+15% damage modifier",
 "-10% movement speed modifier",
 "+10 extra health per crystal",
-"+20% area modifier,"],
+"+20% area modifier"],
 "icon":"assets/character_icons/Houndmaster.webp"}
 ,{"characterType":"The Spellblade",
 "stats":["+30 maximum health",

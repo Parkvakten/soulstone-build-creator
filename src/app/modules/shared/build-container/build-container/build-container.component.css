@@ -13,3 +13,9 @@
     outline-offset: -3px;
     padding: .5em;
 }
+
+.local-buil-container{
+    display: grid;
+    grid-template-columns: 1;
+    
+}

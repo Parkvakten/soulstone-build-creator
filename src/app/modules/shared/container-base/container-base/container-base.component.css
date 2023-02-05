@@ -1,8 +1,8 @@
-.title{
+.base-title{
     color: var(--text-title-color);
 }
 
-.character-container{
+.base-container{
     border: 2px solid;
     border-color: var(--border-outer-color);
     border-top-color: white;
@@ -17,13 +17,13 @@
     min-height: 490px;
 }
 
-.character-icon{
+.base-icon{
     width: 10em;
     height: 10em;
     
 }
 
-.weapon-container{
+.base-container{
     border: 2px solid;
     border-color: var(--border-outer-color);
     border-top-color: white;

@@ -1,33 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { first } from 'rxjs';
+import { Component, Input } from '@angular/core';
 import { IBuild } from 'src/app/resources/models/build/build';
-import { ICharacter } from 'src/app/resources/models/character/character';
+import { IWeapon } from 'src/app/resources/models/weapon/weapon';
 
 @Component({
-  selector: 'app-character-container',
-  templateUrl: './character-container.component.html',
-  styleUrls: ['./character-container.component.css']
+  selector: 'app-weapon-container',
+  templateUrl: './weapon-container.component.html',
+  styleUrls: ['./weapon-container.component.css']
 })
+export class WeaponContainerComponent {
 
-export class CharacterContainerComponent implements OnInit{
-  ngOnInit(): void {
-    
-  }
+  @Input() weapon!: IWeapon;
+  @Input() currentBuild!: IBuild;
+  @Input() selected: boolean = false;
+  selectedIndex: number = -1
 
 
   setSelectedIndex(index: number){
     this.selectedIndex = index
   }
-  @Input() currentBuild!: IBuild;
-  @Input() character!: ICharacter;
-  @Input() stepNumber!: number;
-  @Input() selected: boolean = false
-  selectedIndex: number = -1
-
-
-  
-
-  formatStatText(type:any,index:number){
+ formatStatText(type:any,index:number){
     let element = document.getElementById(this.getId(type,index));
     let str = document.getElementById(this.getId(type,index))?.innerHTML; 
     if(str !== undefined && str !== '' && !str.includes('<')){

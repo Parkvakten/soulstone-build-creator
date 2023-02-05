@@ -23,6 +23,8 @@ export class CreateBuildComponent implements OnInit {
   selectedSkillIndex: number = -1;
   selectedRuneIndex: number = -1;
   filterString:string = '';
+  localStorageBuild: IBuild | null = null;
+
   
 $getCharacters: Observable<ICharacter[]> = this.idbService.getAllItems$<ICharacter>(this.idbService.db.characters).pipe(map((res)=>{
   console.log('res for get characters',res);
@@ -79,7 +81,7 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
 
    addBuild(){
     let build: IBuild = generateBuild();
-    
+    localStorage.setItem('inprogressBuild',JSON.stringify(build))
     this.idbService.getTableLength(this.idbService.db.builds).then((res)=>{
       build.id = res+1;
       this.buildService._setNewCurrentBuild(build);
@@ -99,7 +101,7 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
 
     let returnBool: boolean = false;
     if(this.currentBuild){
-      if(this.currentBuild.stepNumber === 0 || this.currentBuild.stepNumber === 1 && this.currentBuild.selectedWeapon !== undefined || this.currentBuild.selectedRunes !== undefined){
+      if(this.currentBuild.stepNumber === 0 && this.currentBuild.selectedCharacter !== undefined|| this.currentBuild.stepNumber === 1 && this.currentBuild.selectedWeapon !== undefined || this.currentBuild.selectedRunes !== undefined){
         returnBool = true
       }   
       }
@@ -130,6 +132,10 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
     this.selectedIndex = index
    }
   ngOnInit(): void {
+    const localBuild = localStorage.getItem('inprogressBuild');
+    if(localBuild !== null){
+      this.localStorageBuild = JSON.parse(localBuild) as IBuild;
+    }
   }
 
   

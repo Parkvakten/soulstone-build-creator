@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { RuneContainerComponent } from './modules/shared/rune_container/rune-container/rune-container.component';
 import { Filter } from './resources/pipes/filter.pipe';
 import { BuildSummaryComponent } from './modules/build-summary/build-summary/build-summary.component';
+import { WeaponContainerComponent } from './modules/shared/weapon-container/weapon-container.component';
+import { ContainerBaseComponent } from './modules/shared/container-base/container-base/container-base.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { BuildSummaryComponent } from './modules/build-summary/build-summary/bui
     BuilContainerComponent,
     RuneContainerComponent,
     Filter,
-    BuildSummaryComponent
+    BuildSummaryComponent,
+    WeaponContainerComponent,
+    ContainerBaseComponent
   ],
   imports: [
     BrowserModule,

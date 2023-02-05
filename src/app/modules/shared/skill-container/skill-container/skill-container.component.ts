@@ -26,7 +26,26 @@ export class SkillContainerComponent {
   }
 
 
-  formatSkillText(text:string){
+  formatSkillText(){
+    let element = document.getElementById(this.skill.activeSkill.title);
+    let str = document.getElementById(this.skill.activeSkill.title)?.innerHTML; 
+    
+      this.skill.statusEffectObj?.forEach((object)=>{
+        if(str !== undefined && str !== '' && !str.includes('<')){
+        let substring:any = str.match(object.effectTitle)
+      if(substring !== null){
+        console.log('str',str,'substring',substring)
+
+      let res = str.replace(substring, "<span style='color:"+object.effectHighligtColor+"'>"+substring+"</span>");
+      if(element){
+        element.innerHTML = res;
+      }}
+    }
+      })
+      
+      
+      
+    
     
   }
 

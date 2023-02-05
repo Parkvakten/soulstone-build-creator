@@ -1,25 +1,24 @@
-<div class="character-container">
-<div *ngIf="this.stepNumber === 0" >
+
+
+<app-container-base
+[title]="this.character.characterType"
+[currentBuild]="this.currentBuild"
+[selected]="this.selected"
+[selectBaseKey]="'selectedCharacter'"
+[selectBaseObject]="this.character"
+[icon]="character.icon"
+[stats]="character.stats"
+></app-container-base>
+<!-- <div class="character-container" *ngIf="this.stepNumber === 0" >
     <div class="character-name" > {{character.characterType}} </div>
     <img class="character-icon" [src]="character.icon" [alt]="character.characterType" >
     <div *ngFor="let stat of character.stats;let i = index">
-        <p  [id]="getId(character.characterType,i)">{{stat}}{{formatStatText(character.characterType,i)}}</p>
+        <p  [id]="getId(character.characterType,i)">{{stat}}{{formatStatText(character.characterType,i)}}
     </div>
-    <app-selector-base 
+    <app-selector-base class="selector-container"
     [selected]="this.selected" 
     [selectItem]="{objectKey:'selectedCharacter',item:character}" 
     [currentBuild]="this.currentBuild"></app-selector-base>
-</div>
-<div *ngIf="this.stepNumber === 1" >
-    <div *ngFor="let weapon of character.weapons; let i = index" (click)="setSelectedIndex(i)" >
-        {{weapon.name}}
-        <app-selector-base 
-        [selected]="this.selected && this.selectedIndex === i"
-        [selectItem]="{objectKey:'selectedWeapon',item:weapon}"
-        [currentBuild]="this.currentBuild"
-        ></app-selector-base>
-    </div>
-    
-</div>
+</div> -->
 
-</div>
+

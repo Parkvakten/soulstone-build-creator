@@ -2,7 +2,7 @@
     <img class="skill-icon" [alt]="this.skill.activeSkill.title" [src]="this.skill.activeSkill.icon">
     <h1 class="skill-title"> {{this.skill.activeSkill.title}} </h1>
 
-    <p class="skill-description" > {{this.skill.activeSkill.description}} </p>
+    <p class="skill-description" [id]="this.skill.activeSkill.title" > {{this.skill.activeSkill.description}}{{formatSkillText()}} </p>
     <div *ngIf="this.skill.statusEffect !== undefined">
         <p class="skill-status-effect" *ngFor="let object of this.skill.statusEffectObj">
             <span class="status-effect-name" [style.color]="object.effectHighligtColor">{{object.effectTitle}}</span>
@@ -10,7 +10,7 @@
             <span>{{object.effectDetail}}</span> 
         </p>
     </div>
-    <app-selector-base 
+    <app-selector-base class="selector-container"
     [selected]="this.selected"
     [selectItem]="{objectKey:'selectedSkills',item:this.skill}"
     [currentBuild]="this.currentBuild">

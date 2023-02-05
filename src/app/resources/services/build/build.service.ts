@@ -22,6 +22,7 @@ export class BuildService {
       if(this.shouldUpdateBuild === true && build !== null){
         console.log('got update',build)
         this.shouldUpdateBuild = false;
+        localStorage.setItem('inprogressBuild',JSON.stringify(build))
       return this.updateBuild$(build)
       }else{
         return this._currentBuild.getValue();
