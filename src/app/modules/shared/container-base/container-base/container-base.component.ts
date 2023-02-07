@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { IBuild } from 'src/app/resources/models/build/build';
+import { IActiveSkill, IStatusEffect } from 'src/app/resources/models/skill/skill';
 import { IStat } from 'src/app/resources/models/stat/stat';
 
 @Component({
@@ -7,7 +8,15 @@ import { IStat } from 'src/app/resources/models/stat/stat';
   templateUrl: './container-base.component.html',
   styleUrls: ['./container-base.component.css']
 })
-export class ContainerBaseComponent {
+export class ContainerBaseComponent implements OnInit, OnChanges{
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('changes',changes)
+  }
+  ngOnInit(): void {
+   console.log('title',this.title)
+   if(this.skill){console.log('skill',this.skill)}
+   
+  }
 
   @Input() currentBuild!: IBuild;
   @Input() title:any = '';
@@ -17,6 +26,14 @@ export class ContainerBaseComponent {
   @Input() icon?: string = '';
   @Input() stats?: IStat[] = [];
   @Input() description?: string;
+  @Input() statusEffect?: IStatusEffect;
+  private _skill!: IActiveSkill;
+  @Input() set skill(val: any){
+    if(val !== undefined){
+      console.log('val',val)
+      this._skill = val;
+    }
+  }
   
 
 

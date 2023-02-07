@@ -1,6 +1,7 @@
 <div class="skill-container">
+    <h4 class="skill-title"> {{this.skill.activeSkill.title}} </h4>
     <img class="skill-icon" [alt]="this.skill.activeSkill.title" [src]="this.skill.activeSkill.icon">
-    <h1 class="skill-title"> {{this.skill.activeSkill.title}} </h1>
+    
 
     <p class="skill-description" [id]="this.skill.activeSkill.title" > {{this.skill.activeSkill.description}}{{formatSkillText()}} </p>
     <div *ngIf="this.skill.statusEffect !== undefined">
@@ -16,3 +17,4 @@
     [currentBuild]="this.currentBuild">
 </app-selector-base>
 </div>
+

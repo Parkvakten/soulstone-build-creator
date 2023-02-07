@@ -1,9 +1,9 @@
 <div class="base-container" >
-    <div class="base-title" > {{title}} </div>
+    <h4 class="base-title" > {{title}} </h4>
     <img class="base-icon" *ngIf="icon" [src]="icon" [alt]="title" >
     <div *ngIf="stats !== undefined && stats.length > 0" >
     <div *ngFor="let stat of stats;let i = index">
-        <p  [id]="getId(title,i)">{{stat}}{{formatStatText(title,i)}}
+        <p class="stat"  [id]="getId(title,i)">{{stat}}{{formatStatText(title,i)}}</p>
     </div>
     </div>
     <div *ngIf="description" >

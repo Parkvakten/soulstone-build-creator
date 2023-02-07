@@ -57,7 +57,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/MagicMissiles.png",
             "title": "Magic Missiles",
-            "description": "Quickly fire 30 magic missiles in front of you, piercing enemies causing 30 damage and applying Brittle: +1% cooldowns and 3 damage per hit for 5 seconds with each hit."
+            "description": "Quickly fire 30 magic missiles in front of you, piercing enemies causing 30 damage and applying Brittle with each hit."
 
            
         }, "id": 5,
@@ -70,7 +70,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ArcaneDisc.png",
             "title": "Arcane Disc",
-            "description": "Hurls an arcane disc that is bound to you in the target direction, causing 480 damage and applying 50% Exposed to targets hit. The disc returns to you at the end of its range, causing damage to enemies again on its way back."
+            "description": "Hurls an arcane disc that is bound to you in the target direction, causing 480 damage and applying Exposed to targets hit. The disc returns to you at the end of its range, causing damage to enemies again on its way back."
             
         },"id": 6,
         "statusEffect": ["Exposed"],
@@ -81,7 +81,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ArcaneSparks.png",
             "title": "Arcane Sparks",
-            "description": "Fire a total of 8 projectiles that move randomly, dealing 160 damage and applying 40% Exposed to enemies caught in their path."
+            "description": "Fire a total of 8 projectiles that move randomly, dealing 160 damage and applying Exposed to enemies caught in their path."
             
             
         },"id": 7,
@@ -105,7 +105,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ArcaneAssault.png",
             "title": "Arcane Assault",
-            "description": "Use arcane energy to hit enemies in front of you, causing 400 damage and applying 200% Vulnerable"
+            "description": "Use arcane energy to hit enemies in front of you, causing 400 damage and applying Vulnerable"
             
             
         },"id": 9,
@@ -117,7 +117,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ArcaneRift.png",
             "title": "Arcane Rift",
-            "description": "For the next 6 seconds, leave a trail of arcane energy behind you, applying 10% Exposed every 1 second to enemies standing on your path."
+            "description": "For the next 6 seconds, leave a trail of arcane energy behind you, applying Exposed every 1 second to enemies standing on your path."
             
             
         },"id": 10,
@@ -149,7 +149,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ArcaneOrb.png",
             "title": "Arcane Orb",
-            "description": "Launch a large orb in the direction you are aiming at, which applies 80% Exposed to targets it passes through. Additionally, this orb quickly fires additional projectiles in all directions, each dealing 70 damage per hit."
+            "description": "Launch a large orb in the direction you are aiming at, which applies Exposed to targets it passes through. Additionally, this orb quickly fires additional projectiles in all directions, each dealing 70 damage per hit."
             
            
         },"id": 13,
@@ -161,7 +161,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ArcaneConjuration.png",
             "title": "Arcane Conjuration",
-            "description": "Summon a total of 10 arcane pillars away from you, that quickly converge to your position, dealing 110 damage and applying 50% Exposed to enemies in their path."
+            "description": "Summon a total of 10 arcane pillars away from you, that quickly converge to your position, dealing 110 damage and applying Exposed to enemies in their path."
             
             
         },"id": 14,
@@ -173,7 +173,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ArcaneOverload.png",
             "title": "Arcane Overload",
-            "description": "Spin your weapon around you, applying 80% Exposed to all nearby enemies, and firing 20 arcane missiles at random positions around you, dealing 250 damage per missile to enemies hit."
+            "description": "Spin your weapon around you, applying Exposed to all nearby enemies, and firing 20 arcane missiles at random positions around you, dealing 250 damage per missile to enemies hit."
             
             
         },"id": 15,
@@ -185,7 +185,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ArcaneExplosion.png",
             "title": "Arcane Explosion",
-            "description": "Summon a large arcane explosion at your position, dealing 350 damage and applying 60% Exposed."
+            "description": "Summon a large arcane explosion at your position, dealing 350 damage and applying Exposed."
             
             
         },"id": 16,
@@ -197,7 +197,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Slash.png",
             "title": "Slash",
-            "description": "Slashes targets in the direction you are aiming at, causing 150 damage and applying 30% Vulnerable."
+            "description": "Slashes targets in the direction you are aiming at, causing 150 damage and applying Vulnerable."
             
            
         },"id": 17,
@@ -209,7 +209,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ArcaneSlash.png",
             "title": "Arcane Slash",
-            "description": "Fire an arcane slash forward, dealing 70 damage and applying 40% Exposed."
+            "description": "Fire an arcane slash forward, dealing 70 damage and applying Exposed."
             
             
         },"id": 18,
@@ -232,7 +232,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ChromaticBolt.png",
             "title": "Chromatic Bolt",
-            "description": "Fires a ricocheting shot in the direction you are aiming at, that bounces around between targets until it has traveled a total of 60 meters, dealing 50 damage and applying a Random Damaging Negative Effect"
+            "description": "Fires a ricocheting shot in the direction you are aiming at, that bounces around between targets until it has traveled a total of 60 meters, dealing 50 damage and applying a random damaging Negative effect every time it hits an enemy"
             
             
         },"id": 20,
@@ -255,7 +255,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ChaosBolt.png",
             "title": "Chaos Bolt",
-            "description": "Fires a chaos bolt in the direction you are aiming at, piercing through enemies in a line, causing a random amount of damage between 1 and 240. Two secondary bolts are released on impact, each applying a Random Powerful Negative Effect."
+            "description": "Fires a chaos bolt in the direction you are aiming at, piercing through enemies in a line, causing a random amount of damage between 1 and 240. Two secondary bolts are released on impact, each applying a random powerful Negative effect."
             
            
         },"id": 22,
@@ -267,7 +267,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ChaosBomb.png",
             "title": "Chaos Bomb",
-            "description": "Throws a chaos bomb in an area in front of you, causing a random amount of damage between 1 and 1000 and applying a Random Powerful Negative Effect."
+            "description": "Throws a chaos bomb in an area in front of you, causing a random amount of damage between 1 and 1000 and applying a random powerful Negative effect."
             
             
         },"id": 23,
@@ -279,7 +279,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/SummonChaosGolem.png",
             "title": "Chaos Golem",
-            "description": "Summon 1 chaos golem to fight for you. A maximum of 3 units can be active at any time. Chaos Golems deal a random amount of damage between 1 and 2000 and inflict Stun and a Random Powerful Negative Effect in a large area."
+            "description": "Summon 1 chaos golem to fight for you. A maximum of 3 units can be active at any time. Chaos Golems deal a random amount of damage between 1 and 2000 and inflict Stun and a random powerful Negative effect in a large area."
             
             
         },"id": 24,
@@ -291,7 +291,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/DeathClaw.png",
             "title": "Death Claw",
-            "description": "Conjures a chaotic death claw at the feet of a random enemy, causing a random amount of damage between 1 and 1000 and applying a Random Powerful Negative Effect."
+            "description": "Conjures a chaotic death claw at the feet of a random enemy, causing a random amount of damage between 1 and 1000 and applying a random powerful Negative effect."
             
             
         },"id": 25,
@@ -303,7 +303,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ChaosWave.png",
             "title": "Chaos Wave",
-            "description": "Releases a wave of chaos around you, dealing random damage between 1 and 400 and applying a Random Powerful Negative Effect."
+            "description": "Releases a wave of chaos around you, dealing random damage between 1 and 400 and applying a random powerful Negative effect."
            
             
         }, "id": 26,
@@ -315,7 +315,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ChaosTotem.png",
             "title": "Chaos Totem",
-            "description": "Summon a chaos totem at your position for 15.0 seconds, which continuously fires chaos bolts at the nearest enemy, dealing a random amount of damage between 1 and 300 and applying a Random Powerful Negative Effect. A maximum of 3 totems may be active at any one time."
+            "description": "Summon a chaos totem at your position for 15.0 seconds, which continuously fires chaos bolts at the nearest enemy, dealing a random amount of damage between 1 and 300 and applying a random powerful Negative effect. A maximum of 3 totems may be active at any one time."
             
             
         },"id": 27,
@@ -327,7 +327,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ManifestationsOfChaos.png",
             "title": "Manifestations of Chaos",
-            "description": "Release a total of 4 projectiles that move randomly, dealing a random amount of damage between 1 and 300 and applying a Random Powerful Negative Effect to enemies caught in their path."
+            "description": "Release a total of 4 projectiles that move randomly, dealing a random amount of damage between 1 and 300 and applying a random powerful Negative effect to enemies caught in their path."
             
            
         },"id": 28,
@@ -339,7 +339,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/UnchainedChaos.png",
             "title": "Unchained Chaos",
-            "description": "Release a chain of chaos at a random enemy, causing a random amount of damage between 1 and 290, applying a Random Powerful Negative Effect, and then jumping anywhere from 0 to 10 additional times to nearby targets if possible."
+            "description": "Release a chain of chaos at a random enemy, causing a random amount of damage between 1 and 290, applying a random powerful Negative effect, and then jumping anywhere from 0 to 10 additional times to nearby targets if possible."
             
             
         },"id": 29,
@@ -351,7 +351,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ChaoticMissile.png",
             "title": "Chaotic Missile",
-            "description": "Throws a chaotic missile forward hitting enemies in a line, causing a random amount of damage between 1 and 80 and applying a Random Powerful Negative Effect every time it goes through enemies. There is a 50% chance that the missile will come back to you."
+            "description": "Throws a chaotic missile forward hitting enemies in a line, causing a random amount of damage between 1 and 80 and applying a random powerful Negative effect every time it goes through enemies. There is a 50% chance that the missile will come back to you."
            
             
         }, "id": 30,
@@ -363,7 +363,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FrostBolt.png",
             "title": "Frost Bolt",
-            "description": "Fires an icy projectile in the direction you are aiming at, piercing through enemies in a line, causing 300 damage and inflicting 20% Slow."
+            "description": "Fires an icy projectile in the direction you are aiming at, piercing through enemies in a line, causing 300 damage and inflicting Slow."
             
             
         },"id": 31,
@@ -375,7 +375,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Glacier.png",
             "title": "Glacier",
-            "description": "Summons a large glacier over a random enemy, dealing 900 damage and pushing enemies back, inflicting 2 seconds Stun and 60% Slow."
+            "description": "Summons a large glacier over a random enemy, dealing 900 damage and pushing enemies back, inflicting Stun and Slow."
            
             
         }, "id": 32,
@@ -387,7 +387,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/IceVortex.png",
             "title": "Ice Vortex",
-            "description": "Summon an icy vortex at a random enemy's position that for 3 seconds quickly applies 5% Slow and then explodes, dealing 25 damage per stack of Slow or Paralysis on the target"
+            "description": "Summon an icy vortex at a random enemy's position that for 3 seconds quickly applies Slow and then explodes, dealing 25 damage per stack of Slow or Paralysis on the target"
             
             
         },"id": 33,
@@ -399,7 +399,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Blizzard.png",
             "title": "Blizzard",
-            "description": "Conjures a blizzard over a random enemy, hitting enemies 25 times, causing a total of 875 damage and applying 5% Slow with every hit."
+            "description": "Conjures a blizzard over a random enemy, hitting enemies 25 times, causing a total of 875 damage and applying Slow with every hit."
             
             
         },"id": 34,
@@ -411,7 +411,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FrozenWarhammer.png",
             "title": "Frozen Warhammer",
-            "description": "Conjures a frozen warhammer to slam targets in front of you, dealing 300 damage and an extra 15 damage per stack of Slow or Paralysis on the target. Applies 10% Slow."
+            "description": "Conjures a frozen warhammer to slam targets in front of you, dealing 300 damage and an extra 15 damage per stack of Slow or Paralysis on the target. Applies Slow."
 
             
            
@@ -424,7 +424,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/PoisonBolt.png",
             "title": "Poison Bolt",
-            "description": "Fires 5 poisonous projectiles in the direction you are aiming at, inflicting Poison: 130 damage over 15 seconds to enemies in a large area."
+            "description": "Fires 5 poisonous projectiles in the direction you are aiming at, inflicting Poison to enemies in a large area."
 
             
             
@@ -437,7 +437,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/PoisonBomb.png",
             "title": "Poison Bomb",
-            "description": "Throws a poison bomb at a random enemy, dealing 100 damage and applying Poison instantly to targets hit, leaving a poison puddle in the ground, inflicting Poison: 450 damage over 15 seconds to enemies in a large area."
+            "description": "Throws a poison bomb at a random enemy, dealing 100 damage and applying Poison instantly to targets hit, leaving a poison puddle in the ground, inflicting Poison to enemies in a large area."
 
             
             
@@ -450,7 +450,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/PoisonCloud.png",
             "title": "Poison Cloud",
-            "description": "Summons a moving poison cloud that applies 1 stacks of Poison: 400 damage over 15 seconds every 0.5 seconds to enemies caught within."
+            "description": "Summons a moving poison cloud that applies Poison to enemies caught within."
            
             
         }, "id": 38,
@@ -462,7 +462,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/AcidRain.png",
             "title": "Acid Rain",
-            "description": "Throw a projectile in an arc in the direction you are aiming at, raining acid on enemies in its trajectory, applying Rot: 100 damage over 15 seconds, spread on death with each rain drop."
+            "description": "Throw a projectile in an arc in the direction you are aiming at, raining acid on enemies in its trajectory, applying Rot with each rain drop."
             
             
         },"id": 39,
@@ -507,7 +507,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/SummonPutridHounds.png",
             "title": "Putrid Hounds",
-            "description": "Summon 2 putrid hounds to fight for you, applying 3% Weakness when they attack. A maximum of 7 units can be active at any time."
+            "description": "Summon 2 putrid hounds to fight for you, applying Weakness when they attack. A maximum of 7 units can be active at any time."
             
             
         },"id": 43,
@@ -519,7 +519,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FesteringStrike.png",
             "title": "Festering Strike",
-            "description": "Causes 30 damage and applies Poison: 90 damage over 15 seconds to all enemies around you."
+            "description": "Causes 30 damage and applies Poison to all enemies around you."
             
             
         },"id": 44,
@@ -531,7 +531,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Contagion.png",
             "title": "Contagion",
-            "description": "Causes a large explosion at your position, applying Rot: 1200 damage over 15 seconds, spread on death to nearby enemies."
+            "description": "Causes a large explosion at your position, applying Rot to nearby enemies."
             
             
         },"id": 45,
@@ -543,7 +543,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/PathOfDecay.png",
             "title": "Path of Decay",
-            "description": "For the next 6 seconds, leave a trail of decay behind you, applying Poison: 120 damage over 15 seconds every 1 seconds to enemies standing in your path."
+            "description": "For the next 6 seconds, leave a trail of decay behind you, applying Poison every 1 seconds to enemies standing in your path."
             
             
         },"id": 46,
@@ -555,7 +555,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/CobraTotem.png",
             "title": "Cobra Totem",
-            "description": "Summon a cobra totem at your position for 10 seconds, which continuously fires poison bombs at the nearest enemy, dealing 150 initial damage and applying 1 stacks of Poison: 500 damage over 15 secondsto enemies in an area. A maximum of 4 totems may be active at any one time."
+            "description": "Summon a cobra totem at your position for 10 seconds, which continuously fires poison bombs at the nearest enemy, dealing 150 initial damage and applying Poison to enemies in an area. A maximum of 4 totems may be active at any one time."
             
             
         },"id": 47,
@@ -567,7 +567,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/VenomousStrike.png",
             "title": "Venomous Strike",
-            "description": "Slashes targets in front of you causing 120 damage and applying 2 stacks of Poison: 220 damage over 15 seconds."
+            "description": "Slashes targets in front of you causing 120 damage and applying Poison."
             
             
         },"id": 48,
@@ -579,7 +579,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FireBolt.png",
             "title": "Fire Bolt",
-            "description": "Shoots a fiery projectile in the direction you are aiming at, causing 200 damage and applying 6 stacks of Burn 300 damage over 8 seconds."
+            "description": "Shoots a fiery projectile in the direction you are aiming at, causing 200 damage and applying Burn."
             
             
         },"id": 49,
@@ -591,7 +591,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Meteor.png",
             "title": "Meteor",
-            "description": "Hurls a large meteor at a random enemy, dealing 400 damage and strong pushback, inflicting 6 seconds Stun and Burn 200 damage over 8 seconds."
+            "description": "Hurls a large meteor at a random enemy, dealing 400 damage and strong pushback, inflicting Stun and Burn."
             
             
         },"id": 50,
@@ -603,7 +603,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FlameWave.png",
             "title": "Flame Wave",
-            "description": "Causes a large explosion at your position, dealing 150 damage to nearby enemies, applying 1 stacks of Burn 400 damage over 8 seconds, 2 seconds Stun and pushing them back."
+            "description": "Causes a large explosion at your position, dealing 150 damage to nearby enemies, applying Burn, Stun and pushing them back."
            
             
         }, "id": 51,
@@ -615,7 +615,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FireWall.png",
             "title": "Fire Wall",
-            "description": "Creates a wall of fire at the feet of a random enemy, applying Burn 480 damage over 8 seconds to any enemy that crosses it."
+            "description": "Creates a wall of fire at the feet of a random enemy, applying Burn to any enemy that crosses it."
             
             
         },"id": 52,
@@ -627,7 +627,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/MeteorShower.png",
             "title": "Meteor Shower",
-            "description": "15 small meteorites hit the ground around a random enemy, dealing 100 damage per meteorite and inflicting 5 seconds Stun and Burn 200 damage over 8 seconds."
+            "description": "15 small meteorites hit the ground around a random enemy, dealing 100 damage per meteorite and inflicting Stun and Burn."
             
             
         },"id": 53,
@@ -661,7 +661,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FireWalk.png",
             "title": "Fire Walk",
-            "description": "For the next 6 seconds, leave a trail of fire behind you, applying 1 stacks of Burn 60 damage over 8 seconds every 1 seconds to enemies standing in the fire."
+            "description": "For the next 6 seconds, leave a trail of fire behind you, applying Burn every 1 seconds to enemies standing in the fire."
             
             
         },"id": 56,
@@ -673,7 +673,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FlameThrower.png",
             "title": "Flamethrower",
-            "description": "You launch a continuous pillar of flames forward hitting enemies for 6 seconds, applying Melting: -2.0 armor and 75 damage over 8 seconds every 0.25 seconds to enemies that are caught in its path."
+            "description": "You launch a continuous pillar of flames forward hitting enemies for 6 seconds, applying Melting 0.25 seconds to enemies that are caught in its path."
             
             
         },"id": 57,
@@ -685,7 +685,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FirePillar.png",
             "title": "Fire Pillar",
-            "description": "Summons a fire pillar at a random enemy position, dealing 10 damage and applying Melting: -15.0 armor and 500 damage over 8 seconds."
+            "description": "Summons a fire pillar at a random enemy position, dealing 10 damage and applying Melting."
             
             
         },"id": 58,
@@ -697,7 +697,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FireSlash.png",
             "title": "Fire Slash",
-            "description": "Sends a fiery slash forward, causing 50 damage and applying 1 stacks of Burn 170 damage over 8 seconds."
+            "description": "Sends a fiery slash forward, causing 50 damage and applying Burn."
             
             
         },"id": 59,
@@ -709,7 +709,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Combustion.png",
             "title": "Combustion",
-            "description": "You emit an aura of fire for 6 seconds, applying 1 stacks of Burn 70 damage over 8 seconds to enemies that stay near you every 0.5 seconds"
+            "description": "You emit an aura of fire for 6 seconds, applying Burn to enemies that stay near you every 0.5 seconds"
             
             
         },"id": 60,
@@ -721,7 +721,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FieryMissiles.png",
             "title": "Fiery Missiles",
-            "description": "While attack is channeled, you automatically launch fiery missiles that seek 3 random targets, dealing 5 damage and applying 1 stacks of Burn 40 damage over 8 seconds in a tiny area."
+            "description": "While attack is channeled, you automatically launch fiery missiles that seek 3 random targets, dealing 5 damage and applying Burn in a tiny area."
             
             
         },"id": 61,
@@ -733,7 +733,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/LightningBolt.png",
             "title": "Lightning Bolt",
-            "description": "Fires 3 lightning projectiles towards a random enemy, piercing through enemies in a line, each causing 700 damage and inflicting 10% Dazed."
+            "description": "Fires 3 lightning projectiles towards a random enemy, piercing through enemies in a line, each causing 700 damage and inflicting Dazed."
             
             
         },"id": 62,
@@ -745,7 +745,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ThunderClap.png",
             "title": "Thunder Clap",
-            "description": "Hit the ground in front of you calling a thunder strike, dealing 1100 damage and applying 2 seconds Stun and 15% Disoriented."
+            "description": "Hit the ground in front of you calling a thunder strike, dealing 1100 damage and applying Stun and Disoriented."
             
             
         },"id": 63,
@@ -757,7 +757,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ThunderStrike.png",
             "title": "Thunder Strike",
-            "description": "Calls down thunder to strike a random enemy, dealing 1300 damage and pushing enemies back, inflicting 20% Dazed and 4 seconds Stun."
+            "description": "Calls down thunder to strike a random enemy, dealing 1300 damage and pushing enemies back, inflicting Dazed and Stun."
             
             
         },"id": 64,
@@ -768,7 +768,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ChainLightning.png",
             "title": "Chain Lightning",
-            "description": "Hurls a lightning bolt at a random enemy, causing 400 damage, applying 10% Dazed and then jumping to 7 additional nearby targets if possible."
+            "description": "Hurls a lightning bolt at a random enemy, causing 400 damage, applying Dazed and then jumping to 7 additional nearby targets if possible."
             
             
         },"id": 65,
@@ -780,7 +780,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/CallLightning.png",
             "title": "Call Lightning",
-            "description": "Summon a total of 7 lightning strikes away from you, that quickly converge to your position, dealing 80 damage and applying 15% Dazed to enemies in their path."
+            "description": "Summon a total of 7 lightning strikes away from you, that quickly converge to your position, dealing 80 damage and applying Dazed to enemies in their path."
             
             
         },"id": 66,
@@ -792,7 +792,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/LightningBeam.png",
             "title": "Lightning Beam",
-            "description": "Fire a continuous beam in the direction you are aiming at, dealing up to 300 damage to enemies in the area and quickly applying 1% Dazed."
+            "description": "Fire a continuous beam in the direction you are aiming at, dealing up to 300 damage to enemies in the area and quickly applying Dazed."
             
             
         },"id": 67,
@@ -804,7 +804,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ShadowBolt.png",
             "title": "Shadow Bolt",
-            "description": "Fires 7 shadowy projectiles towards a random enemy, piercing through enemies in a line, inflicting 1 stacks of Doom: 160 delayed damage each."
+            "description": "Fires 7 shadowy projectiles towards a random enemy, piercing through enemies in a line, inflicting Doom."
             
             
         },"id": 68,
@@ -816,7 +816,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ShadowSpikes.png",
             "title": "Shadow Spike",
-            "description": "Shadow spikes are summoned from the ground in a straight line towards a random enemy, causing 230 damage and applying Doom: 350 delayed damage."
+            "description": "Shadow spikes are summoned from the ground in a straight line towards a random enemy, causing 230 damage and applying Doom."
             
             
         },"id": 69,
@@ -828,7 +828,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Void.png",
             "title": "Void",
-            "description": "Creates a void at a random position that pulls enemies in a large area towards it position for 6 seconds, applying 1 stacks of Doom: 240 delayed damage. The pull is not effective against very heavy enemies."
+            "description": "Creates a void at a random position that pulls enemies in a large area towards it position for 6 seconds, applying Doom. The pull is not effective against very heavy enemies."
             
             
         },"id": 70,
@@ -840,7 +840,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ShadowOrb.png",
             "title": "Shadow Orb",
-            "description": "Launch a large orb in the direction you are aiming at, which applies 1 stacks of Cursed: 200 delayed area damage to targets it passes through. Additionally, this orb quickly fires additional projectiles in all directions, each dealing 50 damage per hit."
+            "description": "Launch a large orb in the direction you are aiming at, which applies Cursed to targets it passes through. Additionally, this orb quickly fires additional projectiles in all directions, each dealing 50 damage per hit."
             
             
         },"id": 71,
@@ -852,7 +852,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ShadowStep.png",
             "title": "Shadow Step",
-            "description": "Create a dark portal in front of you and another a few meters away from you, allowing you to teleport from one portal to the other at any time, dealing 300 damage and applying Hemorrhage: 750 damage over 10 seconds, and extra damage from movement to enemies near the portal you come out of. Both portals are consumed in the process."
+            "description": "Create a dark portal in front of you and another a few meters away from you, allowing you to teleport from one portal to the other at any time, dealing 300 damage and applying Hemorrhage to enemies near the portal you come out of. Both portals are consumed in the process."
             
             
         },"id": 72,
@@ -886,7 +886,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ShadowGrasp.png",
             "title": "Shadow Grasp",
-            "description": "Pulls enemies in a large area towards you, applying Cursed: 150 delayed area damage."
+            "description": "Pulls enemies in a large area towards you, applying Cursed."
             
             
         },"id": 75,
@@ -898,7 +898,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ShadowNova.png",
             "title": "Shadow Nova",
-            "description": "Creates a shadow nova around you, which heals allies for 25 health and applies Doom: 400 delayed damage on enemies in a large area."
+            "description": "Creates a shadow nova around you, which heals allies for 25 health and applies Doom on enemies in a large area."
             
             
         },"id": 76,
@@ -910,7 +910,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/RayOfDoom.png",
             "title": "Ray of Doom",
-            "description": "Summon 2 shadow rays that rotate around you for 6 seconds, applying 1 stacks of Doom: 150 delayed damage to enemies hit."
+            "description": "Summon 2 shadow rays that rotate around you for 6 seconds, applying Doom to enemies hit."
            
             
         }, "id": 77,
@@ -933,7 +933,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Obliterate.png",
             "title": "Obliterate",
-            "description": "Obliterate targets in the direction you are aiming at, causing 150 damage and applying 9% Weakness."
+            "description": "Obliterate targets in the direction you are aiming at, causing 150 damage and applying Weakness."
             
             
         },"id": 79,
@@ -945,7 +945,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/HeroicStrike.png",
             "title": "Heroic Strike",
-            "description": "Slow attack that strikes targets in a large area in the direction you are aiming at, causing 650 damage and applying Confused: -5% chance to hit and 50% chance to take 500 damage when attacking, for 5 seconds on enemies hit. x3 critical damage."
+            "description": "Slow attack that strikes targets in a large area in the direction you are aiming at, causing 650 damage and applying Confused on enemies hit. x3 critical damage."
             
             
         },"id": 80,
@@ -957,7 +957,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/LightBeam.png",
             "title": "Light Beam",
-            "description": "Fire a continuous beam in the direction you are aiming at, dealing up to 280 damage to enemies in the area and quickly applying Brittle: +1% cooldowns and 1 damage per hit for 5 seconds."
+            "description": "Fire a continuous beam in the direction you are aiming at, dealing up to 280 damage to enemies in the area and quickly applying Brittle."
             
             
         },"id": 81,
@@ -991,7 +991,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/BeaconOfLight.png",
             "title": "Beacon of Light",
-            "description": "You emit a blessed aura for 6 seconds, causing 80 damage and applying Confused: -1.0% chance to hit and 50% chance to take 20 damage when attacking, for 5 seconds to enemies that stay near you every 0.5 seconds."
+            "description": "You emit a blessed aura for 6 seconds, causing 80 damage and applying Confused to enemies that stay near you every 0.5 seconds."
             
             
         },"id": 84,
@@ -1025,7 +1025,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/BladesOfLight.png",
             "title": "Blades of Light",
-            "description": "You slash forward two times, causing a total of 180 damage and applying 4% Dazed for each hit."
+            "description": "You slash forward two times, causing a total of 180 damage and applying Dazed for each hit."
             
             
         },"id": 87,
@@ -1059,7 +1059,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Subdue.png",
             "title": "Subdue",
-            "description": "A powerful strike in the direction you are aiming at, dealing 50 damage and an extra 10 damage per stack of Bleed or Hemorrhage in the affected targets, applying 12% Fragility."
+            "description": "A powerful strike in the direction you are aiming at, dealing 50 damage and an extra 10 damage per stack of Bleed or Hemorrhage in the affected targets, applying Fragility."
             
             
         },"id": 90,
@@ -1115,7 +1115,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/DoubleSlash.png",
             "title": "Double Slash",
-            "description": "You slash forward two times, causing a total of 80 damage and applying 2 stacks of Bleed: 100 damage over 10 seconds."
+            "description": "You slash forward two times, causing a total of 80 damage and applying Bleed."
             
             
         },"id": 95,
@@ -1127,7 +1127,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ThrowAxe.png",
             "title": "Throw Axe",
-            "description": "Throws an axe forward hitting enemies in a line, and then coming back to your current position, causing 100 damage and applying 2 stacks of Hemorrhage: 300 damage over 10 seconds, and extra damage from movement every time it goes through enemies."
+            "description": "Throws an axe forward hitting enemies in a line, and then coming back to your current position, causing 100 damage and applying Hemorrhage every time it goes through enemies."
             
             
         },"id": 96,
@@ -1139,7 +1139,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Uppercut.png",
             "title": "Uppercut",
-            "description": "Throw enemies in the direction you are aiming at in the air, causing 400 damage and inflicting 5 seconds Stun and Wound."
+            "description": "Throw enemies in the direction you are aiming at in the air, causing 430 damage and inflicting Stun and Wound. May also stun elite enemies"
             
             
         },"id": 97,
@@ -1151,7 +1151,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Flurry.png",
             "title": "Flurry",
-            "description": "Quickly throw daggers in the direction you are aiming at, hitting enemies total of 20 times, dealing 40 damage and applying 2 stacks of Bleed: 60 damage over 10 seconds with every hit."
+            "description": "Quickly throw daggers in the direction you are aiming at, hitting enemies total of 20 times, dealing 40 damage and applying Bleed with every hit."
             
             
         },"id": 98,
@@ -1185,7 +1185,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Backstab.png",
             "title": "Backstab",
-            "description": "Stab enemies in front of you, causing 300 damage. Damage is multiplied by 5 and you also apply Hemorrhage: 800 damage over 10 seconds, and extra damage from movement if you are behind the target."
+            "description": "Stab enemies in front of you, causing 300 damage. Damage is multiplied by 5 and you also apply Hemorrhage if you are behind the target."
             
             
         },"id": 101,
@@ -1197,7 +1197,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Rupture.png",
             "title": "Rupture",
-            "description": "Hit enemies in a long line in front of you, dealing 500 damage and applying 15% Disoriented and 4 seconds Stun. Can stun most elite enemies."
+            "description": "Hit enemies in a long line in front of you, dealing 500 damage and applying Disoriented and Stun. Can stun most elite enemies."
            
             
         }, "id": 102,
@@ -1209,7 +1209,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/SinisterStrike.png",
             "title": "Sinister Strike",
-            "description": "Stab enemies in front of you, causing 70 damage if the target is facing you, or applying 10 stacks of Hemorrhage: 300 damage over 10 seconds, and extra damage from movement if you are behind the target."
+            "description": "Stab enemies in front of you, causing 70 damage if the target is facing you, or applying Hemorrhage if you are behind the target."
             
             
         },"id": 103,
@@ -1221,7 +1221,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Eviscerate.png",
             "title": "Eviscerate",
-            "description": "You strike enemies in front of you, dealing 80 damage and applying 5 stacks of Bleed: 100 damage over 10 seconds if they are facing you, or dealing 250 damage and an extra 50 damage per stack of Bleed or Hemorrhage in the target and removing those effects in the process if you are behind their backs."
+            "description": "You strike enemies in front of you, dealing 80 damage and applying Bleed if they are facing you, or dealing 250 damage and an extra 50 damage per stack of Bleed or Hemorrhage in the target and removing those effects in the process if you are behind their backs."
             
             
         },"id": 104,
@@ -1255,7 +1255,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/StormOfSpears.png",
             "title": "Storm of Spears",
-            "description": "Quickly spin around for a few seconds firing a total of 100 spears in all directions, each piercing enemies and dealing 50 damage and applying Hemorrhage: 300 damage over 10 seconds, and extra damage from movement."
+            "description": "Quickly spin around for a few seconds firing a total of 100 spears in all directions, each piercing enemies and dealing 50 damage and applying Hemorrhage."
             
             
         },"id": 107,
@@ -1267,7 +1267,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Thrust.png",
             "title": "Thrust",
-            "description": "Hit enemies in a long line in front of you dealing 90 damage and applying 4 stacks of Bleed: 120 damage over 10 seconds."
+            "description": "Hit enemies in a long line in front of you dealing 90 damage and applying Bleed."
             
             
         },"id": 108,
@@ -1301,7 +1301,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Demolish.png",
             "title": "Demolish",
-            "description": "Hit the ground in front of you, dealing 300 damage and sending 10 shockwaves in random directions, each dealing 100 damage and applying Hemorrhage: 150 damage over 10 seconds, and extra damage from movement"
+            "description": "Hit the ground in front of you, dealing 300 damage and sending 10 shockwaves in random directions, each dealing 100 damage and applying Hemorrhage."
             
             
         },"id": 111,
@@ -1313,7 +1313,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Shockwave.png",
             "title": "Shockwave",
-            "description": "Hit the ground causing a shockwave in a line in front of you, causing 250 damage and applying Hemorrhage: 300 damage over 10 seconds, and extra damage from movement."
+            "description": "Hit the ground causing a shockwave in a line in front of you, causing 250 damage and applying Hemorrhage."
             
             
         },"id": 112,
@@ -1325,7 +1325,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ShockwaveTotem.png",
             "title": "Shockwave Totem",
-            "description": "Summon a ground shaking totem at your position for 20 seconds, which continuously fires shockwaves at the nearest enemy, dealing 100 damage and applying Hemorrhage: 200 damage over 10 seconds, and extra damage from movement in a large area. A maximum of 4 totems may be active at any one time."
+            "description": "Summon a ground shaking totem at your position for 20 seconds, which continuously fires shockwaves at the nearest enemy, dealing 100 damage and applying Hemorrhage in a large area. A maximum of 4 totems may be active at any one time."
             
             
         },"id": 113,
@@ -1337,7 +1337,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Stomp.png",
             "title": "Stomp",
-            "description": "You stomp the ground, causing 400 damage and applying +9% Fragility and 4 seconds Stun to all enemies around you."
+            "description": "You stomp the ground, causing 400 damage and applying Fragility and Stun to all enemies around you."
             
             
         },"id": 114,
@@ -1345,23 +1345,12 @@
         "cooldown": 7,
         "skillType": ["Slam", "Area", "Burst", "Physical"]
     },
-    {
-        "activeSkill": {
-            "icon": "assets/skill_icons/GroundSlam.png",
-            "title": "Ground Slam",
-            "description": "Hit the ground with a powerful strike in the direction you are aiming at, causing 300 damage, applying Bleed: 500 damage over 10 seconds."
-            
-            
-        },"id": 115,
-        "statusEffect":["Bleed"],
-        "cooldown": 6,
-        "skillType": ["Slam", "Area", "Burst", "Physical"]
-    },
+
     {
         "activeSkill": {
             "icon": "assets/skill_icons/BladedChakram.png",
             "title": "Bladed Chakram",
-            "description": "Throw a chakram in the target direction, causing 120 damage and applying Rot: 450 damage over 15 seconds, spread on death to targets hit. The chakram returns to you at the end of its range, causing damage to enemies again on its way back."
+            "description": "Throw a chakram in the target direction, causing 120 damage and applying Rot to targets hit. The chakram returns to you at the end of its range, causing damage to enemies again on its way back."
             
             
         },"id": 116,
@@ -1384,7 +1373,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/FragShot.png",
             "title": "Frag Shot",
-            "description": "Fires a shot in the direction you are aiming at, piercing through enemies in a line, dealing 250 damage. Two secondary bolts are released on impact, each dealing another 150 damage and applying 3% Fragility."
+            "description": "Fires a shot in the direction you are aiming at, piercing through enemies in a line, dealing 250 damage. Two secondary bolts are released on impact, each dealing another 150 damage and applying Fragility."
             
             
         },"id": 118,
@@ -1407,7 +1396,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/SplitShot.png",
             "title": "Split Shot",
-            "description": "Fires a projectile in the direction you are aiming at, that explodes on impact releasing 10 projectiles, each dealing 70 damage and applying Bleed: 250 damage over 10 seconds."
+            "description": "Fires a projectile in the direction you are aiming at, that explodes on impact releasing 10 projectiles, each dealing 70 damage and applying Bleed."
             
             
         },"id": 120,
@@ -1441,7 +1430,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Shoot.png",
             "title": "Shoot",
-            "description": "Fires 3 arrows in the direction you are aiming at, dealing 50 damage to all enemies hit and applying 3% Fragility for each arrow."
+            "description": "Fires 3 arrows in the direction you are aiming at, dealing 50 damage to all enemies hit and applying Fragility for each arrow."
             
             
         },"id": 123,
@@ -1453,7 +1442,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/RainOfArrows.png",
             "title": "Rain of Arrows",
-            "description": "Shoots multiple arrows at a random enemy's location, hitting enemies multiple times, causing a total of 560 damage and applying 3 seconds Stun with every hit."
+            "description": "Shoots multiple arrows at a random enemy's location, hitting enemies multiple times, causing a total of 560 damage and applying Stun with every hit."
             
             
         },"id": 124,
@@ -1476,7 +1465,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/BombBarrage.png",
             "title": "Bomb Barrage",
-            "description": "Fires 10 bombs in an area in front of you, each causing 85 damage and applying 3% Weakness."
+            "description": "Fires 10 bombs in an area in front of you, each causing 85 damage and applying Weakness."
             
             
         },"id": 126,
@@ -1499,7 +1488,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ShrapnelBomb.png",
             "title": "Shrapnel Bomb",
-            "description": "Throw a bomb in front of you, dealing 270 damage in an area and exploding into 15 projectiles that fly in all directions, each dealing 45 damage and applying Bleed: 80 damage over 10 seconds."
+            "description": "Throw a bomb in front of you, dealing 270 damage in an area and exploding into 15 projectiles that fly in all directions, each dealing 45 damage and applying Bleed."
             
             
         },"id": 128,
@@ -1522,7 +1511,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/WeakeningGrenade.png",
             "title": "Weakening Grenade",
-            "description": "Throws a grenade in an area in front of you, causing 350 damage and applying 24% Weakness."
+            "description": "Throws a grenade in an area in front of you, causing 350 damage and applying Weakness."
             
             
         },"id": 130,
@@ -1534,11 +1523,11 @@
         "activeSkill": {
             "icon": "assets/skill_icons/BearTrap.png",
             "title": "Bear Trap",
-            "description": "Leave a permanent trap in the ground that explodes when an enemy steps on it, causing 500 damage and applying 60% Slow and Wound to enemies in a large area."
+            "description": "Leave a permanent trap in the ground that explodes when an enemy steps on it, causing 500 damage and applying Slow to enemies in a large area."
             
             
         },"id": 131,
-        "statusEffect":["Slow","Wound"],
+        "statusEffect":["Slow"],
         "cooldown": 8,
         "skillType": ["Bomb", "Lasting", "Static", "Physical"]
     },
@@ -1546,7 +1535,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ShrapnelMine.png",
             "title": "Shrapnel Mine",
-            "description": "Leave a permanent mine in the ground that explodes when an enemy steps on it, exploding into 20 fragments that fly in all direction, each applying 5 stacks of Hemorrhage: 130 damage over 10 seconds, and extra damage from movement."
+            "description": "Leave a permanent mine in the ground that explodes when an enemy steps on it, exploding into 20 fragments that fly in all direction, each applying Hemorrhage."
             
             
         },"id": 132,
@@ -1558,7 +1547,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/MortarShot.png",
             "title": "Mortar Shot",
-            "description": "Fires 5 mortar shots in an area in front of you, each causing 30 damage and applying 1 stacks of Bleed: 60 damage over 10 seconds."
+            "description": "Fires 5 mortar shots in an area in front of you, each causing 30 damage and applying Bleed."
             
             
         },"id": 133,
@@ -1570,7 +1559,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Disengage.png",
             "title": "Disengage",
-            "description": "Throw an icy bomb right in front of you, dealing 450 damage and applying 20 stacks of Paralysis: -100% movement speed, +20% direct damage taken to enemies, pushing them away."
+            "description": "Throw an icy bomb right in front of you, dealing 450 damage and applying Paralysis to enemies, pushing them away."
             
             
         },"id": 134,
@@ -1582,7 +1571,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/ExplosiveShot.png",
             "title": "Explosive Shot",
-            "description": "Fires an explosive shot in the direction you are aiming at, dealing 250 damage and applying 12% Weakness to enemies in large area."
+            "description": "Fires an explosive shot in the direction you are aiming at, dealing 250 damage and applying Weakness to enemies in large area."
             
             
         },"id": 135,
@@ -1605,7 +1594,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/NapalmBlast.png",
             "title": "Napalm Blast",
-            "description": "Fires a blast of fire in a cone in front of you, causing 40 damage, applying Melting: -12.0 armor and 400 damage over 8 seconds and leaving a burning area in the ground that continuously applies Melting: -1.0 armor to enemies."
+            "description": "Fires a blast of fire in a cone in front of you, causing 40 damage, applying Melting and leaving a burning area in the ground that continuously applies Melting."
             
             
         },"id": 137,
@@ -1617,7 +1606,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/PowerBlast.png",
             "title": "Power Blast",
-            "description": "Fires a powerful blast in a line in front of you, causing 150 damage and applying 10% Disoriented."
+            "description": "Fires a powerful blast in a line in front of you, causing 150 damage and applying Disoriented."
             
             
         },"id": 138,
@@ -1633,6 +1622,7 @@
             
             
         },"id": 139,
+        "statusEffect":["Paralysis"],
         "cooldown": 4,
         "skillType": ["Ice", "Blast", "Area", "Frontal", "Magical"]
     },
@@ -1640,7 +1630,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/AncientCurse.png",
             "title": "Ancient Curse",
-            "description": "Fires a shadowy blast in a cone in front of you, causing 200 damage and applying Doom: 300 delayed damage to enemies, and increasing the cast frequency of allies by an additional 50% for 12.0 seconds."
+            "description": "Fires a shadowy blast in a cone in front of you, causing 200 damage and applying Doom to enemies, and increasing the cast frequency of allies by an additional 50% for 12.0 seconds."
             
             
         },"id": 140,
@@ -1652,7 +1642,7 @@
         "activeSkill": {
             "icon": "assets/skill_icons/Buckshot.png",
             "title": "Buckshot",
-            "description": "Fires a blast of pellets in a cone in front of you, causing 100 damage and applying 3% Fragility."
+            "description": "Fires a blast of pellets in a cone in front of you, causing 100 damage and applying Fragility."
             
             
         },"id": 141,

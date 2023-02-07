@@ -1,8 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { map, Observable, of } from 'rxjs';
 import { IBuild } from 'src/app/resources/models/build/build';
-import { IActiveSkill, IStatusEffect, StatusEffectTitle } from 'src/app/resources/models/skill/skill';
-import { IdbService } from 'src/app/resources/services/idb/idb.service';
+import { IActiveSkill, IStatusEffect } from 'src/app/resources/models/skill/skill';
 
 @Component({
   selector: 'app-skill-container',
@@ -17,13 +15,7 @@ export class SkillContainerComponent {
   @Input() statusEffects: IStatusEffect[] = [];
   @Input() currentBuild!: IBuild;
   @Input() selected: boolean = false;
-    /**
-   *
-   */
-  constructor(private idbService: IdbService) {
-  
-    
-  }
+
 
 
   formatSkillText(){
@@ -34,7 +26,6 @@ export class SkillContainerComponent {
         if(str !== undefined && str !== '' && !str.includes('<')){
         let substring:any = str.match(object.effectTitle)
       if(substring !== null){
-        console.log('str',str,'substring',substring)
 
       let res = str.replace(substring, "<span style='color:"+object.effectHighligtColor+"'>"+substring+"</span>");
       if(element){

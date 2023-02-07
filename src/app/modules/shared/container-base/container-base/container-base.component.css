@@ -11,6 +11,7 @@
     margin: .5em;
     padding: .5em;
     display: grid;
+    grid-template-rows: 5% 45% 40% 10%;
     justify-items: center;
     text-align: center;
     background-image: linear-gradient(var(--background),var(--container-bg-dark));
@@ -20,29 +21,15 @@
 .base-icon{
     width: 10em;
     height: 10em;
-    
+    align-self: center;
 }
 
-.base-container{
-    border: 2px solid;
-    border-color: var(--border-outer-color);
-    border-top-color: white;
-    outline: 2px solid var(--border-color);
-    outline-offset: -3px;
-    margin: .5em;
-    padding: .5em;
-    display: grid;
-    justify-items: center;
-    text-align: center;
-    background-image: linear-gradient(var(--background),var(--container-bg-dark));
-    min-height: 490px;
+
+.stat{
+    padding: 0;
+    margin: 0;
 }
 
-.weapon-icon{
-    width: 10em;
-    height: 10em;
-    
-}
 .selector-container{
     width: 100%;
 }

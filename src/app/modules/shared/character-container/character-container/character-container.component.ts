@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { first } from 'rxjs';
+import { Component, Input } from '@angular/core';
 import { IBuild } from 'src/app/resources/models/build/build';
 import { ICharacter } from 'src/app/resources/models/character/character';
 
@@ -9,11 +8,7 @@ import { ICharacter } from 'src/app/resources/models/character/character';
   styleUrls: ['./character-container.component.css']
 })
 
-export class CharacterContainerComponent implements OnInit{
-  ngOnInit(): void {
-    
-  }
-
+export class CharacterContainerComponent{
 
   setSelectedIndex(index: number){
     this.selectedIndex = index

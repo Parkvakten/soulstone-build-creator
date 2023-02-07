@@ -9,16 +9,6 @@
 [icon]="character.icon"
 [stats]="character.stats"
 ></app-container-base>
-<!-- <div class="character-container" *ngIf="this.stepNumber === 0" >
-    <div class="character-name" > {{character.characterType}} </div>
-    <img class="character-icon" [src]="character.icon" [alt]="character.characterType" >
-    <div *ngFor="let stat of character.stats;let i = index">
-        <p  [id]="getId(character.characterType,i)">{{stat}}{{formatStatText(character.characterType,i)}}
-    </div>
-    <app-selector-base class="selector-container"
-    [selected]="this.selected" 
-    [selectItem]="{objectKey:'selectedCharacter',item:character}" 
-    [currentBuild]="this.currentBuild"></app-selector-base>
-</div> -->
+
 
 
