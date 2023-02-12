@@ -7,13 +7,13 @@
     <button (click)="addBuild()" class="btn btn-outline-light button">Create new build</button>
 
     <h3 class="title">Unsaved build</h3>
-    <app-buil-container [build]="localStorageBuild"></app-buil-container>
+    <app-buil-container [getInprgBuild]="true" ></app-buil-container>
 </div>
 
     <div class="div-right">
         <h3 class="title">Select build</h3>     
     
-        <app-buil-container [builds]="$getBuilds | async" ></app-buil-container>
+        <app-buil-container [getBuilds]="true"></app-buil-container>
        
     
 </div>
@@ -55,27 +55,42 @@
     </div>
 </div>
 
-<input class="filter-field" *ngIf="this.currentBuild.stepNumber === 2 || this.currentBuild.stepNumber === 3"  type="text" name="search" [placeholder]="this.currentBuild.stepNumber === 2 ? '...Search skill name' : '...Search rune name'" [(ngModel)]="this.filterString">
-<div *ngIf="this.currentBuild.stepNumber === 2" class="grid-container" style="grid-template-columns: repeat(3,1fr);" >
-    
-    <div *ngFor="let skill of $getSkills | async  | filter:filterString:'activeSkill':'title'; let i = index" >
-        <app-skill-container
-         (click)="setSelectedSkillIndex(i)"
-          [skill]="skill"
-           [currentBuild]="this.currentBuild"
-            [selected]="this.selectedSkillIndex === i"
-             ></app-skill-container>
-    </div>
-</div>
 
-<div *ngIf="this.currentBuild.stepNumber === 3" class="grid-container" style="grid-template-columns: repeat(3,1fr);">
+<input class="filter-field" *ngIf="this.currentBuild.stepNumber === 3 || this.currentBuild.stepNumber === 2"  type="text" name="search" [placeholder]="this.currentBuild.stepNumber === 2 ? '...Search skill name' : '...Search rune name'" [(ngModel)]="this.filterString">
+<div *ngIf="this.currentBuild.stepNumber === 2">
+<div  class="grid-container" style="grid-template-columns: repeat(3,1fr);">
     <div *ngFor="let rune of $getRunes | async | filter:filterString:'title'; let i = index" >
         <app-rune-container (click)="setSelectedRuneIndex(i)" [rune]="rune" [currentBuild]="this.currentBuild" [selected]="this.selectedRuneIndex === i" ></app-rune-container>
     </div>
+
 </div>
+<app-select-summary   [currentBuild]="this.currentBuild" [runes]="this.currentBuild.selectedRunes" ></app-select-summary>
+</div>
+
+<div *ngIf="this.currentBuild.stepNumber === 3">
+    
+    <div  class="grid-container" style="grid-template-columns: repeat(3,1fr);" >
+        
+        <div *ngFor="let skill of $getSkills | async  | filter:filterString:'activeSkill':'title'; let i = index" >
+            <app-skill-container
+             (click)="setSelectedSkillIndex(i)"
+              [skill]="skill"
+               [currentBuild]="this.currentBuild"
+                [selected]="this.selectedSkillIndex === i"
+                 ></app-skill-container>
+        </div>
+       
+    </div>
+    <app-select-summary  [currentBuild]="this.currentBuild" [skills]="this.currentBuild.selectedSkills"  ></app-select-summary>
+    </div>
+
 <div *ngIf="this.currentBuild.stepNumber === 4 " >
-    <input type="text" placeholder="Enter build name">
+    
+    <div style="margin-bottom:1em;margin-top: 1em;">
+    <input [(ngModel)]="buildName" type="text" placeholder="Build name">
     <button (click)="saveBuild()" >Save build</button>
+</div>
     <app-build-summary [build]="this.currentBuild" ></app-build-summary>
+
 </div>
 </div>

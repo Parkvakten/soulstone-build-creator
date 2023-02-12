@@ -1,14 +1,14 @@
 
-<div class="grid-container" >
+<div class="grid-container" *ngIf="this.getBuilds" >
     
-    <span (click)="navigateToBuild(build)" class="grid-item" *ngFor="let build of this.builds" >
-     <img *ngIf="build.icon" [src]="build.icon" >
+    <span (click)="navigateToBuild(build)" class="grid-item" *ngFor="let build of $getBuilds | async" >
+     <img *ngIf="build.selectedCharacter" [src]="build.selectedCharacter.icon" [alt]="build.selectedCharacter.characterType">
      {{build.buildName}}</span>
  </div>
  
-<div class="grid-container" *ngIf="build" >
+<div class="grid-container" *ngIf="this.getInprgBuild" >
     
-    <span (click)="navigateToBuild(build)" class="grid-item" >
-     <img *ngIf="build.icon" [src]="build.icon" >
+    <span (click)="navigateToBuild(build)" class="grid-item" *ngFor="let build of $getInProgressBuilds | async"  >
+        <img *ngIf="build.selectedCharacter" [src]="build.selectedCharacter.icon" [alt]="build.selectedCharacter.characterType">
      {{build.buildName}}</span>
  </div>

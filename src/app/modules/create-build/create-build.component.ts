@@ -24,6 +24,7 @@ export class CreateBuildComponent implements OnInit {
   selectedRuneIndex: number = -1;
   filterString:string = '';
   localStorageBuild: IBuild | null = null;
+  buildName:string = '';
 
   
 $getCharacters: Observable<ICharacter[]> = this.idbService.getAllItems$<ICharacter>(this.idbService.db.characters).pipe(map((res)=>{
@@ -56,13 +57,7 @@ $getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbSer
   return res;
 }))
 
-$getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idbService.db.builds)
-.pipe(
-  map((res)=>{
-    console.log('res for get builds',res);
-    return res
-  })
-)
+
 
   currentBuild: IBuild | null = null
   
@@ -81,17 +76,24 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
 
    addBuild(){
     let build: IBuild = generateBuild();
-    localStorage.setItem('inprogressBuild',JSON.stringify(build))
     this.idbService.getTableLength(this.idbService.db.builds).then((res)=>{
       build.id = res+1;
       this.buildService._setNewCurrentBuild(build);
-      //return this.idbService.addItem$(this.idbService.db.builds,build)
+      return this.idbService.addItem$(this.idbService.db.builds,build)
     })
     
    }
 
    saveBuild(){
-    return this.idbService.addItem$(this.idbService.db.builds,this.currentBuild)
+    if(this.currentBuild){
+      this.currentBuild.status = 'SAVED';
+      this.currentBuild.buildName = this.buildName;
+      console.log('current build',this.currentBuild);
+
+      this.buildService._updateBuild(this.currentBuild)
+    }
+    
+    
    }
 
    checkNextButton():boolean{
@@ -112,6 +114,7 @@ $getBuilds: Observable<IBuild[]> = this.idbService.getAllItems$<IBuild>(this.idb
    previousStep(){
     if(this.currentBuild){
     this.buildService.previousStep(this.currentBuild)
+    console.log('current',this.currentBuild)
   }
    }
 

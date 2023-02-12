@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { type } from 'os';
 import { map, Observable, BehaviorSubject, mergeMap, switchMap, of, takeUntil, take, shareReplay, concatMap, forkJoin } from 'rxjs';
-import { generateBuild, IBuild } from '../../models/build/build';
+import { BuildStatus, generateBuild, IBuild } from '../../models/build/build';
 import { IdbService } from '../idb/idb.service';
 
 @Injectable({
@@ -22,7 +22,6 @@ export class BuildService {
       if(this.shouldUpdateBuild === true && build !== null){
         console.log('got update',build)
         this.shouldUpdateBuild = false;
-        localStorage.setItem('inprogressBuild',JSON.stringify(build))
       return this.updateBuild$(build)
       }else{
         return this._currentBuild.getValue();
@@ -92,6 +91,18 @@ export class BuildService {
 
   getBuild$(buildId: number):Observable<IBuild> {
     return this.idbService.getItemByIndex$<IBuild>(this.idbService.db.builds,'id',buildId).pipe(map((build)=>{
+      return build;
+    }))
+  }
+
+  getBuildByStatus$(status: BuildStatus): Observable<IBuild>{
+    return this.idbService.getItemByIndex$<IBuild>(this.idbService.db.builds,'status',status).pipe(map((build)=> {
+      return build;
+    }))
+  }
+
+  getBuildsByStatus$(status: BuildStatus): Observable<IBuild[]>{
+    return this.idbService.getItemsByIndex$<IBuild>(this.idbService.db.builds,{'status':status}).pipe(map((build)=> {
       return build;
     }))
   }

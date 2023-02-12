@@ -350,7 +350,7 @@
     "icon":"assets/rune_icons/RerollMastery.png"
   },
   {
-    "title": "Singlar Focus",
+    "title": "Singular Focus",
     "description": "Skills can now be picked multiple times. Power-ups that enchance a specific skill, will be applied to a random instance of the skill.",
     "runeCost": 5,
     "id":51,

@@ -37,7 +37,6 @@
             "icon": "assets/skill_icons/DeathVortex.png",
             "title": "Death Vortex",
             "description": "Summon a dark vortex at a random enemy's position that moves randomly, applying Doom to enemies caught within."
-           
         }, "id": 3,
         "statusEffect": ["Doom"],
         "cooldown": 12,
@@ -46,9 +45,8 @@
     {
         "activeSkill": {
             "icon": "assets/skill_icons/ArcanePower.png",
-            "title": "Arance Power",
+            "title": "Arcane Power",
             "description": "Empower you and all your nearby allies, increasing the multi cast modifier by 50% for 10.0 seconds."
-            
         },"id": 4,
         "cooldown": 30,
         "skillType": ["Arcane", "Empowering", "Lasting", "Area", "Magical"]

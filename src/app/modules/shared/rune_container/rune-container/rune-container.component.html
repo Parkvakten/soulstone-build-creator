@@ -3,13 +3,6 @@
     <h1 class="rune-title"> {{this.rune.title}} </h1>
 
     <p class="rune-description" > {{this.rune.description}} </p>
-    <!-- <div *ngIf="this.skill.statusEffect !== undefined">
-        <p class="skill-status-effect" *ngFor="let object of this.skill.statusEffectObj">
-            <span class="status-effect-name" [style.color]="object.effectHighligtColor">{{object.effectTitle}}</span>
-            <span>: </span>
-            <span>{{object.effectDetail}}</span> 
-        </p>
-    </div> -->
     <app-selector-base class="selector-container"
     [selected]="this.selected"
     [selectItem]="{objectKey:'selectedRunes',item:this.rune}"

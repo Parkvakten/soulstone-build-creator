@@ -17,6 +17,7 @@ import { Filter } from './resources/pipes/filter.pipe';
 import { BuildSummaryComponent } from './modules/build-summary/build-summary/build-summary.component';
 import { WeaponContainerComponent } from './modules/shared/weapon-container/weapon-container.component';
 import { ContainerBaseComponent } from './modules/shared/container-base/container-base/container-base.component';
+import { SelectSummaryComponent } from './modules/shared/select-summary/select-summary/select-summary.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ContainerBaseComponent } from './modules/shared/container-base/containe
     Filter,
     BuildSummaryComponent,
     WeaponContainerComponent,
-    ContainerBaseComponent
+    ContainerBaseComponent,
+    SelectSummaryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 export interface IRune{
     title: string,
     description: string,
-    runeConst:number,
+    runeCost:number,
     id:number,
     icon:string
 }

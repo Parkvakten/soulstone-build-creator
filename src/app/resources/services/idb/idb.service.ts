@@ -3,6 +3,7 @@ import { Table } from 'dexie';
 import { defer, from, map, mergeMap, Observable, of } from 'rxjs';
 import { IdbDatabase } from 'src/app/idbconfig';
 import { ICharacter } from '../../models/character/character';
+import { IdbIndex } from '../../models/idb/idb';
 import { IRune } from '../../models/rune/rune';
 import { IActiveSkill, IStatusEffect } from '../../models/skill/skill';
 import { IWeapon } from '../../models/weapon/weapon';
@@ -98,8 +99,8 @@ export class IdbService {
     return obs$
   }
 
-  getItemsByIndex$<T>(table: Table, key:string,indexArr: string[]):Observable<T[]>{
-    const obs$ = from(table.where(key).anyOf(indexArr).toArray());
+  getItemsByIndex$<T>(table: Table,indexArr: IdbIndex):Observable<T[]>{
+    const obs$ = from(table.where({...indexArr}).toArray());
     return obs$
   }
 
