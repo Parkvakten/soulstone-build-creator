@@ -5,8 +5,10 @@
       <button (click)="removeRune(i)" class="remove-text btn btn-danger" *ngIf="this.selectedIndex === i && this.showRemove" >Remove skill</button>
   </button>
   </div></div>
-  
-  <progress class="progress-bar" [value]="totalCost()" [max]="10">Progress</progress>
+  <div class="progress-bar" [attr.data-label]="totalCost()+'/10'">
+    <span class="value" [ngStyle]="{'width':totalCost() * 10+'%'}"></span>
+  </div>
+
 </div>
 
 <div class="skill-summary" *ngIf="this.skills !== undefined && this.skills.length > 0 && this.currentBuild.stepNumber === 3">

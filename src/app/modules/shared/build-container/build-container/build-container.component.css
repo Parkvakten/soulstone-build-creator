@@ -6,19 +6,21 @@
     cursor: pointer;
     margin: .5em;
     border: 2px solid;
-    
+    display: grid;
     border-color: var(--border-outer-color);
     border-top-color: white;
     outline: 2px solid var(--border-color);
     outline-offset: -3px;
     padding: .5em;
-
-    
+    max-width: 10em;
+    background-image: linear-gradient(var(--background),var(--container-bg-dark));
+    color: var(--text-title-color);
 }
 
 .grid-item img{
-    width: 50px;
-    height: 50px;
+    width: 5em;
+    height: 5em;
+    justify-self: center;
 }
 .local-buil-container{
     display: grid;

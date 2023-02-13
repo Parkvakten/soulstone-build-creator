@@ -1,1 +1,10 @@
-<p>view-skills works!</p>
+<input class="filter-field"  type="text" name="search" [placeholder]="'...Search skill name'" [(ngModel)]="this.filterString">
+<div  class="grid-container" style="grid-template-columns: repeat(3,1fr);" >
+        
+    <div *ngFor="let skill of $getSkills | async  | filter:filterString:'activeSkill':'title'; let i = index" >
+        <app-skill-container
+          [skill]="skill"
+             ></app-skill-container>
+    </div>
+   
+</div>

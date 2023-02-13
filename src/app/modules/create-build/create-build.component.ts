@@ -75,7 +75,13 @@ $getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbSer
     }
 
    addBuild(){
+
     let build: IBuild = generateBuild();
+    let buildName = prompt("Enter build name:", "");
+    if(buildName){
+      build.buildName = buildName
+    }
+      
     this.idbService.getTableLength(this.idbService.db.builds).then((res)=>{
       build.id = res+1;
       this.buildService._setNewCurrentBuild(build);
