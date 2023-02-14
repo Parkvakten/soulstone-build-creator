@@ -93,7 +93,6 @@ $getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbSer
    saveBuild(){
     if(this.currentBuild){
       this.currentBuild.status = 'SAVED';
-      this.currentBuild.buildName = this.buildName;
       console.log('current build',this.currentBuild);
 
       this.buildService._updateBuild(this.currentBuild)

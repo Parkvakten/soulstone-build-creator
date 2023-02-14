@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { IBuild } from 'src/app/resources/models/build/build';
+import { generateExportStringFromBuild, IBuild } from 'src/app/resources/models/build/build';
 import { BuildService } from 'src/app/resources/services/build/build.service';
 
 @Component({
@@ -11,6 +11,7 @@ import { BuildService } from 'src/app/resources/services/build/build.service';
 export class BuilContainerComponent implements OnInit {
   @Input() getBuilds: boolean = false;
   @Input() getInprgBuild:boolean = false;
+  @Input() exportable: boolean = false;
   localStorageBuild: IBuild | null = null;
   constructor(private buildService:BuildService) {
     
@@ -40,5 +41,13 @@ export class BuilContainerComponent implements OnInit {
 
   navigateToBuild(build:IBuild){
     this.buildService._setNewCurrentBuild(build)
+   }
+   exportBuild(build: IBuild){
+    if(this.exportable === true){
+      let exportString = JSON.stringify(generateExportStringFromBuild(build));
+      navigator.clipboard.writeText(exportString);
+      alert('Buildstring copied to clipboard')
+
+    }
    }
 }

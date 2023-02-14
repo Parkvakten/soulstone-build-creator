@@ -1,7 +1,7 @@
 
 <div class="grid-container" *ngIf="this.getBuilds" >
     
-    <span (click)="navigateToBuild(build)" class="grid-item" *ngFor="let build of $getBuilds | async" >
+    <span (click)="this.exportable === true ? exportBuild(build) : navigateToBuild(build) "    class="grid-item" *ngFor="let build of $getBuilds | async" >
             {{build.buildName}}
         <img *ngIf="build.selectedCharacter" [src]="build.selectedCharacter.icon" [alt]="build.selectedCharacter.characterType">
      </span>

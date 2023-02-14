@@ -5,7 +5,8 @@ export interface ICharacter {
     characterType: CharacterType
     weapons: IWeapon[],
     stats: IStat[],
-    icon:string
+    icon:string,
+    id:number
 }
 
 export type CharacterType = [

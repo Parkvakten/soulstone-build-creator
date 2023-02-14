@@ -8,9 +8,15 @@
     <h1>Start making your build</h1>
     <p>To start making your build, click the Create button in the header or follow this <a routerLink="/create">link</a></p>
 </div>
+<div class="start-grid text" ><h1>Import build</h1>
+    <p>Paste the build string in the textfield below and click the button to import a build</p>
+    <input>
+    <button>Import</button>
+</div>
 <div class="share-grid text">
     <h1>Share your build</h1>
     <p>To share your build, copy this link and share it, other people can then import the build.</p>
+    <app-buil-container [exportable]="true" [getBuilds]="true"></app-buil-container>
 </div>
 <div class="continue-grid text">
     <h1>Continue working on your previous builds</h1>
