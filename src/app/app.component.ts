@@ -3,7 +3,7 @@ import { IActiveSkill, IStatusEffect } from './resources/models/skill/skill';
 import { IRune } from './resources/models/rune/rune';
 import { IWeapon } from './resources/models/weapon/weapon';
 import { IdbService } from './resources/services/idb/idb.service';
-import { forkJoin, map, Observable, of, switchMap } from 'rxjs';
+import { forkJoin, map, Observable, of, switchMap, take } from 'rxjs';
 import { Version } from '@angular/compiler';
 import { Versions, VersionService } from './resources/services/version/version.service';
 import { ICharacter } from './resources/models/character/character';
@@ -60,31 +60,14 @@ export class AppComponent implements OnInit{
 
   }
 
- /*
- Att göra:
-  Fixa bilder för
-    -Tom actionbar slots 
-    -Runor
- */
-
-
   ngOnInit(): void {
-   //console.log('JSON DATA',this.active_skills,this.runes,this.status_effects,this.weapons)
-  
-    //Hämta gamla versioner och jämför med dom som finns i JSON filen
-    /* 
-    active_skills
-    runes
-    status_effects
-    weapons
-    */
-    //console.log('this.versions',this.versions[0].version)
+
     
-   this.populateIdbWithJSON(this.active_skills,this.runes,this.status_effects,this.characters,this.weapons).subscribe((res)=> {
-    console.log('res',res);
+   this.populateIdbWithJSON(this.active_skills,this.runes,this.status_effects,this.characters,this.weapons).pipe(
+    take(1))
+    .subscribe((res)=> {
    })
-   
-   //Hämta data för runor, vapen och skills.
+
    
   }
   populateIdbWithJSON(active_skills: IActiveSkill[], runes: IRune[], status_effects: IStatusEffect[],characters: ICharacter[], weapons: IWeapon[]):Observable<boolean[]> {

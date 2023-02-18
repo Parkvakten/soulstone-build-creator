@@ -12,6 +12,8 @@ export class BuilContainerComponent implements OnInit {
   @Input() getBuilds: boolean = false;
   @Input() getInprgBuild:boolean = false;
   @Input() exportable: boolean = false;
+  @Input() gridRepeat:number = 3;
+  @Input() allSavedBuilds: IBuild[] = [];
   localStorageBuild: IBuild | null = null;
   constructor(private buildService:BuildService) {
     
@@ -24,7 +26,6 @@ export class BuilContainerComponent implements OnInit {
     $getInProgressBuilds: Observable<IBuild[]> = this.buildService.getBuildsByStatus$('INPRG')
     .pipe(
       map((res)=>{
-        console.log('res for get inprg build',res);
         return res;
       })
     
@@ -33,7 +34,6 @@ export class BuilContainerComponent implements OnInit {
     $getBuilds: Observable<IBuild[]> = this.buildService.getBuildsByStatus$('SAVED')
     .pipe(
       map((res)=>{
-        console.log('res for get builds',res);
         return res
       })
     )
@@ -45,9 +45,17 @@ export class BuilContainerComponent implements OnInit {
    exportBuild(build: IBuild){
     if(this.exportable === true){
       let exportString = JSON.stringify(generateExportStringFromBuild(build));
-      navigator.clipboard.writeText(exportString);
-      alert('Buildstring copied to clipboard')
+      navigator.clipboard.writeText(exportString).then(()=>{
+        alert('Buildstring copied to clipboard')
+      })
+      
+    }
+   }
 
+   getStyles(){
+    return{
+      display: 'grid',
+      'grid-template-columns': `repeat(${this.gridRepeat},1fr)`,
     }
    }
 }

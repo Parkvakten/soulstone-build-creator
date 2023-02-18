@@ -12,6 +12,9 @@
     background-image: linear-gradient(var(--background),var(--container-bg-dark));
     min-height: 460px
 }
+.rune-span-text{
+    color: var(--highlight-color);
+}
 
 .rune-icon{
     width: 10em;

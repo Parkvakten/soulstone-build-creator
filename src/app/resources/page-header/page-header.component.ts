@@ -1,22 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
-import $ from "jquery";
-import { filter } from 'rxjs';
+import {  Subject, takeUntil } from 'rxjs';
+import { BuildService } from '../services/build/build.service';
 
 @Component({
   selector: 'app-page-header',
   templateUrl: './page-header.component.html',
   styleUrls: ['./page-header.component.css']
 })
-export class PageHeaderComponent {
+export class PageHeaderComponent implements OnDestroy {
 
   createHighlighted: boolean = false;
   skillsHighlighted: boolean = false;
+  destroy$: Subject<boolean> = new Subject<boolean>();
 
-  constructor(private router: Router) {
-    this.router.events.subscribe((event)=>{
+  constructor(private router: Router, private buildService:BuildService) {
+  this.router.events.pipe(
+    takeUntil(this.destroy$))
+    .subscribe((event)=>{
       if(event instanceof NavigationStart){
-        console.log(event.url,event.url === '/create',event.url === '/view');
         if(event.url === '/create'){
           this.createHighlighted = true;
           this.skillsHighlighted = false;
@@ -29,6 +31,20 @@ export class PageHeaderComponent {
         }
       }
     })
+    
    }
+
+   navigateHome(){
+      this.buildService._setNewCurrentBuild(null);
+    this.router.navigate(['/'],{
+      queryParams:{'buildId':null},
+      queryParamsHandling: 'merge',
+      replaceUrl:true
+    })
+   }
+   ngOnDestroy() {
+    this.destroy$.next(true);
+    this.destroy$.unsubscribe();
+  }
 
 }

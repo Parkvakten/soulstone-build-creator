@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { map, Observable} from 'rxjs';
+import { map, Observable, Subject, Subscription, takeUntil} from 'rxjs';
 import { generateBuild, IBuild } from 'src/app/resources/models/build/build';
 import { ICharacter } from 'src/app/resources/models/character/character';
 import { IRune } from 'src/app/resources/models/rune/rune';
@@ -18,42 +18,39 @@ import { IdbService } from 'src/app/resources/services/idb/idb.service';
 })
   
 
-export class CreateBuildComponent implements OnInit {
+export class CreateBuildComponent implements OnInit, OnDestroy {
   selectedIndex: number = -1;
   selectedSkillIndex: number = -1;
   selectedRuneIndex: number = -1;
   filterString:string = '';
   localStorageBuild: IBuild | null = null;
   buildName:string = '';
+  
+  destroy$: Subject<boolean> = new Subject<boolean>();
 
   
 $getCharacters: Observable<ICharacter[]> = this.idbService.getAllItems$<ICharacter>(this.idbService.db.characters).pipe(map((res)=>{
-  console.log('res for get characters',res);
   return res;
   
 }))
 
 $getWeapons: Observable<IWeapon[]> = this.idbService.getAllItems$<IWeapon>(this.idbService.db.weapons).pipe(map((res)=>{
-  console.log('res for get weapons',res)
   return res;
 }))
 
 
 $getStatusEffects: Observable<IStatusEffect[]> = this.idbService.getAllItems$<IStatusEffect>(this.idbService.db.status_effects).pipe(map((res)=>{
-  console.log('res for get status effects',res)
   return res;
 }))
   
 
 $getSkills: Observable<IActiveSkill[]> = this.idbService.getAllItems$<IActiveSkill>(this.idbService.db.active_skills).pipe(map((res)=>{
-  console.log('res for get skills',res);
   return res;
 }))
 
 $getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbService.db.runes)
 .pipe(
   map((res)=>{
-  console.log('res for get runes',res);
   return res;
 }))
 
@@ -64,9 +61,16 @@ $getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbSer
   
 
   constructor(private idbService: IdbService, private buildService: BuildService,private router: Router,private route:ActivatedRoute) {
-    this.buildService.currentBuild$.subscribe((res)=>{      
+    this.buildService.currentBuild$.pipe(
+      takeUntil(this.destroy$)).subscribe((res)=>{      
       this.currentBuild = res;
-    })}
+    })
+   
+  }
+  ngOnDestroy(): void {
+    this.destroy$.next(true);
+    this.destroy$.unsubscribe();
+  }
   
     goBack(){
       this.router.navigate([
@@ -80,21 +84,20 @@ $getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbSer
     let buildName = prompt("Enter build name:", "");
     if(buildName){
       build.buildName = buildName
+      this.idbService.getTableLength(this.idbService.db.builds).then((res)=>{
+        build.id = res+1;
+        this.buildService._setNewCurrentBuild(build);
+        return this.idbService.addItem$(this.idbService.db.builds,build)
+      })
     }
       
-    this.idbService.getTableLength(this.idbService.db.builds).then((res)=>{
-      build.id = res+1;
-      this.buildService._setNewCurrentBuild(build);
-      return this.idbService.addItem$(this.idbService.db.builds,build)
-    })
+  
     
    }
 
    saveBuild(){
     if(this.currentBuild){
       this.currentBuild.status = 'SAVED';
-      console.log('current build',this.currentBuild);
-
       this.buildService._updateBuild(this.currentBuild)
     }
     
@@ -119,7 +122,6 @@ $getRunes: Observable<IRune[]> = this.idbService.getAllItems$<IRune>(this.idbSer
    previousStep(){
     if(this.currentBuild){
     this.buildService.previousStep(this.currentBuild)
-    console.log('current',this.currentBuild)
   }
    }
 

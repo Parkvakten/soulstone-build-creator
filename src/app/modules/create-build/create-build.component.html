@@ -2,14 +2,14 @@
 <button class="btn btn-outline-light button" (click)="previousStep()" *ngIf="this.currentBuild && this.currentBuild.stepNumber > 0">Previous step</button>
 <button class="btn btn-outline-light button" (click)="nextStep()" *ngIf="checkNextButton()" >Next step</button>
 <div class="first-step-container" *ngIf="!this.currentBuild" >
-    <div class="div-left">
+    <div class="div-left div-border">
         <h3 class="title">Create build</h3>
     <button (click)="addBuild()" class="btn btn-outline-light button">Create new build</button>
     <h3 class="title">Unsaved build</h3>
     <app-buil-container [getInprgBuild]="true" ></app-buil-container>
 </div>
 
-    <div class="div-right">
+    <div class="div-right div-border">
         <h3 class="title">Select build</h3>     
     
         <app-buil-container [getBuilds]="true"></app-buil-container>
@@ -56,7 +56,10 @@
 </div>
 
 
-<input class="filter-field" *ngIf="this.currentBuild.stepNumber === 3 || this.currentBuild.stepNumber === 2"  type="text" name="search" [placeholder]="this.currentBuild.stepNumber === 2 ? '...Search skill name' : '...Search rune name'" [(ngModel)]="this.filterString">
+<input class="filter-field" *ngIf="this.currentBuild.stepNumber === 3 || this.currentBuild.stepNumber === 2"
+  type="text"
+   name="search"
+    [placeholder]="this.currentBuild.stepNumber === 2 ? '...Search skill name' : '...Search rune name'" [(ngModel)]="this.filterString">
 <div *ngIf="this.currentBuild.stepNumber === 2">
     <h3 class="title">Select runes</h3>
 <div  class="grid-container" style="grid-template-columns: repeat(3,1fr);">

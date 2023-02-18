@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Table } from 'dexie';
-import { defer, from, map, mergeMap, Observable, of } from 'rxjs';
+import { concatMap, defer, forkJoin, from, map, mergeMap, Observable, of, switchMap } from 'rxjs';
 import { IdbDatabase } from 'src/app/idbconfig';
+import { IBuild, IExportString } from '../../models/build/build';
 import { ICharacter } from '../../models/character/character';
 import { IdbIndex } from '../../models/idb/idb';
 import { IRune } from '../../models/rune/rune';
@@ -18,7 +19,6 @@ export class IdbService {
 
   addItem$(table: Table, object: any):Observable<boolean>{
     const obs$ = from(table.add(object).then((res)=>{
-      console.log('res from add',res)
       return true;
     }).catch(()=>{
       return false;
@@ -29,7 +29,6 @@ export class IdbService {
   populateSkills$(skills: IActiveSkill[]):Observable<boolean>{
     
     const obs$ = defer(()=> from(IdbDatabase.active_skills.bulkAdd(skills).then((res)=>{
-      console.log('result i add',res);
       return true;
       
     }).catch(()=>{
@@ -40,7 +39,6 @@ export class IdbService {
   }
   populateWeapons$(weapons: IWeapon[]):Observable<boolean>{
     const obs$ = defer(()=> from(IdbDatabase.weapons.bulkAdd(weapons).then((res)=>{
-      console.log('result i add på weapons------------------',res);
       return true;
       
     }).catch(()=>{
@@ -93,7 +91,6 @@ export class IdbService {
 
   getItemByIndex$<T>(table:Table,key:string, index: any):Observable<T>{
     const obs$ = from(table.where(key).equals(index).toArray()).pipe(mergeMap((res)=>{
-      console.log('res',res)
       return res;
     }))
     return obs$
@@ -114,6 +111,30 @@ const obs$ = from(table.update(id,changes).then(()=>{
   return changes as any
 }))
 return obs$
+  }
+
+  test():Observable<IActiveSkill[]>{
+    //  this.db.active_skills.where('id').equals([1,2,3,4,]).toArray();
+    const getSkills$ = from(this.db.active_skills.where('id').anyOf([5, 8, 11, 12, 10, 14]).toArray());
+    return getSkills$;
+  }
+
+  getBuildFromExportString$(build: IExportString):Observable<any>{
+    const getCharacter$ = from(this.db.characters.where('id').equals(build.selectedCharacterId).toArray());
+    const getWeapon$ = from(this.db.weapons.where('id').equals(build.selectedWeaponId).toArray());
+    const getRunes$ = from(this.db.runes.where('id').anyOf(build.selectedRunesId).toArray());
+    const getSkills$ = from(this.db.active_skills.where('id').anyOf(build.selectedSkillsId).toArray());
+    return forkJoin([getCharacter$, getWeapon$, getRunes$,getSkills$]).pipe(map((res)=>{
+      return res.map((r)=>{
+        if('characterType' in r[0] || 'class' in r[0]){
+          return r[0]
+        }else{
+          return r;
+        }
+        
+      })
+    }))
+    
   }
 
 

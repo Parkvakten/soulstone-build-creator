@@ -53,7 +53,6 @@ export class SelectSummaryComponent {
   removeRune(index: number){
     if(this.runes){
       this.runes.splice(index,1);
-      console.log('runes',this.runes)
       this.currentBuild.selectedRunes = this.runes
       this.buildService._updateBuild(this.currentBuild);
       this.selectedIndex = -1;

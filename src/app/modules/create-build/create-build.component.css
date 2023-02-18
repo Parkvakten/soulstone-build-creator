@@ -2,9 +2,24 @@
     display: flex;
     justify-content: space-evenly;
 }
+.div-border{
+    cursor: pointer;
+    margin: 0.5em;
+    border: 2px solid;
+    display: grid;
+    border-color: var(--border-outer-color);
+    border-top-color: white;
+    outline: 2px solid var(--border-color);
+    outline-offset: -3px;
+    padding: 0.5em;
+    max-width: 10em;
+    background-image: linear-gradient(var(--background),var(--container-bg-dark));
+    color: var(--text-title-color);
+}
 .div-left{
     max-width: 50%;
     width: 50%;
+    grid-template-rows: 5% 7.5% 5% 82.5%;
 }
 .div-right{
     max-width: 50%;

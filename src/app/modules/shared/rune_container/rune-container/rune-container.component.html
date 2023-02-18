@@ -1,8 +1,9 @@
 <div class="rune-container">
     <img class="rune-icon" [alt]="this.rune.title" [src]="this.rune.icon">
-    <h1 class="rune-title"> {{this.rune.title}} </h1>
-
+    <h3 class="rune-title"> {{this.rune.title}} </h3>
+    <h5><span class="rune-span-text">Runic Power Cost: </span>{{this.rune.runeCost}}</h5>
     <p class="rune-description" > {{this.rune.description}} </p>
+    
     <app-selector-base class="selector-container"
     [selected]="this.selected"
     [selectItem]="{objectKey:'selectedRunes',item:this.rune}"

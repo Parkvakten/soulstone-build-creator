@@ -33,18 +33,17 @@ export class SelectorBaseComponent {
       
       
         case 'selectedRunes':
-             console.log(this.currentBuild.selectedRunes)
              if(this.currentBuild.selectedRunes === undefined){
               this.currentBuild.selectedRunes = [selectItem.item]
              }else{
               
-               if(!this.checkIfRuneExists(selectItem.item) && this.currentBuild.selectedRunes.length < 6 && this.checkRuneCost(selectItem.item)){
+               if(!this.checkIfRuneExists(selectItem.item) && this.currentBuild.selectedRunes.length < 5 && this.checkRuneCost(selectItem.item)){
                 this.currentBuild.selectedRunes.push(selectItem.item);
                 this.buildService._updateBuild(this.currentBuild)
                }
              }
 
-            if(this.currentBuild.selectedRunes !== undefined && (this.currentBuild.selectedRunes.length >= 6 || this.getTotalRuneCost() === 10)){
+            if(this.currentBuild.selectedRunes !== undefined && (this.currentBuild.selectedRunes.length >= 5 || this.getTotalRuneCost() === 10)){
                 this.buildService.nextStep(this.currentBuild)
             }
          
@@ -55,7 +54,6 @@ export class SelectorBaseComponent {
           this.currentBuild.selectedSkills = [selectItem.item]
         }else{
           //Check if there are any runes selected, check if the selected skill already exists in selectedSkills
-          console.log(this.currentBuild.selectedSkills,this.currentBuild.selectedRunes !== undefined,this.checkIfSkillExists(selectItem.item))
           if(this.checkIfSkillExists(selectItem.item)){
             //If selectedRunes includes Singular Focus, we can add more than one of the same skill
             if(this.currentBuild.selectedRunes !== undefined && this.currentBuild.selectedRunes.filter((rune)=> {
@@ -105,7 +103,6 @@ export class SelectorBaseComponent {
     //Return true if the new rune does exist in the currently selected runes
     if(this.currentBuild.selectedRunes !== undefined){
       if(this.currentBuild.selectedRunes.filter((rune)=>{
-        console.log(rune.title,newRune.title,rune.id,newRune.id)
         return (rune.title === newRune.title || rune.id === newRune.id)
       }).length === 1){
         return true
@@ -127,7 +124,6 @@ export class SelectorBaseComponent {
         Loop through the existing runes and add up the total runecost.
         Check if the new rune can be added to the existing runes without the total runecost to go over 10
         */
-       console.log('cost with new rune',this.getTotalRuneCost() + rune.runeCost,this.getTotalRuneCost() + rune.runeCost <= 10)
         if(this.getTotalRuneCost() + rune.runeCost <= 10){
           return true
         }else{
@@ -145,7 +141,6 @@ export class SelectorBaseComponent {
     //Return true if the new skill does exist in the currently selected skills
     if(this.currentBuild.selectedSkills !== undefined){
       if(this.currentBuild.selectedSkills.filter((skill)=>{
-        console.log(skill.activeSkill.title,newSkill.activeSkill.title,skill.id,newSkill.id)
         return (skill.activeSkill.title === newSkill.activeSkill.title || skill.id === newSkill.id)
       }).length === 1){
         return true

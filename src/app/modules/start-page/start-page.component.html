@@ -1,25 +1,23 @@
-<!-- Här vill vi visa:
-1. Lite text om vad man kan göra?
-2. Lite text om hur man gör för att skapa en build
-3. Builds man har gjort -->
 
 <div class="grid">
-<div class="start-grid text">
+<div class="start-grid text" routerLink="/create">
     <h1>Start making your build</h1>
-    <p>To start making your build, click the Create button in the header or follow this <a routerLink="/create">link</a></p>
+    <p>Click here to start making a build</p>
 </div>
-<div class="start-grid text" ><h1>Import build</h1>
+<div class="text" ><h1>Import build</h1>
     <p>Paste the build string in the textfield below and click the button to import a build</p>
-    <input>
-    <button>Import</button>
+    <input [(ngModel)]="this.importString" >
+    <button (click)="importBuild()">Import</button>
 </div>
-<div class="share-grid text">
-    <h1>Share your build</h1>
-    <p>To share your build, copy this link and share it, other people can then import the build.</p>
-    <app-buil-container [exportable]="true" [getBuilds]="true"></app-buil-container>
-</div>
-<div class="continue-grid text">
+
+<div class="text">
     <h1>Continue working on your previous builds</h1>
     <p>Click the build you want to continue working on</p>
+    <app-buil-container [gridRepeat]="5" [getInprgBuild]="true"></app-buil-container>
+</div>
+<div class="text">
+    <h1 >Share your build</h1>
+    <p >To share your build, copy this link and share it, other people can then import the build.</p>
+    <app-buil-container [exportable]="true" [allSavedBuilds]="this.allSavedBuilds" [gridRepeat]="6"></app-buil-container>
 </div>
 </div>

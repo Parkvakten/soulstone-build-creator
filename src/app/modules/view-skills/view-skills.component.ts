@@ -15,7 +15,6 @@ export class ViewSkillsComponent implements OnInit {
   filterString:string = '';
   
 $getSkills: Observable<IActiveSkill[]> = this.idbService.getAllItems$<IActiveSkill>(this.idbService.db.active_skills).pipe(map((res)=>{
-  console.log('res for get skills',res);
   return res;
 }))
   ngOnInit(): void {

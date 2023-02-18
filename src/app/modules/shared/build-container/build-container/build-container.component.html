@@ -1,5 +1,5 @@
 
-<div class="grid-container" *ngIf="this.getBuilds" >
+<div class="grid-container" [ngStyle]="getStyles()" *ngIf="this.getBuilds" >
     
     <span (click)="this.exportable === true ? exportBuild(build) : navigateToBuild(build) "    class="grid-item" *ngFor="let build of $getBuilds | async" >
             {{build.buildName}}
@@ -7,9 +7,17 @@
      </span>
  </div>
  
-<div class="grid-container" *ngIf="this.getInprgBuild" >
+ 
+<div class="grid-container" [ngStyle]="getStyles()" *ngIf="this.getInprgBuild" >
     
     <span (click)="navigateToBuild(build)" class="grid-item" *ngFor="let build of $getInProgressBuilds | async"  >
+        {{build.buildName}}
+        <img *ngIf="build.selectedCharacter" [src]="build.selectedCharacter.icon" [alt]="build.selectedCharacter.characterType">
+     </span>
+ </div>
+ <div class="grid-container" [ngStyle]="getStyles()" *ngIf="this.allSavedBuilds.length > 0" >
+    
+    <span (click)="this.exportable === true ? exportBuild(build) : navigateToBuild(build) " class="grid-item" *ngFor="let build of this.allSavedBuilds"  >
         {{build.buildName}}
         <img *ngIf="build.selectedCharacter" [src]="build.selectedCharacter.icon" [alt]="build.selectedCharacter.characterType">
      </span>

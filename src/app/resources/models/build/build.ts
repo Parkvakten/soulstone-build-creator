@@ -1,3 +1,4 @@
+import { Observable } from "rxjs";
 import { ICharacter } from "../character/character";
 import { IRune } from "../rune/rune";
 import { IActiveSkill } from "../skill/skill";
@@ -17,9 +18,6 @@ export interface IBuild{
     selectedWeapon?: IWeapon,
     selectedSkills?: IActiveSkill[],
     selectedRunes?: IRune[],
-    icon?:string,
-    
-
 }
 
 export interface IExportString {
@@ -59,6 +57,7 @@ export function generateExportStringFromBuild(build: IBuild): IExportString | nu
 
 
 }
+
 
 export function generateBuild():IBuild{
     let build: IBuild = {id:0,stepNumber:0,buildName:'New Build',status:'INPRG'}
