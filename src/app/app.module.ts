@@ -18,6 +18,7 @@ import { BuildSummaryComponent } from './modules/build-summary/build-summary/bui
 import { WeaponContainerComponent } from './modules/shared/weapon-container/weapon-container.component';
 import { ContainerBaseComponent } from './modules/shared/container-base/container-base/container-base.component';
 import { SelectSummaryComponent } from './modules/shared/select-summary/select-summary/select-summary.component';
+import { PageFooterComponent } from './resources/page-footer/page-footer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SelectSummaryComponent } from './modules/shared/select-summary/select-s
     BuildSummaryComponent,
     WeaponContainerComponent,
     ContainerBaseComponent,
-    SelectSummaryComponent
+    SelectSummaryComponent,
+    PageFooterComponent
   ],
   imports: [
     BrowserModule,

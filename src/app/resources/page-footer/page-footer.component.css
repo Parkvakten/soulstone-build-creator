@@ -1,0 +1,20 @@
+.footer-container{
+    width: 100%;
+   
+    box-shadow: 0 8px 6px -6px black;
+    position: sticky;
+}
+
+.text-container{
+    display: -webkit-flex;
+  display: flex;
+  height: 5em;
+  font-size: .8em;
+  background-color: var(--container-bg-dark);
+  color: white;
+  font-weight: bold;
+
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
