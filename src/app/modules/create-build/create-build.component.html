@@ -59,7 +59,7 @@
 <input class="filter-field" *ngIf="this.currentBuild.stepNumber === 3 || this.currentBuild.stepNumber === 2"
   type="text"
    name="search"
-    [placeholder]="this.currentBuild.stepNumber === 2 ? '...Search skill name' : '...Search rune name'" [(ngModel)]="this.filterString">
+    [placeholder]="this.currentBuild.stepNumber === 2 ? '...Search rune name' : '...Search skill name'" [(ngModel)]="this.filterString">
 <div *ngIf="this.currentBuild.stepNumber === 2">
     <h3 class="title">Select runes</h3>
 <div  class="grid-container" style="grid-template-columns: repeat(3,1fr);">
@@ -85,7 +85,7 @@
         </div>
        
     </div>
-    <app-select-summary  [currentBuild]="this.currentBuild" [skills]="this.currentBuild.selectedSkills"  ></app-select-summary>
+    <app-select-summary [currentBuild]="this.currentBuild" [skills]="this.currentBuild.selectedSkills"  ></app-select-summary>
     </div>
 
 <div *ngIf="this.currentBuild.stepNumber === 4 " >

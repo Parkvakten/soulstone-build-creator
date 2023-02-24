@@ -8,8 +8,8 @@
     border-top-color: white;
     outline: 2px solid var(--border-color);
     outline-offset: -3px;
-    margin: .5em;
-    padding: .5em;
+    margin: 4.5px;
+    padding: 4.5px;
     display: grid;
     grid-template-rows: auto 45% 40% 10%;
     justify-items: center;
@@ -19,8 +19,8 @@
 }
 
 .base-icon{
-    width: 10em;
-    height: 10em;
+    width: 180px;
+    height: 180px;
     align-self: center;
 }
 

@@ -1,6 +1,7 @@
 .container{
-    padding-top: 1em;
+
     background-color: var(--container-bg-dark);
     color: white;
     font-size: 18px;
+    margin-bottom: 55px;
 }

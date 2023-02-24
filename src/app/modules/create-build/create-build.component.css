@@ -4,15 +4,14 @@
 }
 .div-border{
     cursor: pointer;
-    margin: 0.5em;
+    margin: 10px;
     border: 2px solid;
     display: grid;
     border-color: var(--border-outer-color);
     border-top-color: white;
     outline: 2px solid var(--border-color);
     outline-offset: -3px;
-    padding: 0.5em;
-    max-width: 10em;
+    padding: 7.5px;
     background-image: linear-gradient(var(--background),var(--container-bg-dark));
     color: var(--text-title-color);
 }
@@ -40,8 +39,8 @@
 }
 
 .filter-field{
-    margin: .5em;   
+    margin: 10px;
 }
-.button{
-    margin: .5em
+button{
+    margin: 10px;
 }

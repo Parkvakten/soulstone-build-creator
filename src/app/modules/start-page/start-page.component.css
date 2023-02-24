@@ -1,7 +1,7 @@
 .grid{
     display: grid;
-    gap: 1.5em;
-    grid-template-rows: 8em 10em auto auto
+    gap: 15px;
+    grid-template-rows: 150px 180px auto auto
 }
 
 .start-grid{
@@ -19,13 +19,13 @@
 }
 
 .text{
-    margin: .5em;
+    margin: 9px;
     border: 2px solid;
     border-color: var(--border-outer-color);
     border-top-color: white;
     outline: 2px solid var(--border-color);
     outline-offset: -3px;
-    padding: .5em;
+    padding: 9px;
 }
 
 .text > h1{

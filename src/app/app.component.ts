@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IActiveSkill, IStatusEffect } from './resources/models/skill/skill';
 import { IRune } from './resources/models/rune/rune';
 import { IWeapon } from './resources/models/weapon/weapon';
 import { IdbService } from './resources/services/idb/idb.service';
-import { forkJoin, map, Observable, of, switchMap, take } from 'rxjs';
+import { forkJoin, map, Observable, of, Subject, switchMap, take, takeUntil } from 'rxjs';
 import { Version } from '@angular/compiler';
 import { Versions, VersionService } from './resources/services/version/version.service';
 import { ICharacter } from './resources/models/character/character';
+import { IBuild } from './resources/models/build/build';
+import { BuildService } from './resources/services/build/build.service';
 
 @Component({
   selector: 'app-root',
@@ -19,8 +21,10 @@ export class AppComponent implements OnInit{
   status_effects: IStatusEffect[] = require('../app/resources/JSONS/status_effects.json');
   weapons: IWeapon[]  = require('../app/resources/JSONS/weapons.json');
   characters: ICharacter[] = require('../app/resources/JSONS/characters.json')
-  //versions: Versions[] = this.getVersionsFromLocalStorage();
+  currentBuild: IBuild | null = null;
 
+  //versions: Versions[] = this.getVersionsFromLocalStorage();
+  
   formatSkills(){
     this.active_skills.slice(1,this.active_skills.length).forEach((skill,skillIndex)=>{
       if(skill.statusEffect !== undefined){
@@ -50,14 +54,17 @@ export class AppComponent implements OnInit{
 
   
   
-  constructor(private idbService: IdbService, private versionService: VersionService) {
+  constructor(private idbService: IdbService, private versionService: VersionService, private buildService: BuildService) {
     if(this.versionService.checkVersion(this.versionService.getVersionNumber('active_skills'),JSON.parse(JSON.stringify(this.active_skills[0])) as Versions)){
       this.formatSkills();
     }
     if(this.versionService.checkVersion(this.versionService.getVersionNumber('characters'),JSON.parse(JSON.stringify(this.characters[0])) as Versions)){
       this.formatCharacter();
     }
-
+    this.buildService.currentBuild$.subscribe((res)=>{     
+      console.log('res',res); 
+      this.currentBuild = res;
+    })
   }
 
   ngOnInit(): void {

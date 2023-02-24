@@ -1,5 +1,10 @@
 <app-page-header></app-page-header>
-<div class="container">
+<div class="container" 
+[ngStyle]="this.currentBuild && this.currentBuild.stepNumber === 2 ?
+ {'margin-bottom':'84px'} :
+ this.currentBuild && this.currentBuild.stepNumber === 3 ?
+  {'margin-bottom': '55px'} :
+   {'margin-bottom': '0px'}">
   <router-outlet></router-outlet>
 </div>
 <app-page-footer></app-page-footer>

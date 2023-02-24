@@ -1,8 +1,9 @@
 <div class="rune-summary" *ngIf="this.currentBuild.selectedRunes && this.currentBuild.selectedRunes.length > 0 && this.currentBuild.stepNumber === 2">
-  <div class="skill-stuff"><div class="skill-summary-item" *ngFor="let rune of this.currentBuild.selectedRunes; let i = index" >
+  <div class="skill-stuff">
+    <div class="skill-summary-item" *ngFor="let rune of this.currentBuild.selectedRunes; let i = index" >
     <button style="all: unset;" (click)="showRemoveText(i)" >  
       <img class="skill-icon" *ngIf="rune.icon" [src]="rune.icon" [alt]="rune.title">
-      <button (click)="removeRune(i)" class="remove-text btn btn-danger" *ngIf="this.selectedIndex === i && this.showRemove" >Remove skill</button>
+      <button (click)="removeRune(i)" class="remove-text btn btn-danger" *ngIf="this.selectedIndex === i && this.showRemove" >Remove rune</button>
   </button>
   </div></div>
   <div class="progress-bar" [attr.data-label]="totalCost()+'/10'">

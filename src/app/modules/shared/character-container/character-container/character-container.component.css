@@ -8,8 +8,8 @@
     border-top-color: white;
     outline: 2px solid var(--border-color);
     outline-offset: -3px;
-    margin: .5em;
-    padding: .5em;
+    margin: 4.5px;
+    padding: 4.5px;
     display: grid;
     justify-items: center;
     text-align: center;
@@ -18,8 +18,8 @@
 }
 
 .character-icon{
-    width: 10em;
-    height: 10em;
+    width: 180px;
+    height: 180px;
     
 }
 
@@ -29,8 +29,8 @@
     border-top-color: white;
     outline: 2px solid var(--border-color);
     outline-offset: -3px;
-    margin: .5em;
-    padding: .5em;
+    margin: 4.5px;
+    padding: 4.5px;
     display: grid;
     justify-items: center;
     text-align: center;
@@ -39,8 +39,8 @@
 }
 
 .weapon-icon{
-    width: 10em;
-    height: 10em;
+    width: 180px;
+    height: 180px;
     
 }
 .selector-container{

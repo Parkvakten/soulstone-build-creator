@@ -13,8 +13,8 @@
     border-top-color: white;
     outline: 2px solid var(--border-color);
     outline-offset: -3px;
-    margin: .25em;
-    padding: .25em;
+    margin: 5px;
+    padding: 5px;
     justify-items: center;
     text-align: center;
     background-image: linear-gradient(var(--background),var(--container-bg-dark));
@@ -24,8 +24,8 @@
     color: var(--text-title-color);
 }
 .base-icon{
-    width: 5em;
-    height: 5em;
+    width: 90px;
+    height: 90px;
     align-self: center;
 }
 

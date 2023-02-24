@@ -10,7 +10,6 @@
   background-color: var(--container-bg-dark);
   color: white;
   font-weight: bold;
-  font-size: 1em;
   justify-content: center;
   position: relative;
 }
@@ -24,7 +23,7 @@
   color: var(--text-title-color);
     cursor: pointer;
     order: -1;
-  font-size: 3em;
+  font-size: 48px;
   position: absolute;
   top: 0;
   left: 0;

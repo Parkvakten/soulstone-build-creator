@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IBuild } from '../models/build/build';
 
 @Component({
   selector: 'app-page-footer',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageFooterComponent implements OnInit {
 
-  constructor() { }
+  @Input() currentBuild: IBuild | null = null;
+
+  constructor() {
+    console.log('currentbuild',this.currentBuild)
+   }
 
   ngOnInit(): void {
   }
